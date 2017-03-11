@@ -30,7 +30,9 @@ if __name__ == '__main__':
 	posts = graph.get_connections(id='119474188105563', connection_name='posts')
 	print ("\n--")
 	SID = 1 
-	getLikesSummary(posts)#Get summary of all likes in a post
+	getLikesSummary(posts)
+	#Get summary of all likes in a post
 	getNextPage(posts)
+	#Get next page
 	
 
