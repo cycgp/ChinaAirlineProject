@@ -10,7 +10,7 @@ seglist = jieba.cut(ret, cut_all=False)
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 dictionary = corpora.Dictionary(ret)
-
+#New note
 hash = {}
 for item in seglist: 
 	if item in hash:
