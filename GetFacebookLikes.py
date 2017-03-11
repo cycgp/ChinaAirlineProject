@@ -26,6 +26,7 @@ def getNextPage(posts):
 
 if __name__ == '__main__':
 	token = 'EAACEdEose0cBAAnIeMwcZAXHSwfwppKThWBHJnzhFjvvtZBDIfj4yFvAqNCpK1H4rO6ZCmt5i9mwVgyFY9hYZAjJRo7rl11a8lVHcblzVLqUZAEuLQT4bFlHRKkJwrqMIQN0qpUKfSVvmTwzmeHo8RWZBflNrY1toaAEBV47X8xH8apaukBZBBbZBRe5LEuDCXoZD'
+	#facebook token
 	graph = facebook.GraphAPI(access_token = token)
 	posts = graph.get_connections(id='119474188105563', connection_name='posts')
 	print ("\n--")
