@@ -17,7 +17,7 @@ The steps of do text mining and sentiment analysis on Trip Advisor.
 - time
 
 ###Simplified Chinese to Traditional Chinese
-OpenCC
+[OpenCC](https://github.com/BYVoid/OpenCC) -- simple tool to translate simplified Chinese to traditional Chinese or traditional chinese to simplified chinese.
 ###Ｗord segmentation
 jieba
 ###Training Word to Vector

@@ -40,19 +40,19 @@ def getReviewInfo(review):
 		'comment':comment,
 		'area':area,
 		'class':seatClass,
-		'orgin':routeDetail[0],
+		'origin':routeDetail[0],
 		'destination' : routeDetail[1]
 	}
-	# print(subjectCount)
-	# print(str(getTextFromTag(quote)))
-	# print(str(rating))
-	# print(str(ratingDate))
-	# print(str(comment))
-	# print(str(area))
-	# print(str(seatClass))
-	# print(str(routeDetail[0]))
-	# print(str(routeDetail[1]))
-	# print('\n---\n')
+	print(subjectCount)
+	print(str(getTextFromTag(quote)))
+	print(str(rating))
+	print(str(ratingDate))
+	print(str(comment))
+	print(str(area))
+	print(str(seatClass))
+	print(str(routeDetail[0]))
+	print(str(routeDetail[1]))
+	print('\n---\n')
 	global list2json
 	#add review detail to dictionary
 	list2json.append(reviewDict)
