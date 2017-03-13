@@ -5,6 +5,7 @@ import json
 import time
 import dryscrape
 
+#generate url of Trip Advisor
 def generateURL():
 	global URL_List
 	for page in range(0,40):
@@ -12,8 +13,9 @@ def generateURL():
 		#Url of China Airline in Trip Advisor
 		URL_List.append(URL)
 
+#get review detail
 def getReviewInfo(review):
-	print(review.prettify())
+	#print(review.prettify())
 	innerBubble = review.find("div", { "class" : "innerBubble" })
 	quote = innerBubble.find("div", { "class" : "quote" }).span
 	rating = innerBubble.find("div", { "class" : "rating" }).img['alt'].encode('utf-8').split(' ')[0]
@@ -26,6 +28,7 @@ def getReviewInfo(review):
 		route = getTextFromTag(labels[2])
 		routeDetail = getRouteDetail(route)
 	except:
+		#avoid no label review
 		area = ''
 		seatClass = ''
 		routeDetail = ['','']
@@ -52,6 +55,7 @@ def getReviewInfo(review):
 	# print(str(routeDetail[1]))
 	# print('\n---\n')
 	global list2json
+	#add review detail to dictionary
 	list2json.append(reviewDict)
 	subjectCount += 1
 
@@ -62,6 +66,7 @@ def getDate(ratingDate):
 		ratingDate = getTextFromTag(ratingDate).split('的')[0]
 	return ratingDate
 
+#get origin and destination
 def getRouteDetail(route):
 	routeInfo = str(route).split(' - ')
 	origin = routeInfo[0]
@@ -76,6 +81,7 @@ def main():
 	global URL_List
 	for URL in URL_List:
 		time.sleep(1)
+		#use dryscrape instead of request to run javascript
 		session = dryscrape.Session()
 		session.visit(URL)
 		response = session.body()
