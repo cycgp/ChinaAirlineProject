@@ -10,7 +10,7 @@ The steps of do text mining and sentiment analysis on Trip Advisor.
 
 ###Web Spider
 
-- BeautifulSoup
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - qt -- (must lover then 5.5 `brew install qt@5.5`)
 - [dryscrape](http://dryscrape.readthedocs.io/en/latest/installation.html) -- `pip install dryscrape`
 - json
@@ -21,8 +21,8 @@ The steps of do text mining and sentiment analysis on Trip Advisor.
 ###Ｗord segmentation
 [jieba](https://github.com/fxsjy/jieba)
 
-- load traditional chinese dictionary `jieba.set_dictionary('jieba_dict/dict.txt.big')`
-- load custom dictionary `jieba.load_userdict("jieba_dict/userdict.txt")`
+- load traditional chinese dictionary -- `jieba.set_dictionary('jieba_dict/dict.txt.big')`
+- load custom dictionary -- `jieba.load_userdict("jieba_dict/userdict.txt")`
 
 ###Training Word to Vector
 gensim
