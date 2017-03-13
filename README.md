@@ -7,11 +7,11 @@ The steps of do text mining and sentiment analysis on Trip Advisor.
 3. Ｗord segmentation
 4. Training Word to Vector
 #####Web Spider
--BeautifulSoup
--qt -- (must lover then 5.5 `brew install qt@5.5`)
--[dryscrape](http://dryscrape.readthedocs.io/en/latest/installation.html) -- `pip install dryscrape`
--json
--time
+- BeautifulSoup
+- qt -- (must lover then 5.5 `brew install qt@5.5`)
+- [dryscrape](http://dryscrape.readthedocs.io/en/latest/installation.html) -- `pip install dryscrape`
+- json
+- time
 #####Simplified Chinese to Traditional Chinese
 OpenCC
 #####Ｗord segmentation
