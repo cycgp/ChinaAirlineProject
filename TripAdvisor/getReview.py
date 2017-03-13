@@ -1,6 +1,5 @@
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
-import requests
 import json
 import time
 import dryscrape
