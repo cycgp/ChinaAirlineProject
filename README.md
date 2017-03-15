@@ -25,6 +25,6 @@ The steps of do text mining and sentiment analysis on Trip Advisor.
 - load custom dictionary `jieba.load_userdict("jieba_dict/userdict.txt")`
 
 ### Training Word to Vector
-gensim
+[gensim](https://radimrehurek.com/gensim/)
 ## Facebook
 ### Get Facebook likes
