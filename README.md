@@ -15,6 +15,7 @@ This is a project in China Airline to do text mining and sentiment analysis on [
 - [民報](http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD)(Taiwan People News)
 - [風傳媒](http://www.storm.mg/articles)(Storm)
 - [新頭殼](https://newtalk.tw/news/summary/today)(New Talk)
+- [苦勞網](http://www.coolloud.org.tw/story)(Cool Loud)
 - [焦點新聞](http://www.eventsinfocus.org/)(Event In Focus)
 
 ## Trip Advisor
