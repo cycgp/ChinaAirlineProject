@@ -1,5 +1,6 @@
-from Spiders.AppleSpider import AppleSpider as ASpider
+from Spiders.AppleSpider import AppleSpider
+from Spiders.UDNSpider import UDNSpider
 
-a = ASpider()
+a = AppleSpider()
 a.getRTNURL()
 a.getContent()

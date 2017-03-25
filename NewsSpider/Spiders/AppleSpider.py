@@ -39,13 +39,16 @@ class AppleSpider:
 			news = soup.find(class_ = 'abdominis')
 			content = ""
 			newsList = []
-			title = str(news.find('h1', {'id':'h1'}).contents[0].encode('utf-8'))
+			title = str(news.find('h1', {'id':'h1'}).contents[0])
+			time = news.find('time').text
 			article = news.find('p', {'id':'summary'}).findAll(text=True)
 			print('新聞標題 : ' + title)
 			print('------------------------------')
+			print(time)
+			print('------------------------------')
 			for contents in article:
-				content +=  str(contents.encode('utf-8'))
+				content +=  str(contents)
 			print(content)
 			print('------------------------------')
-			self.newsLists.append([title,content])
+			self.newsLists.append([title,time,content])
 		return self.newsLists
