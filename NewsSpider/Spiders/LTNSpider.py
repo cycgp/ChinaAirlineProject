@@ -5,12 +5,12 @@ import json
 
 class LTNSpider:
 	RTN_URLList = []
-	articleList = []
-	newsLists = []
+	ARTICLE_List = []
+	NEWS_Lists = []
 	def __init__(self):
 		self.RTN_URLList = LTNSpider.RTN_URLList
-		self.articleList = LTNSpider.articleList
-		self.newsLists = LTNSpider.newsLists
+		self.ARTICLE_List = LTNSpider.ARTICLE_List
+		self.NEWS_Lists = LTNSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getRTNURL(self):
@@ -25,15 +25,15 @@ class LTNSpider:
 			articles = soup.find_all('a', {'class' : 'picword'})
 			for article in articles:
 				articleURL = article.get('href')
-				self.articleList.append(articleURL)
-		return self.articleList
+				self.ARTICLE_List.append(articleURL)
+		return self.ARTICLE_List
 
 	# def checkUpdate():
 	# 	pass
 
 	#Get Content from article
 	def getContent(self):
-		for article in self.articleList:
+		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'content')
@@ -62,5 +62,5 @@ class LTNSpider:
 				content +=  str(contents.text)
 			print(content)
 			print('------------------------------')
-			self.newsLists.append([title,time,content])
-		return self.newsLists
+			self.NEWS_Lists.append([title,time,content])
+		return self.NEWS_Lists

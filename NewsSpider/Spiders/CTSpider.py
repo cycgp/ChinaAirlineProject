@@ -5,12 +5,12 @@ import json
 
 class CTSpider:
 	RTN_URLList = []
-	articleList = []
-	newsLists = []
+	ARTICLE_List = []
+	NEWS_Lists = []
 	def __init__(self):
 		self.RTN_URLList = CTSpider.RTN_URLList
-		self.articleList = CTSpider.articleList
-		self.newsLists = CTSpider.newsLists
+		self.ARTICLE_List = CTSpider.ARTICLE_List
+		self.NEWS_Lists = CTSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getRTNURL(self):
@@ -26,15 +26,15 @@ class CTSpider:
 			for article in articles:
 				articleURL = 'http://www.chinatimes.com'+ article.find('a').get('href')
 				print(articleURL)
-				self.articleList.append(articleURL)
-		return self.articleList
+				self.ARTICLE_List.append(articleURL)
+		return self.ARTICLE_List
 
 	# def checkUpdate():
 	# 	pass
 
 	#Get Content from article
 	def getContent(self):
-		for article in self.articleList:
+		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'page_container')
@@ -51,5 +51,5 @@ class CTSpider:
 				content +=  str(contents.text)
 			print(content)
 			print('------------------------------')
-			self.newsLists.append([title,time,content])
-		return self.newsLists
+			self.NEWS_Lists.append([title,time,content])
+		return self.NEWS_Lists

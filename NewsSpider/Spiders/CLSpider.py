@@ -2,19 +2,20 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 import json
+import dryscrape
 
 class CLSpider:
 	RTN_URLList = []
-	articleList = []
-	newsLists = []
+	ARTICLE_List = []
+	NEWS_Lists = []
 	def __init__(self):
 		self.RTN_URLList = CLSpider.RTN_URLList
-		self.articleList = CLSpider.articleList
-		self.newsLists = CLSpider.newsLists
+		self.ARTICLE_List = CLSpider.ARTICLE_List
+		self.NEWS_Lists = CLSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getRTNURL(self):
-		for page in range(1,2):
+		for page in range(0,2):
 			#Real-time news pages
 			URL = 'http://www.coolloud.org.tw/story?page='+str(page)
 			self.RTN_URLList.append(URL)
@@ -22,21 +23,22 @@ class CLSpider:
 		for URL in self.RTN_URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
-			articles = soup.findAll(class_ = 'field-content pc-style')
-			print(articles)
+			articles = soup.findAll('div', {'class':'field-content pc-style'})
 			for article in articles:
 				articleURL = 'http://www.coolloud.org.tw'+ article.find('a').get('href')
-				self.articleList.append(articleURL)
-		return self.articleList
+				self.ARTICLE_List.append(articleURL)
+		return self.ARTICLE_List
 
 	# def checkUpdate():
 	# 	pass
 
 	#Get Content from article
 	def getContent(self):
-		for article in self.articleList:
-			r = requests.get(article)
-			soup = bs4(r.text, 'html.parser')
+		for article in self.ARTICLE_List:
+			session = dryscrape.Session()
+			session.visit(article)
+			response = session.body()
+			soup = bs4(response, 'html.parser')
 			news = soup.find(class_ = 'main-container')
 			content = ""
 			newsList = []
@@ -45,11 +47,11 @@ class CLSpider:
 			article = news.find(class_ = 'node node-post node-promoted clearfix').findAll('p')
 			print('新聞標題 : ' + title)
 			print('------------------------------')
-			print(time)
+			print(time.text)
 			print('------------------------------')
 			for contents in article:
-				content +=  str(contents)
-			print(content.text)
+				content +=  str(contents.text)
+			print(content)
 			print('------------------------------')
-			self.newsLists.append([title,time,content])
-		return self.newsLists
+			self.NEWS_Lists.append([title,time,content])
+		return self.NEWS_Lists

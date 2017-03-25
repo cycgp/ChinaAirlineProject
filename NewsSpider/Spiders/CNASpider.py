@@ -5,12 +5,12 @@ import json
 
 class CNASpider:
 	RTN_URLList = []
-	articleList = []
-	newsLists = []
+	ARTICLE_List = []
+	NEWS_Lists = []
 	def __init__(self):
 		self.RTN_URLList = CNASpider.RTN_URLList
-		self.articleList = CNASpider.articleList
-		self.newsLists = CNASpider.newsLists
+		self.ARTICLE_List = CNASpider.ARTICLE_List
+		self.NEWS_Lists = CNASpider.NEWS_Lists
 
 	#Get real-time news url
 	def getRTNURL(self):
@@ -22,18 +22,18 @@ class CNASpider:
 		for URL in self.RTN_URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
-			articles = soup.find(class_ = 'article_list').findAll('li')
+			articles = soup.find(class_ = 'ARTICLE_List').findAll('li')
 			for article in articles:
 				articleURL = 'http://www.cna.com.tw'+article.find('a').get('href')
-				self.articleList.append(articleURL)
-		return self.articleList
+				self.ARTICLE_List.append(articleURL)
+		return self.ARTICLE_List
 
 	# def checkUpdate():
 	# 	pass
 
 	#Get Content from article
 	def getContent(self):
-		for article in self.articleList:
+		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'news_article')
@@ -50,5 +50,5 @@ class CNASpider:
 				content +=  str(contents)
 			print(content)
 			print('------------------------------')
-			self.newsLists.append([title,time,content])
-		return self.newsLists
+			self.NEWS_Lists.append([title,time,content])
+		return self.NEWS_Lists
