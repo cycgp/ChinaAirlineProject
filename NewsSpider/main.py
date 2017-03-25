@@ -6,8 +6,8 @@ from Spiders.TNLSpider import TNLSpider
 from Spiders.CTSpider import CTSpider
 from Spiders.TPNSpider import TPNSpider
 from Spiders.StormSpider import StormSpider
-from Spiders.NTSpider import NTSpider
+from Spiders.CLSpider import CLSpider
 
-a = NTSpider()
+a = CLSpider()
 a.getRTNURL()
 a.getContent()
