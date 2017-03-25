@@ -2,30 +2,30 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 import json
+import time
 
-class StormSpider:
+class NTSpider:
 	RTN_URLList = []
 	articleList = []
 	newsLists = []
 	def __init__(self):
-		self.RTN_URLList = StormSpider.RTN_URLList
-		self.articleList = StormSpider.articleList
-		self.newsLists = StormSpider.newsLists
+		self.RTN_URLList = NTSpider.RTN_URLList
+		self.articleList = NTSpider.articleList
+		self.newsLists = NTSpider.newsLists
 
 	#Get real-time news url
 	def getRTNURL(self):
-		for page in range(1,2):
-			#Real-time news pages
-			URL = 'http://www.storm.mg/articles/'+str(page)
-			self.RTN_URLList.append(URL)
+		a = time.strftime('%Y-%m-%d', time.localtime())
+		#Real-time news pages
+		URL = 'https://newtalk.tw/news/summary/'+str(a)+'#cal'
+		self.RTN_URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.RTN_URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
-			articles = soup.findAll(class_ = 'main_content')
+			articles = soup.findAll(class_ = 'news_title')
 			for article in articles:
-				articleURL = 'http://www.storm.mg'+ article.find('p').find('a').get('href')
-				print(articleURL)
+				articleURL = article.find('a').get('href')
 				self.articleList.append(articleURL)
 		return self.articleList
 
@@ -37,13 +37,13 @@ class StormSpider:
 		for article in self.articleList:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
-			news = soup.find(class_ = 'inner-wrap')
+			news = soup.find(id = 'left_column')
 			content = ""
 			newsList = []
-			title = str(news.find('h1', {'class':'title'}).contents[0])
-			time = news.find(class_='date').text.split('風傳媒')[0]
-			article = news.article.findAll('p')
-			print('新聞標題 : ' + title.strip())
+			title = str(news.find(class_ = 'content_title').contents[0])
+			time = news.find(class_='content_date').text.split()[1]
+			article = news.findAll('p')
+			print('新聞標題 : ' + title)
 			print('------------------------------')
 			print(time)
 			print('------------------------------')
