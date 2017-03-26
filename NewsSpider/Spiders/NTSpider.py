@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs4
 import requests
 import json
 import time
+import dryscrape
 
 class NTSpider:
 	RTN_URLList = []
@@ -17,7 +18,7 @@ class NTSpider:
 	def getRTNURL(self):
 		a = time.strftime('%Y-%m-%d', time.localtime())
 		#Real-time news pages
-		URL = 'https://newtalk.tw/news/summary/'+str(a)+'#cal'
+		URL = 'https://newtalk.tw/news/summary/'+str(a)
 		self.RTN_URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.RTN_URLList:
@@ -35,8 +36,10 @@ class NTSpider:
 	#Get Content from article
 	def getContent(self):
 		for article in self.ARTICLE_List:
-			r = requests.get(article)
-			soup = bs4(r.text, 'html.parser')
+			session = dryscrape.Session()
+			session.visit(article)
+			response = session.body()
+			soup = bs4(response, 'html.parser')
 			news = soup.find(id = 'left_column')
 			content = ""
 			newsList = []
@@ -49,6 +52,7 @@ class NTSpider:
 			print('------------------------------')
 			for contents in article:
 				content +=  str(contents.text)
+			content = content.split('（喜歡這條新聞，給新頭殼按個讚！）')[0]
 			print(content)
 			print('------------------------------')
 			self.NEWS_Lists.append([title,time,content])
