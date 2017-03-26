@@ -15,7 +15,6 @@ class TPNSpider:
 
 	#Get real-time news url
 	def getRTNURL(self):
-		i = 0
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD#page-'+str(page)
@@ -30,9 +29,6 @@ class TPNSpider:
 			for article in articles:
 				try:
 					articleURL = 'http://www.peoplenews.tw'+ article.findAll('a')[0].get('href')
-					print(articleURL)
-					print('--'+ str(i) + '--')
-					i += 1
 					self.ARTICLE_List.append(articleURL)
 				except:
 					pass
