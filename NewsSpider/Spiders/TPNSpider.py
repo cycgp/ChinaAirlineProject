@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 import json
+import dryscrape
 
 class TPNSpider:
 	RTN_URLList = []
@@ -14,20 +15,27 @@ class TPNSpider:
 
 	#Get real-time news url
 	def getRTNURL(self):
+		i = 0
 		for page in range(1,2):
 			#Real-time news pages
-			URL = 'http://www.peoplenews.tw/list/總覽#page-'+str(page)
+			URL = 'http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD#page-'+str(page)
 			self.RTN_URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.RTN_URLList:
-			r = requests.get(URL)
-			soup = bs4(r.text, 'html.parser')
-			articles = soup.findAll(class_ = 'list_realtime')
-			print(articles)
+			session = dryscrape.Session(base_url=URL)
+			session.visit('')
+			response = session.body()
+			soup = bs4(response, 'html.parser')
+			articles = soup.findAll('div',{'class':'list_realtime'})
 			for article in articles:
-				articleURL = 'http://www.peoplenews.tw'+ article.find('a')[1].get('href')
-				print(articleURL)
-				self.ARTICLE_List.append(articleURL)
+				try:
+					articleURL = 'http://www.peoplenews.tw'+ article.findAll('a')[0].get('href')
+					print(articleURL)
+					print('--'+ str(i) + '--')
+					i += 1
+					self.ARTICLE_List.append(articleURL)
+				except:
+					pass
 		return self.ARTICLE_List
 
 	# def checkUpdate():
@@ -43,13 +51,13 @@ class TPNSpider:
 			newsList = []
 			title = str(news.find('h1').contents[0])
 			time = news.find(class_ = 'date').text
-			article = news.findAll('p', {'class':'news_font2'})
+			article = news.find('div', {'id':'newscontent'}).findAll('p')
 			print('新聞標題 : ' + title)
 			print('------------------------------')
 			print(time)
 			print('------------------------------')
 			for contents in article:
-				content +=  str(contents.text)
+			    content +=  str(contents.text)
 			print(content)
 			print('------------------------------')
 			self.NEWS_Lists.append([title,time,content])
