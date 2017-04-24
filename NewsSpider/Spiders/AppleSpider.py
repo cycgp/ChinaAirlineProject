@@ -1,7 +1,9 @@
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
+import time
 import requests
 import json
+import sys
 
 class AppleSpider:
 	RTN_URLList = []
@@ -24,7 +26,8 @@ class AppleSpider:
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find_all(class_ = 'rtddt')
 			for article in articles:
-				articleURL = 'http://www.appledaily.com.tw/'+article.find('a').get('href')
+				inListURL = article.find('a').get('href')
+				articleURL = article.find('a').get('href') if 'http://www.appledaily.com.tw' in inListURL else 'http://www.appledaily.com.tw'+article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
 		return self.ARTICLE_List
 
@@ -39,16 +42,21 @@ class AppleSpider:
 			news = soup.find(class_ = 'abdominis')
 			content = ""
 			newsList = []
-			title = str(news.find('h1', {'id':'h1'}).contents[0])
-			time = news.find('time').text
+			title = news.find('h1', {'id':'h1'}).contents[0]
+			Time = news.find('time').text
+			datetime = news.find('time')['datetime'].strip('/')
 			article = news.find('p', {'id':'summary'}).findAll(text=True)
 			print('新聞標題 : ' + title)
 			print('------------------------------')
-			print(time)
+			print(Time)
 			print('------------------------------')
 			for contents in article:
 				content +=  str(contents)
 			print(content)
 			print('------------------------------')
+			if time.strftime('%Y/%m/%d', time.localtime()) not in datetime:
+				break
+			else:
+				pass
 			self.NEWS_Lists.append([title,time,content])
 		return self.NEWS_Lists
