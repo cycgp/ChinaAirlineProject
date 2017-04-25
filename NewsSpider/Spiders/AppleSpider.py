@@ -4,6 +4,7 @@ import time
 import requests
 import json
 import sys
+import timeout_decorator
 
 class AppleSpider:
 	RTN_URLList = []
@@ -16,7 +17,7 @@ class AppleSpider:
 
 	#Get real-time news url
 	def getRTNURL(self):
-		for page in range(1,2):
+		for page in range(0,10):
 			#Real-time news pages
 			URL = 'http://www.appledaily.com.tw/realtimenews/section/new/'+str(page)
 			self.RTN_URLList.append(URL)
@@ -46,6 +47,10 @@ class AppleSpider:
 			Time = news.find('time').text
 			datetime = news.find('time')['datetime'].strip('/')
 			article = news.find('p', {'id':'summary'}).findAll(text=True)
+			if time.strftime('%Y/%m/%d', time.localtime()) not in datetime:
+				continue
+			else:
+				pass
 			print('新聞標題 : ' + title)
 			print('------------------------------')
 			print(Time)
@@ -54,9 +59,6 @@ class AppleSpider:
 				content +=  str(contents)
 			print(content)
 			print('------------------------------')
-			if time.strftime('%Y/%m/%d', time.localtime()) not in datetime:
-				break
-			else:
-				pass
+
 			self.NEWS_Lists.append([title,time,content])
 		return self.NEWS_Lists
