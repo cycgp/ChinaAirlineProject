@@ -17,7 +17,7 @@ class AppleSpider:
 
 	#Get real-time news url
 	def getRTNURL(self):
-		for page in range(0,10):
+		for page in range(0,40):
 			#Real-time news pages
 			URL = 'http://www.appledaily.com.tw/realtimenews/section/new/'+str(page)
 			self.RTN_URLList.append(URL)
@@ -44,7 +44,7 @@ class AppleSpider:
 			content = ""
 			newsList = []
 			title = news.find('h1', {'id':'h1'}).contents[0]
-			Time = news.find('time').text
+			Time = news.find('time').text.split('日')[1]
 			datetime = news.find('time')['datetime'].strip('/')
 			article = news.find('p', {'id':'summary'}).findAll(text=True)
 			if time.strftime('%Y/%m/%d', time.localtime()) not in datetime:
@@ -53,7 +53,7 @@ class AppleSpider:
 				pass
 			print('新聞標題 : ' + title)
 			print('------------------------------')
-			print(Time)
+			print(datetime + ' ' + Time)
 			print('------------------------------')
 			for contents in article:
 				content +=  str(contents)

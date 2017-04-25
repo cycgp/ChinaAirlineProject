@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 import json
+import time
 
 class CNASpider:
 	RTN_URLList = []
@@ -14,7 +15,7 @@ class CNASpider:
 
 	#Get real-time news url
 	def getRTNURL(self):
-		for page in range(1,2):
+		for page in range(0,20):
 			#Real-time news pages
 			URL = 'http://www.cna.com.tw/list/aall-'+str(page)+'.aspx'
 			self.RTN_URLList.append(URL)
@@ -22,7 +23,7 @@ class CNASpider:
 		for URL in self.RTN_URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
-			articles = soup.find(class_ = 'ARTICLE_List').findAll('li')
+			articles = soup.find(class_ = 'article_list').findAll('li')
 			for article in articles:
 				articleURL = 'http://www.cna.com.tw'+article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
@@ -40,11 +41,15 @@ class CNASpider:
 			content = ""
 			newsList = []
 			title = str(news.find('h1', {'itemprop':'headline'}).contents[0])
-			time = news.find('div', {'class':'update_times'}).find('p', {'class':'blue'}).text.split('：')[1]
+			Time = news.find('div', {'class':'update_times'}).find('p', {'class':'blue'}).text.split('：')[1]
 			article = news.find('div', {'class':'article_box'}).p.text
-			print('新聞標題 : ' + title)
+			if time.strftime('%Y/%m/%d', time.localtime()) not in Time:
+				continue
+			else:
+				pass
+			print('新聞標題 : ' + title.strip())
 			print('------------------------------')
-			print(time)
+			print(Time)
 			print('------------------------------')
 			for contents in article:
 				content +=  str(contents)
