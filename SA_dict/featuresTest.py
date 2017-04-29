@@ -166,7 +166,6 @@ if __name__ == "__main__":
             test = posFeatures[posLength:]+negFeatures[negLength:]#預測集(驗證集)(20%)
 
             data,tag = zip(*test)#分離測試集合的資料和標籤，便於驗證和測試
-            print(data)
             if j == 1:
                 print('\nn\tBernoulliNB\tMultinomiaNB\tSVC\t\tLinearSVC\tLogisticRegression')
             j = 2
