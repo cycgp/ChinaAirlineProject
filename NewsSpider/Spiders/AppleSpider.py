@@ -41,7 +41,7 @@ class AppleSpider:
 				inListURL = article.find('a').get('href')
 				articleURL = article.find('a').get('href') if 'http://www.appledaily.com.tw' in inListURL else 'http://www.appledaily.com.tw'+article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
-		return self.ARTICLE_List
+		return {'press':'apl', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
 	# 	pass
