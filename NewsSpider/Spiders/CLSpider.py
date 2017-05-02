@@ -5,11 +5,11 @@ import requests
 import json
 
 class CLSpider:
-	RTN_URLList = []
+	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.RTN_URLList = CLSpider.RTN_URLList
+		self.URLList = CLSpider.URLList
 		self.ARTICLE_List = CLSpider.ARTICLE_List
 		self.NEWS_Lists = CLSpider.NEWS_Lists
 
@@ -18,9 +18,9 @@ class CLSpider:
 		for page in range(0,2):
 			#Real-time news pages
 			URL = 'http://www.coolloud.org.tw/story?page='+str(page)
-			self.RTN_URLList.append(URL)
+			self.URLList.append(URL)
 		#Get articles url from real-time news pages
-		for URL in self.RTN_URLList:
+		for URL in self.URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.findAll('div', {'class':'field-content pc-style'})
@@ -35,7 +35,7 @@ class CLSpider:
 	#Get Content from article
 	def getContent(self):
 		for article in self.ARTICLE_List:
-			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			driver = webdriver.PhantomJS()
 			r = driver.get(article)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')

@@ -4,11 +4,11 @@ import requests
 import json
 
 class UDNSpider:
-	RTN_URLList = []
+	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.RTN_URLList = UDNSpider.RTN_URLList
+		self.URLList = UDNSpider.URLList
 		self.ARTICLE_List = UDNSpider.ARTICLE_List
 		self.NEWS_Lists = UDNSpider.NEWS_Lists
 
@@ -18,9 +18,9 @@ class UDNSpider:
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'https://udn.com/news/breaknews/1/99/'+str(page)+'#breaknews'
-			self.RTN_URLList.append(URL)
+			self.URLList.append(URL)
 		#Get articles url from real-time news pages
-		for URL in self.RTN_URLList:
+		for URL in self.URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find(id = 'breaknews_body').find_all('dt')

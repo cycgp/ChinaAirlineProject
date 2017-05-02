@@ -9,8 +9,5 @@ from Spiders.NTSpider import NTSpider
 from Spiders.TPNSpider import TPNSpider
 import pandas as pd
 
-a = TPNSpider()
-a.getRTNURL()
-newsList = a.getContent()
-df = pd.DataFrame(data=newsList, columns=['Title','Time','Content'])
-df.to_csv('newsList.csv', sep=',', encoding='utf-8', index=False)
+a = AppleSpider()
+a.getURL()

@@ -4,11 +4,11 @@ import requests
 import json
 
 class LTNSpider:
-	RTN_URLList = []
+	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.RTN_URLList = LTNSpider.RTN_URLList
+		self.URLList = LTNSpider.URLList
 		self.ARTICLE_List = LTNSpider.ARTICLE_List
 		self.NEWS_Lists = LTNSpider.NEWS_Lists
 
@@ -17,9 +17,9 @@ class LTNSpider:
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'http://news.ltn.com.tw/list/BreakingNews?page='+str(page)
-			self.RTN_URLList.append(URL)
+			self.URLList.append(URL)
 		#Get articles url from real-time news pages
-		for URL in self.RTN_URLList:
+		for URL in self.URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find_all('a', {'class' : 'picword'})

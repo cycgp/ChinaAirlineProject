@@ -4,11 +4,11 @@ import requests
 import json
 
 class TNLSpider:
-	RTN_URLList = []
+	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.RTN_URLList = TNLSpider.RTN_URLList
+		self.URLList = TNLSpider.URLList
 		self.ARTICLE_List = TNLSpider.ARTICLE_List
 		self.NEWS_Lists = TNLSpider.NEWS_Lists
 
@@ -17,9 +17,9 @@ class TNLSpider:
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'https://www.thenewslens.com/news?page='+str(page)
-			self.RTN_URLList.append(URL)
+			self.URLList.append(URL)
 		#Get articles url from real-time news pages
-		for URL in self.RTN_URLList:
+		for URL in self.URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find_all(class_ = 'info-box')

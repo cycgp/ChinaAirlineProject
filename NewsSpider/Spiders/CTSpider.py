@@ -4,11 +4,11 @@ import requests
 import json
 
 class CTSpider:
-	RTN_URLList = []
+	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.RTN_URLList = CTSpider.RTN_URLList
+		self.URLList = CTSpider.URLList
 		self.ARTICLE_List = CTSpider.ARTICLE_List
 		self.NEWS_Lists = CTSpider.NEWS_Lists
 
@@ -17,9 +17,9 @@ class CTSpider:
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'http://www.chinatimes.com/realtimenews?page='+str(page)
-			self.RTN_URLList.append(URL)
+			self.URLList.append(URL)
 		#Get articles url from real-time news pages
-		for URL in self.RTN_URLList:
+		for URL in self.URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find(class_ = 'listRight').findAll('h2')

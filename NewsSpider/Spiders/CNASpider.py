@@ -5,11 +5,11 @@ import json
 import time
 
 class CNASpider:
-	RTN_URLList = []
+	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.RTN_URLList = CNASpider.RTN_URLList
+		self.URLList = CNASpider.URLList
 		self.ARTICLE_List = CNASpider.ARTICLE_List
 		self.NEWS_Lists = CNASpider.NEWS_Lists
 
@@ -18,9 +18,9 @@ class CNASpider:
 		for page in range(0,20):
 			#Real-time news pages
 			URL = 'http://www.cna.com.tw/list/aall-'+str(page)+'.aspx'
-			self.RTN_URLList.append(URL)
+			self.URLList.append(URL)
 		#Get articles url from real-time news pages
-		for URL in self.RTN_URLList:
+		for URL in self.URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find(class_ = 'article_list').findAll('li')

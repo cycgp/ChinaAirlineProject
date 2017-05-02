@@ -7,17 +7,17 @@ import sys
 import re
 
 class AppleSpider:
-	RTN_URLList = []
+	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.RTN_URLList = AppleSpider.RTN_URLList
+		self.URLList = AppleSpider.URLList
 		self.ARTICLE_List = AppleSpider.ARTICLE_List
 		self.NEWS_Lists = AppleSpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
-		RTN_URLList = []
+	def getURL(self):
+		URLList = []
 		page = 1
 		state = True
 		while state:
@@ -29,9 +29,11 @@ class AppleSpider:
 			state = t.strftime('%y%m%d', t.localtime()) in soup
 			if state:
 				page += 1
-			self.RTN_URLList.append(URL)
+			else:
+				page -= 1
+			self.URLList.append(URL)
 		#Get articles url from real-time news pages
-		for URL in self.RTN_URLList:
+		for URL in self.URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find_all(class_ = 'rtddt')

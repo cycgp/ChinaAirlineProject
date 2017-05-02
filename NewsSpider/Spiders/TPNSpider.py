@@ -5,11 +5,11 @@ import requests
 import json
 
 class TPNSpider:
-	RTN_URLList = []
+	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.RTN_URLList = TPNSpider.RTN_URLList
+		self.URLList = TPNSpider.URLList
 		self.ARTICLE_List = TPNSpider.ARTICLE_List
 		self.NEWS_Lists = TPNSpider.NEWS_Lists
 
@@ -19,10 +19,10 @@ class TPNSpider:
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD#page-'+str(page)
-			self.RTN_URLList.append(URL)
+			self.URLList.append(URL)
 		#Get articles url from real-time news pages
-		for URL in self.RTN_URLList:
-			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+		for URL in self.URLList:
+			driver = webdriver.PhantomJS()
 			r = driver.get(URL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
