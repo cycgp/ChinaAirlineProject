@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs4
 from selenium import webdriver
 import requests
 import json
+import time as t
 
 class TPNSpider:
 	URLList = []
@@ -15,14 +16,28 @@ class TPNSpider:
 
 	#Get real-time news url
 	def getURL(self):
-		i = 0
-		for page in range(1,2):
+		page = 1
+		state = True
+		while state:
 			#Real-time news pages
 			URL = 'http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD#page-'+str(page)
+			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			r = driver.get(URL)
+			pageSource = driver.page_source
+			soup = bs4(pageSource, 'html.parser')
+			timeList = soup.findAll('div', {'class':'date'})
+			for time in timeList:
+				timeList[timeList.index(time)] = time.text.split(' ')[1].replace('-','')
+			state = t.strftime('%y%m%d', t.localtime()) in timeList
+			if state:
+				page += 1
+					
+			else:
+				page -= 1
 			self.URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			driver = webdriver.PhantomJS()
+			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
 			r = driver.get(URL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -33,7 +48,7 @@ class TPNSpider:
 					self.ARTICLE_List.append(articleURL)
 				except:
 					pass
-		return self.ARTICLE_List
+		return {'press':'tpn', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
 	# 	pass
@@ -47,8 +62,14 @@ class TPNSpider:
 			content = ""
 			newsList = []
 			title = str(news.find('h1').contents[0])
-			time = news.find(class_ = 'date').text
+			time = news.find(class_ = 'date').text.split(' ')[0].replace('-','/')
 			article = news.find('div', {'id':'newscontent'}).findAll('p')
+
+			if t.strftime('%Y/%m/%d', t.localtime()) not in time:
+				continue
+			else:
+				pass
+
 			print('新聞標題 : ' + title)
 			print('------------------------------')
 			print(time)
