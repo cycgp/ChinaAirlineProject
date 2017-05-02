@@ -5,7 +5,7 @@ This is a project in China Airline to do text mining and sentiment analysis on [
 
 #### News List
 
-- [自由時報](http://news.ltn.com.tw/list/BreakingNews)(Liberty Time)
+- [自由時報](http://news.ltn.com.tw/list/BreakingNews)(Liberty Time) 
 - [蘋果日報](http://www.appledaily.com.tw/realtimenews/section/new/)(Apple Daily)
 - [聯合新聞網](https://udn.com/news/breaknews/1)(UDN)
 - [中時電子報](http://www.chinatimes.com/realtimenews)(China Times)
@@ -15,7 +15,7 @@ This is a project in China Airline to do text mining and sentiment analysis on [
 - [民報](http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD)(Taiwan People News)
 - [風傳媒](http://www.storm.mg/articles)(Storm)
 - [新頭殼](https://newtalk.tw/news/summary/today)(New Talk)
-- [苦勞網](http://www.coolloud.org.tw/story)(Cool Loud)
+- [苦勞網](http://www.coolloud.org.tw/story)(Cool Loud) *
 
 ## Trip Advisor
 The steps of do text mining and sentiment analysis on Trip Advisor.
