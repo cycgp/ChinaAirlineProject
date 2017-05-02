@@ -1,10 +1,10 @@
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
-import time
+import time as t
 import requests
 import json
 import sys
-import timeout_decorator
+import re
 
 class AppleSpider:
 	RTN_URLList = []
@@ -17,9 +17,18 @@ class AppleSpider:
 
 	#Get real-time news url
 	def getRTNURL(self):
-		for page in range(0,40):
+		RTN_URLList = []
+		page = 1
+		state = True
+		while state:
 			#Real-time news pages
 			URL = 'http://www.appledaily.com.tw/realtimenews/section/new/'+str(page)
+			r = requests.get(URL)
+			soup = bs4(r.text, 'html.parser')
+			soup = soup.find('time').text.replace(' / ','')
+			state = t.strftime('%y%m%d', t.localtime()) in soup
+			if state:
+				page += 1
 			self.RTN_URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.RTN_URLList:
@@ -37,28 +46,31 @@ class AppleSpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'abdominis')
 			content = ""
-			newsList = []
 			title = news.find('h1', {'id':'h1'}).contents[0]
-			Time = news.find('time').text.split('日')[1]
-			datetime = news.find('time')['datetime'].strip('/')
+			time = re.split('年|月|日|:', news.find('time').text)#time to list
+			timeInNews = ':'.join(time[3:])
+			datetime = '/'.join(time[:3])
 			article = news.find('p', {'id':'summary'}).findAll(text=True)
-			if time.strftime('%Y/%m/%d', time.localtime()) not in datetime:
+
+			#filter fault news
+			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
-			print('新聞標題 : ' + title)
-			print('------------------------------')
-			print(datetime + ' ' + Time)
-			print('------------------------------')
+
+			articleID = ''.join(time)+'0'
+			print(articleID)
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'apl'+articleID
 			for contents in article:
 				content +=  str(contents)
-			print(content)
-			print('------------------------------')
-
-			self.NEWS_Lists.append([title,time,content])
+			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists
