@@ -4,7 +4,10 @@ from Spiders.LTNSpider import LTNSpider
 from Spiders.TNLSpider import TNLSpider
 from Spiders.CTSpider import CTSpider
 from Spiders.StormSpider import StormSpider
+import pandas as pd
 
 a = AppleSpider()
 a.getRTNURL()
-a.getContent()
+newsList = a.getContent()
+df = pd.DataFrame(data=newsList, columns=['News ID', 'Title','Time','Content'])
+df.to_csv('newsList.csv', sep=',', encoding='utf-8', index=False)
