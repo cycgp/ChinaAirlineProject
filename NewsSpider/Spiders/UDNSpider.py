@@ -1,7 +1,9 @@
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
+from selenium import webdriver
 import requests
 import json
+import time as t
 
 class UDNSpider:
 	URLList = []
@@ -14,11 +16,22 @@ class UDNSpider:
 
 	#Get real-time news url
 	def getURL(self):
-		i = 0
-		for page in range(1,2):
+		page = 1
+		state = True
+		while state:
 			#Real-time news pages
 			URL = 'https://udn.com/news/breaknews/1/99/'+str(page)+'#breaknews'
-			self.URLList.append(URL)
+			r = requests.get(URL)
+			soup = bs4(r.text, 'html.parser')
+			timeList = soup.findAll(class_ = 'dt')
+			for time in timeList:
+				timeList[timeList.index(time)] = time.text.split(' ')[0]
+			state = t.strftime('%m-%d', t.localtime()) in timeList
+			if state:
+				page += 1
+				self.URLList.append(URL)
+			else:
+				page -= 1
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
 			r = requests.get(URL)
@@ -27,7 +40,7 @@ class UDNSpider:
 			for article in articles:
 				articleURL = 'https://udn.com/'+article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
-		return self.ARTICLE_List
+		return {'press':'udn', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
 	# 	pass
@@ -35,21 +48,27 @@ class UDNSpider:
 	#Get Content from article
 	def getContent(self):
 		for article in self.ARTICLE_List:
-			session = dryscrape.Session()
-			session.visit(article)
-			response = session.body()
-			soup = bs4(response, 'html.parser')
+			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			r = driver.get(article)
+			pageSource = driver.page_source
+			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(id = 'story_body_content')
 			content = ""
 			newsList = []
 			title = str(news.find('h1', {'id':'story_art_title'}).contents[0])
 			time = str(news.find('div', {'class':'story_bady_info_author'}))
 			timeSoup = bs4(time, 'html.parser')
-			timeSoup.span.decompose()
+			timeSoupS = timeSoup.div.text.split(' ')[0].replace('-','/')
 			article = news.findAll('p')
+
+			if t.strftime('%Y/%m/%d', t.localtime()) not in timeSoupS:
+				continue
+			else:
+				pass
+
 			print('新聞標題 : ' + title)
 			print('------------------------------')
-			print(timeSoup.div.text)
+			print(timeSoup.text)
 			print('------------------------------')
 			for contents in article:
 				try:
