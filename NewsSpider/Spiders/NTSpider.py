@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs4
 from selenium import webdriver
 import requests
 import json
-import time
+import time as t
 import re
 
 class NTSpider:
@@ -17,7 +17,7 @@ class NTSpider:
 
 	#Get real-time news url
 	def getURL(self):
-		a = time.strftime('%Y-%m-%d', time.localtime())
+		a = t.strftime('%Y-%m-%d', t.localtime())
 		#Real-time news pages
 		URL = 'https://newtalk.tw/news/summary/'+str(a)
 		self.URLList.append(URL)
@@ -29,7 +29,7 @@ class NTSpider:
 			for article in articles:
 				articleURL = article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
-		return self.ARTICLE_List
+		return {'press':'ntk', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
 	# 	pass
