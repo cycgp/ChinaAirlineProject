@@ -1,9 +1,10 @@
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
+from selenium import webdriver
 import requests
 import json
 import time
-import dryscrape
+import re
 
 class NTSpider:
 	RTN_URLList = []
@@ -36,15 +37,15 @@ class NTSpider:
 	#Get Content from article
 	def getContent(self):
 		for article in self.ARTICLE_List:
-			session = dryscrape.Session()
-			session.visit(article)
-			response = session.body()
-			soup = bs4(response, 'html.parser')
+			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			r = driver.get(article)
+			pageSource = driver.page_source
+			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(id = 'left_column')
 			content = ""
 			newsList = []
-			title = str(news.find(class_ = 'content_title').contents[0])
-			time = news.find(class_='content_date').text.split()[1]
+			title = news.find(class_ = 'content_title').text
+			time = '/'.join(re.split('發布 |[.]| [|] |[:]|   [\n]', news.find(class_='content_date').text)[1:-1])
 			article = news.findAll('p')
 			print('新聞標題 : ' + title)
 			print('------------------------------')

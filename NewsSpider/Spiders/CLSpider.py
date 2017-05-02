@@ -1,8 +1,8 @@
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
+from selenium import webdriver
 import requests
 import json
-import dryscrape
 
 class CLSpider:
 	RTN_URLList = []
@@ -35,10 +35,10 @@ class CLSpider:
 	#Get Content from article
 	def getContent(self):
 		for article in self.ARTICLE_List:
-			session = dryscrape.Session()
-			session.visit(article)
-			response = session.body()
-			soup = bs4(response, 'html.parser')
+			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			r = driver.get(article)
+			pageSource = driver.page_source
+			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(class_ = 'main-container')
 			content = ""
 			newsList = []

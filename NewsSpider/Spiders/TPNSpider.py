@@ -1,8 +1,8 @@
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
+from selenium import webdriver
 import requests
 import json
-import dryscrape
 
 class TPNSpider:
 	RTN_URLList = []
@@ -22,17 +22,14 @@ class TPNSpider:
 			self.RTN_URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.RTN_URLList:
-			session = dryscrape.Session(base_url=URL)
-			session.visit('')
-			response = session.body()
-			soup = bs4(response, 'html.parser')
-			articles = soup.findAll('div',{'class':'list_realtime'})
+			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			r = driver.get(URL)
+			pageSource = driver.page_source
+			soup = bs4(pageSource, 'html.parser')
+			articles = soup.find('div', {'id':'area_list'}).findAll('a')
 			for article in articles:
 				try:
-					articleURL = 'http://www.peoplenews.tw'+ article.findAll('a')[0].get('href')
-					print(articleURL)
-					print('--'+ str(i) + '--')
-					i += 1
+					articleURL = 'http://www.peoplenews.tw'+ article.get('href')
 					self.ARTICLE_List.append(articleURL)
 				except:
 					pass
