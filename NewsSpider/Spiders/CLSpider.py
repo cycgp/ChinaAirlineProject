@@ -14,7 +14,7 @@ class CLSpider:
 		self.NEWS_Lists = CLSpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
+	def getURL(self):
 		for page in range(0,2):
 			#Real-time news pages
 			URL = 'http://www.coolloud.org.tw/story?page='+str(page)

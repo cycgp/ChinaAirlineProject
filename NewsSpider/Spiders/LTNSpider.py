@@ -13,7 +13,7 @@ class LTNSpider:
 		self.NEWS_Lists = LTNSpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
+	def getURL(self):
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'http://news.ltn.com.tw/list/BreakingNews?page='+str(page)

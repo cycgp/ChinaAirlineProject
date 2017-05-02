@@ -13,7 +13,7 @@ class CTSpider:
 		self.NEWS_Lists = CTSpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
+	def getURL(self):
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'http://www.chinatimes.com/realtimenews?page='+str(page)

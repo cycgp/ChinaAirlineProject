@@ -13,7 +13,7 @@ class StormSpider:
 		self.NEWS_Lists = StormSpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
+	def getURL(self):
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'http://www.storm.mg/articles/'+str(page)

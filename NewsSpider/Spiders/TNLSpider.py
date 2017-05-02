@@ -13,7 +13,7 @@ class TNLSpider:
 		self.NEWS_Lists = TNLSpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
+	def getURL(self):
 		for page in range(1,2):
 			#Real-time news pages
 			URL = 'https://www.thenewslens.com/news?page='+str(page)

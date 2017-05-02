@@ -14,7 +14,7 @@ class CNASpider:
 		self.NEWS_Lists = CNASpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
+	def getURL(self):
 		for page in range(0,20):
 			#Real-time news pages
 			URL = 'http://www.cna.com.tw/list/aall-'+str(page)+'.aspx'

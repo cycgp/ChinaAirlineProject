@@ -16,7 +16,7 @@ class NTSpider:
 		self.NEWS_Lists = NTSpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
+	def getURL(self):
 		a = time.strftime('%Y-%m-%d', time.localtime())
 		#Real-time news pages
 		URL = 'https://newtalk.tw/news/summary/'+str(a)

@@ -13,7 +13,7 @@ class UDNSpider:
 		self.NEWS_Lists = UDNSpider.NEWS_Lists
 
 	#Get real-time news url
-	def getRTNURL(self):
+	def getURL(self):
 		i = 0
 		for page in range(1,2):
 			#Real-time news pages
