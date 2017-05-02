@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 import json
-import time
+import time as t
 
 class CNASpider:
 	URLList = []
@@ -12,13 +12,24 @@ class CNASpider:
 		self.URLList = CNASpider.URLList
 		self.ARTICLE_List = CNASpider.ARTICLE_List
 		self.NEWS_Lists = CNASpider.NEWS_Lists
-
 	#Get real-time news url
 	def getURL(self):
-		for page in range(0,20):
+		page = 1
+		state = True
+		while state:
 			#Real-time news pages
 			URL = 'http://www.cna.com.tw/list/aall-'+str(page)+'.aspx'
-			self.URLList.append(URL)
+			r = requests.get(URL)
+			soup = bs4(r.text, 'html.parser')
+			timeList = soup.find('div', {'class':'article_list'}).findAll('span')
+			for time in timeList:
+				timeList[timeList.index(time)] = time.text.split(' ')[0]
+			state = t.strftime('%Y/%m/%d', t.localtime()) in timeList
+			if state:
+				page += 1
+				self.URLList.append(URL)
+			else:
+				page -= 1
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
 			r = requests.get(URL)
@@ -27,7 +38,7 @@ class CNASpider:
 			for article in articles:
 				articleURL = 'http://www.cna.com.tw'+article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
-		return self.ARTICLE_List
+		return {'press':'cna', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
 	# 	pass
@@ -41,15 +52,15 @@ class CNASpider:
 			content = ""
 			newsList = []
 			title = str(news.find('h1', {'itemprop':'headline'}).contents[0])
-			Time = news.find('div', {'class':'update_times'}).find('p', {'class':'blue'}).text.split('：')[1]
+			time = news.find('div', {'class':'update_times'}).find('p', {'class':'blue'}).text.split('：')[1]
 			article = news.find('div', {'class':'article_box'}).p.text
-			if time.strftime('%Y/%m/%d', time.localtime()) not in Time:
+			if t.strftime('%Y/%m/%d', t.localtime()) not in time:
 				continue
 			else:
 				pass
 			print('新聞標題 : ' + title.strip())
 			print('------------------------------')
-			print(Time)
+			print(time)
 			print('------------------------------')
 			for contents in article:
 				content +=  str(contents)

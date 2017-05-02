@@ -16,7 +16,7 @@ class CLSpider:
 
 	#Get real-time news url
 	def getURL(self):
-		page = 1
+		page = 0
 		state = True
 		while state:
 			#Real-time news pages
@@ -40,7 +40,6 @@ class CLSpider:
 			for article in articles:
 				articleURL = 'http://www.coolloud.org.tw'+ article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
-		print(self.ARTICLE_List)
 		return {'press':'cld', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
