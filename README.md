@@ -12,9 +12,9 @@ This is a project in China Airline to do text mining and sentiment analysis on [
 - [中央通訊社](http://www.cna.com.tw/list/aall-1.aspx)(CNA)
 - [關鍵評論網](https://www.thenewslens.com/news)(The News Lens)
 - [東森新聞雲](http://www.ettoday.net/news/news-list.htm)(ETtoday)
-- [民報](http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD)(Taiwan People News)
+- [民報](http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD)(Taiwan People News) *
 - [風傳媒](http://www.storm.mg/articles)(Storm)
-- [新頭殼](https://newtalk.tw/news/summary/today)(New Talk)
+- [新頭殼](https://newtalk.tw/news/summary/today)(New Talk) *
 - [苦勞網](http://www.coolloud.org.tw/story)(Cool Loud) *
 
 ## Trip Advisor
