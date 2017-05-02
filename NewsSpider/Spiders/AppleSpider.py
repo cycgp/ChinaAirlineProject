@@ -17,7 +17,6 @@ class AppleSpider:
 
 	#Get real-time news url
 	def getURL(self):
-		URLList = []
 		page = 1
 		state = True
 		while state:
@@ -29,9 +28,9 @@ class AppleSpider:
 			state = t.strftime('%y%m%d', t.localtime()) in soup
 			if state:
 				page += 1
+				self.URLList.append(URL)
 			else:
 				page -= 1
-			self.URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
 			r = requests.get(URL)

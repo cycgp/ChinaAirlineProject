@@ -7,7 +7,9 @@ from Spiders.StormSpider import StormSpider
 from Spiders.CLSpider import CLSpider
 from Spiders.NTSpider import NTSpider
 from Spiders.TPNSpider import TPNSpider
+from Spiders.CLSpider import CLSpider
 import pandas as pd
 
-a = AppleSpider()
+a = CLSpider()
 a.getURL()
+a.getContent()
