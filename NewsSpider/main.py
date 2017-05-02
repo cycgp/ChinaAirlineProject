@@ -10,6 +10,6 @@ from Spiders.TPNSpider import TPNSpider
 from Spiders.CLSpider import CLSpider
 import pandas as pd
 
-a = CNASpider()
+a = CTSpider()
 a.getURL()
 a.getContent()
