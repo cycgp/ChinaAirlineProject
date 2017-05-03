@@ -48,6 +48,7 @@ class TNLSpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
@@ -56,6 +57,7 @@ class TNLSpider:
 			newsList = []
 			title = str(news.find('h1', {'class':'article-title'}).header.contents[0])
 			time = news.find(class_ = 'article-info').text.split(',')[0].replace(' ','')
+			datetime = ''.join(re.split('/',time))[:3]
 			article = soup.find(class_ = 'article-content').findAll('p')
 
 			if t.strftime('%Y/%m/%d', t.localtime()) not in time:
@@ -71,5 +73,14 @@ class TNLSpider:
 				content +=  str(contents.text)
 			print(content)
 			print('------------------------------')
-			self.NEWS_Lists.append([title,time,content])
+
+			articleID = ''.join(time)+'0'
+			print(articleID)
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'tnl'+articleID
+			for contents in article:
+				content +=  str(contents)
+			self.NEWS_Lists.append([articleID, title,datetime,content])
 		return self.NEWS_Lists

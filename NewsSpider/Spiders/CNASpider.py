@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 import json
+import re
 import time as t
 
 class CNASpider:
@@ -45,6 +46,7 @@ class CNASpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
@@ -52,19 +54,24 @@ class CNASpider:
 			content = ""
 			newsList = []
 			title = str(news.find('h1', {'itemprop':'headline'}).contents[0])
-			time = news.find('div', {'class':'update_times'}).find('p', {'class':'blue'}).text.split('：')[1]
+			time = re.split('最新更新：| |/|:', news.find('div', {'class':'update_times'}).find('p', {'class':'blue'}).text)
+			times = time
+			datetime = '/'.join(time[1:4])
+			timeInNews = ':'.join(time[4:])
 			article = news.find('div', {'class':'article_box'}).p.text
-			if t.strftime('%Y/%m/%d', t.localtime()) not in time:
+
+			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
-			print('新聞標題 : ' + title.strip())
-			print('------------------------------')
-			print(time)
-			print('------------------------------')
+
+			articleID = ''.join(time[1:])+'0'
+			print(articleID)
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'cna'+articleID
 			for contents in article:
 				content +=  str(contents)
-			print(content)
-			print('------------------------------')
-			self.NEWS_Lists.append([title,time,content])
+			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists

@@ -48,6 +48,7 @@ class CTSpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
@@ -55,21 +56,23 @@ class CTSpider:
 			content = ""
 			newsList = []
 			title = str(news.find('h1').contents[0])
-			time = re.split('年|月|日|:', news.find('time').text)#time to list
-			timeInNews = ':'.join(time[3:])
+			time = re.split('年|月|日|:| ', news.find('time').text)#time to list
+			timeInNews = ':'.join(time[4:])
 			datetime = '/'.join(time[:3])
 			article = news.findAll('p')
+
 			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
-			print('新聞標題 : ' + title)
-			print('------------------------------')
-			print(datetime + ' ' + timeInNews)
-			print('------------------------------')
+
+			articleID = ''.join(time)+'0'
+			print(articleID)
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'cnt'+articleID
 			for contents in article:
 				content +=  str(contents.text)
-			print(content)
-			print('------------------------------')
-			self.NEWS_Lists.append([title,time,content])
+			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists

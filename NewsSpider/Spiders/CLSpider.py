@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs4
 from selenium import webdriver
 import requests
 import json
+import re
 import time as t
 
 class CLSpider:
@@ -32,6 +33,7 @@ class CLSpider:
 				self.URLList.append(URL)
 			else:
 				page -= 1
+			
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
 			r = requests.get(URL)
@@ -47,30 +49,42 @@ class CLSpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
-			driver = webdriver.PhantomJS()
+			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
 			r = driver.get(article)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(class_ = 'main-container')
 			content = ""
 			title = str(news.find('p').contents[0])
-			time = news.find(class_ ='date-display-single')
+			time = re.split('/', news.find(class_ ='date-display-single').text)
+			datetime = '/'.join(time[:3])
 			article = news.find(class_ = 'node node-post node-promoted clearfix').findAll('p')
 
 			#filter fault news
-			if t.strftime('%Y/%m/%d', t.localtime()) not in time:
+			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
 
+
 			print('新聞標題 : ' + title)
 			print('------------------------------')
-			print(time.text)
+			print(datetime)
 			print('------------------------------')
 			for contents in article:
 				content +=  str(contents.text)
 			print(content)
 			print('------------------------------')
-			self.NEWS_Lists.append([title,time,content])
+
+			articleID = ''.join(time)+'0'
+			print(articleID)
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'cld'+articleID
+			for contents in article:
+				content +=  str(contents)
+			self.NEWS_Lists.append([articleID,title,datetime,content])
 		return self.NEWS_Lists

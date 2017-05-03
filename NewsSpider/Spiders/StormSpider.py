@@ -22,10 +22,10 @@ class StormSpider:
 			URL = 'http://www.storm.mg/articles/'+str(page)
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
-			timeList = soup.findAll(class_ = 'dt')
+			timeList = soup.findAll(class_ = 'main_date')
 			for time in timeList:
-				timeList[timeList.index(time)] = time.text.split('')[0].replace('年|月|日','')
-			state = t.strftime('%m-%d', t.localtime()) in timeList
+				timeList[timeList.index(time)] = time.text.replace('年','/').replace('月','/').replace('日','').split(' ')[0]
+			state = t.strftime('%y/%m/%d', t.localtime()) in timeList
 			if state:
 				page += 1
 				self.URLList.append(URL)
@@ -38,7 +38,6 @@ class StormSpider:
 			articles = soup.findAll(class_ = 'main_content')
 			for article in articles:
 				articleURL = 'http://www.storm.mg'+ article.find('p').find('a').get('href')
-				print(articleURL)
 				self.ARTICLE_List.append(articleURL)
 		return {'press':'stn', 'URLList':self.ARTICLE_List}
 
@@ -54,21 +53,33 @@ class StormSpider:
 			content = ""
 			newsList = []
 			title = str(news.find('h1', {'class':'title'}).contents[0])
-			time = news.find(class_='date').text.split('風傳媒')[0].replace('年|月|日','')
+			time = re.split('年|月|日| |:|風傳媒',news.find(class_='date').text)
+			print(time)
+			datetime = '/'.join(time[:3])
+			timeInNews = ':'.join(time[3:5])
 			article = news.article.findAll('p')
 
-			if t.strftime('%Y/%m/%d', t.localtime()) not in time:
+			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
 
 			print('新聞標題 : ' + title.strip())
 			print('------------------------------')
-			print(time)
+			print(datetime + ' ' + timeInNews)
 			print('------------------------------')
 			for contents in article:
 				content +=  str(contents.text)
 			print(content)
 			print('------------------------------')
-			self.NEWS_Lists.append([title,time,content])
+
+			articleID = ''.join(time)+'0'
+			print(articleID)
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'stn'+articleID
+			for contents in article:
+				content +=  str(contents)
+			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists
