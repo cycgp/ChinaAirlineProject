@@ -49,24 +49,12 @@ class NTSpider:
 			time = '/'.join(re.split('發布 |[.]| [|] |[:]|   [\n]', news.find(class_='content_date').text)[1:-1])
 			datetime ='/'.join(re.split('/', time))[:10]
 			timeInNews = ':'.join(re.split('/', time))[11:16]
-			print(datetime)
-			print(timeInNews)
 			article = news.findAll('p')
 
 			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
-
-			print('新聞標題 : ' + title)
-			print('------------------------------')
-			print(datetime + ' ' + timeInNews)
-			print('------------------------------')
-			for contents in article:
-				content +=  str(contents.text)
-			content = content.split('（喜歡這條新聞，給新頭殼按個讚！）')[0]
-			print(content)
-			print('------------------------------')
 
 			articleID = ''.join(re.split('/', time))[:12]+'0'
 			print(articleID)

@@ -4,6 +4,7 @@ from selenium import webdriver
 import requests
 import json
 import time as t
+import re
 
 class TPNSpider:
 	URLList = []
@@ -27,14 +28,14 @@ class TPNSpider:
 			soup = bs4(pageSource, 'html.parser')
 			timeList = soup.findAll('div', {'class':'date'})
 			for time in timeList:
-				timeList[timeList.index(time)] = time.text.split(' ')[1].replace('-','')
-			state = t.strftime('%y%m%d', t.localtime()) in timeList
+				timeList[timeList.index(time)] = (time.text).split(' ')[1].replace('-','')
+			state = t.strftime('%Y%m%d', t.localtime()) in timeList
 			if state:
 				page += 1
-					
+				self.URLList.append(URL)	
 			else:
 				page -= 1
-			self.URLList.append(URL)
+			
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
 			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
@@ -55,6 +56,7 @@ class TPNSpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
@@ -62,21 +64,35 @@ class TPNSpider:
 			content = ""
 			newsList = []
 			title = str(news.find('h1').contents[0])
-			time = news.find(class_ = 'date').text.split(' ')[0].replace('-','/')
+			time = re.split('-| |:', news.find(class_ = 'date').text)
+			datetime = '/'.join(time[:3])
+			timeInNews = ':'.join(time[3:])
+			print(time)
+			print(datetime)
+			print(timeInNews)
 			article = news.find('div', {'id':'newscontent'}).findAll('p')
 
-			if t.strftime('%Y/%m/%d', t.localtime()) not in time:
+			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
 
 			print('新聞標題 : ' + title)
 			print('------------------------------')
-			print(time)
+			print(datetime + ' ' + timeInNews)
 			print('------------------------------')
 			for contents in article:
 			    content +=  str(contents.text)
 			print(content)
 			print('------------------------------')
-			self.NEWS_Lists.append([title,time,content])
+
+			articleID = ''.join(time)+'0'
+			print(articleID)
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'tpn'+articleID
+			for contents in article:
+				content +=  str(contents)
+			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists

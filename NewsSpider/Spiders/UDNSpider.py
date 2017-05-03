@@ -47,6 +47,7 @@ class UDNSpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
 			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
 			r = driver.get(article)
@@ -56,7 +57,7 @@ class UDNSpider:
 			content = ""
 			newsList = []
 			title = str(news.find('h1', {'id':'story_art_title'}).contents[0])
-			time = str(news.find('div', {'class':'story_bady_info_author'}))
+			time = news.find('div', {'class':'story_bady_info_author'}).text
 			timeSoup = bs4(time, 'html.parser')
 			timeSoupS = timeSoup.div.text.split(' ')[0].replace('-','/')
 			article = news.findAll('p')
@@ -77,5 +78,14 @@ class UDNSpider:
 					pass
 			print(content)
 			print('------------------------------')
-			self.NEWS_Lists.append([title,time,content])
+
+			articleID = ''.join(time)+'0'
+			print(articleID)
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'tpn'+articleID
+			for contents in article:
+				content +=  str(contents)
+			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists

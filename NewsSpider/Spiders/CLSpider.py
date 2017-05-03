@@ -27,7 +27,7 @@ class CLSpider:
 			timeList = soup.findAll('span', {'class':'date-display-single'})
 			for time in timeList:
 				timeList[timeList.index(time)] = time.text
-			state = t.strftime('%y%m%d', t.localtime()) in timeList
+			state = t.strftime('%Y/%m/%d', t.localtime()) in timeList
 			if state:
 				page += 1
 				self.URLList.append(URL)
@@ -60,6 +60,7 @@ class CLSpider:
 			title = str(news.find('p').contents[0])
 			time = re.split('/', news.find(class_ ='date-display-single').text)
 			datetime = '/'.join(time[:3])
+			print(datetime)
 			article = news.find(class_ = 'node node-post node-promoted clearfix').findAll('p')
 
 			#filter fault news
@@ -67,7 +68,6 @@ class CLSpider:
 				continue
 			else:
 				pass
-
 
 			print('新聞標題 : ' + title)
 			print('------------------------------')

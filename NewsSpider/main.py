@@ -10,7 +10,7 @@ from Spiders.TPNSpider import TPNSpider
 from Spiders.UDNSpider import UDNSpider
 import pandas as pd
 
-a = TNLSpider()
+a = UDNSpider()
 a.getURL()
 a.getContent()
 

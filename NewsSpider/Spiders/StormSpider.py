@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 import json
+import re
 import time as t
 
 class StormSpider:
@@ -25,7 +26,7 @@ class StormSpider:
 			timeList = soup.findAll(class_ = 'main_date')
 			for time in timeList:
 				timeList[timeList.index(time)] = time.text.replace('年','/').replace('月','/').replace('日','').split(' ')[0]
-			state = t.strftime('%y/%m/%d', t.localtime()) in timeList
+			state = t.strftime('%Y/%m/%d', t.localtime()) in timeList
 			if state:
 				page += 1
 				self.URLList.append(URL)
@@ -46,6 +47,7 @@ class StormSpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
