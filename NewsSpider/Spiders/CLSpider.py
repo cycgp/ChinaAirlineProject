@@ -27,13 +27,16 @@ class CLSpider:
 			timeList = soup.findAll('span', {'class':'date-display-single'})
 			for time in timeList:
 				timeList[timeList.index(time)] = time.text
+			print(URL)
+			print(timeList)
+			timeList = timeList[:-5]#filter hot news
 			state = t.strftime('%Y/%m/%d', t.localtime()) in timeList
 			if state:
 				page += 1
 				self.URLList.append(URL)
 			else:
 				page -= 1
-			
+
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
 			r = requests.get(URL)
@@ -51,16 +54,15 @@ class CLSpider:
 	def getContent(self):
 		articleIDList = []
 		for article in self.ARTICLE_List:
-			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			driver = webdriver.PhantomJS()
 			r = driver.get(article)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(class_ = 'main-container')
 			content = ""
-			title = str(news.find('p').contents[0])
+			title = str(news.find('p').text)
 			time = re.split('/', news.find(class_ ='date-display-single').text)
-			datetime = '/'.join(time[:3])
-			print(datetime)
+			datetime = '/'.join(time[:3])+' 00:00'
 			article = news.find(class_ = 'node node-post node-promoted clearfix').findAll('p')
 
 			#filter fault news
@@ -74,17 +76,16 @@ class CLSpider:
 			print(datetime)
 			print('------------------------------')
 			for contents in article:
-				content +=  str(contents.text)
+				content +=  contents.text
 			print(content)
 			print('------------------------------')
 
-			articleID = ''.join(time)+'0'
-			print(articleID)
+			articleID = ''.join(time)+'00000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'cld'+articleID
 			for contents in article:
-				content +=  str(contents)
+				content +=  contents.text
 			self.NEWS_Lists.append([articleID,title,datetime,content])
 		return self.NEWS_Lists

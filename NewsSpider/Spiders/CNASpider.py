@@ -22,9 +22,12 @@ class CNASpider:
 			URL = 'http://www.cna.com.tw/list/aall-'+str(page)+'.aspx'
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
+			if  soup.find('div', {'class':'article_list'}) is None:
+				break
 			timeList = soup.find('div', {'class':'article_list'}).findAll('span')
 			for time in timeList:
 				timeList[timeList.index(time)] = time.text.split(' ')[0]
+			print(timeList)
 			state = t.strftime('%Y/%m/%d', t.localtime()) in timeList
 			if state:
 				page += 1
@@ -52,10 +55,9 @@ class CNASpider:
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'news_article')
 			content = ""
-			newsList = []
-			title = str(news.find('h1', {'itemprop':'headline'}).contents[0])
-			time = re.split('最新更新：| |/|:', news.find('div', {'class':'update_times'}).find('p', {'class':'blue'}).text)
-			times = time
+			title = news.find('h1').contents[0]
+			print(title.replace(' ',''))
+			time = re.split('發稿時間：| |/|:', news.find('div', {'class':'update_times'}).find('p').text)
 			datetime = '/'.join(time[1:4])
 			timeInNews = ':'.join(time[4:])
 			article = news.find('div', {'class':'article_box'}).p.text
