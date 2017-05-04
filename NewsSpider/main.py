@@ -10,7 +10,7 @@ from Spiders.TPNSpider import TPNSpider
 from Spiders.UDNSpider import UDNSpider
 import pandas as pd
 
-a = CNASpider()
+a = LTNSpider()
 a.getURL()
 newsList = a.getContent()
 df = pd.DataFrame(data=newsList, columns=['News ID', 'Title','Time','Content'])

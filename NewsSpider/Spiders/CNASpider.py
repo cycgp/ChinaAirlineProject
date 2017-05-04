@@ -27,7 +27,6 @@ class CNASpider:
 			timeList = soup.find('div', {'class':'article_list'}).findAll('span')
 			for time in timeList:
 				timeList[timeList.index(time)] = time.text.split(' ')[0]
-			print(timeList)
 			state = t.strftime('%Y/%m/%d', t.localtime()) in timeList
 			if state:
 				page += 1
@@ -55,8 +54,7 @@ class CNASpider:
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'news_article')
 			content = ""
-			title = news.find('h1').contents[0]
-			print(title.replace(' ',''))
+			title = news.find('h1').text.replace('\r\n        ','')
 			time = re.split('發稿時間：| |/|:', news.find('div', {'class':'update_times'}).find('p').text)
 			datetime = '/'.join(time[1:4])
 			timeInNews = ':'.join(time[4:])
@@ -68,7 +66,6 @@ class CNASpider:
 				pass
 
 			articleID = ''.join(time[1:])+'0'
-			print(articleID)
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)

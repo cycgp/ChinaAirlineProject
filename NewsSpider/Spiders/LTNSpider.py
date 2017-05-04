@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs4
 import requests
 import json
 import time as t
+import re
 
 class LTNSpider:
 	URLList = []
@@ -47,6 +48,7 @@ class LTNSpider:
 
 	#Get Content from article
 	def getContent(self):
+		articleIDList = []
 		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
@@ -72,13 +74,17 @@ class LTNSpider:
 				continue
 			else:
 				pass
-			print('新聞標題 : ' + title)
-			print('------------------------------')
-			print(time)
-			print('------------------------------')
+
 			for contents in article:
 				content +=  str(contents.text)
-			print(content)
-			print('------------------------------')
-			self.NEWS_Lists.append([title,time,content])
+
+			time = re.split('-|\xa0\xa0|:', time)
+			datetime = '/'.join(time[:3])
+			timeInNews = ':'.join(time[3:])
+			articleID = ''.join(time)+'0'
+			while articleID in articleIDList:
+				articleID = str(int(articleID)+1)
+			articleIDList.append(articleID)
+			articleID = 'ltn'+articleID
+			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists
