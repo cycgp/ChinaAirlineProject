@@ -66,12 +66,11 @@ class aplSpider:
 				pass
 
 			articleID = ''.join(time)+'0'
-			print(articleID)
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'apl'+articleID
 			for contents in article:
 				content +=  str(contents)
-			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
+			self.NEWS_Lists.append([articleID, article, title, datetime + ' ' + timeInNews, content])
 		return self.NEWS_Lists

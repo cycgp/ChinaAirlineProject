@@ -71,6 +71,8 @@ class stmSpider:
 			articleIDList.append(articleID)
 			articleID = 'stm'+articleID
 			for contents in article:
-				content +=  str(contents)
-			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
+				content +=  str(contents.text.strip())
+
+			content = ''.join(re.split(' |[\n]|[\t]|[\r]', content))
+			self.NEWS_Lists.append([articleID, article, title, datetime + ' ' + timeInNews, content])
 		return self.NEWS_Lists

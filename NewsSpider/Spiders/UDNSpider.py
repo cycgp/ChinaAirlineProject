@@ -67,22 +67,19 @@ class udnSpider:
 			timeInNews = ':'.join(time[3:])
 			article = news.findAll('p')
 
+			if '今日星座運勢' in title:
+				break
+
 			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
 
-			print('新聞標題 : ' + title)
-			print('------------------------------')
-			print(datetime + ' ' + timeInNews)
-			print('------------------------------')
 			for contents in article:
 				try:
 					content +=  str(contents.text)
 				except:
 					pass
-			print(content)
-			print('------------------------------')
 
 			articleID = ''.join(time)+'0'
 			while articleID in articleIDList:
@@ -91,5 +88,5 @@ class udnSpider:
 			articleID = 'udn'+articleID
 			for contents in article:
 				content +=  str(contents.text)
-			self.NEWS_Lists.append([articleID, title, datetime + ' ' + timeInNews, content])
+			self.NEWS_Lists.append([articleID, article, title, datetime + ' ' + timeInNews, content])
 		return self.NEWS_Lists

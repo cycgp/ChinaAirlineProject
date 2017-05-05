@@ -65,18 +65,23 @@ class ltnSpider:
 			except:
 				continue
 			newsSoup = bs4(str(newsText), 'html.parser')
-			newsSoup.ul.decompose()
+			try:
+				newsSoup.ul.decompose()
+			except:
+				pass
 			try:
 				article = newsSoup.findAll('p')
 			except:
 				pass
-			if t.strftime('%Y-%m-%d', t.localtime()) not in time.split()[0]:
+			if t.strftime('%Y-%m-%d', t.localtime()) not in time.split()[0] or 'TAIPEI TIMES' in title:
 				continue
 			else:
 				pass
 
 			for contents in article:
-				content +=  str(contents.text)
+				content +=  str(contents.text.strip())
+			content = ''.join(re.split(' |[\n]|[\t]|[\r]', content))
+
 
 			time = re.split('-|\xa0\xa0|:', time)
 			datetime = '/'.join(time[:3])
@@ -86,5 +91,5 @@ class ltnSpider:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'ltn'+articleID
-			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
+			self.NEWS_Lists.append([articleID, article, title, datetime + ' ' + timeInNews, content])
 		return self.NEWS_Lists

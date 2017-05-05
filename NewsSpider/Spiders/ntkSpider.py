@@ -28,7 +28,6 @@ class ntkSpider:
 			articles = soup.findAll(class_ = 'news_title')
 			for article in articles:
 				articleURL = article.find('a').get('href')
-				print(articleURL)
 				self.ARTICLE_List.append(articleURL)
 		return {'press':'ntk', 'URLList':self.ARTICLE_List}
 
@@ -62,5 +61,5 @@ class ntkSpider:
 			articleID = 'ntk'+articleID
 			for contents in article:
 				content +=  str(contents.text)
-			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
+			self.NEWS_Lists.append([articleID, article, title, datetime + ' ' + timeInNews, content])
 		return self.NEWS_Lists

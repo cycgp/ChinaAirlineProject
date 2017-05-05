@@ -72,5 +72,5 @@ class cnaSpider:
 			articleID = 'cna'+articleID
 			for contents in article:
 				content +=  str(contents)
-			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
+			self.NEWS_Lists.append([articleID, article, title, datetime + ' ' + timeInNews, content])
 		return self.NEWS_Lists

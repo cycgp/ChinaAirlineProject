@@ -45,6 +45,7 @@ class cldSpider:
 			for article in articles:
 				articleURL = 'http://www.coolloud.org.tw'+ article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
+				print(self.ARTICLE_List)
 		return {'press':'cld', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
@@ -68,14 +69,8 @@ class cldSpider:
 			else:
 				pass
 
-			print('新聞標題 : ' + title)
-			print('------------------------------')
-			print(datetime)
-			print('------------------------------')
 			for contents in article:
 				content +=  contents.text
-			print(content)
-			print('------------------------------')
 
 			articleID = ''.join(time)+'00000'
 			while articleID in articleIDList:
@@ -84,5 +79,5 @@ class cldSpider:
 			articleID = 'cld'+articleID
 			for contents in article:
 				content +=  contents.text
-			self.NEWS_Lists.append([articleID,title,datetime,content])
+			self.NEWS_Lists.append([articleID, article, title, datetime, content])
 		return self.NEWS_Lists

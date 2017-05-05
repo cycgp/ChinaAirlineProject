@@ -55,7 +55,7 @@ class tnlSpider:
 			news = soup.find(class_ = 'article-title-box')
 			content = ""
 			newsList = []
-			title = str(news.find('h1', {'class':'article-title'}).header.contents[0])
+			title = str(news.find('h1', {'class':'article-title'}).header.text)
 			time = news.find(class_ = 'article-info').text.split(',')[0].replace(' ','')
 			article = soup.find(class_ = 'article-content').findAll('p')
 
@@ -64,13 +64,13 @@ class tnlSpider:
 			else:
 				pass
 
-			articleID = ''.join(re.split('/', time))[:8]+'0'
-			print(articleID)
+			articleID = ''.join(re.split('/', time))[:8]+'00000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'tnl'+articleID
 			for contents in article:
-				content +=  str(contents.text)
-			self.NEWS_Lists.append([articleID, title,time,content])
+				content +=  str(contents.text.strip())
+			content = content.strip()
+			self.NEWS_Lists.append([articleID, article, title, time + ' 00:00', content])
 		return self.NEWS_Lists

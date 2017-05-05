@@ -29,7 +29,7 @@ class tpnSpider:
 			timeList = soup.findAll('div', {'class':'date'})
 			for time in timeList:
 				timeList[timeList.index(time)] = (time.text).split(' ')[1].replace('-','')
-			state = t.strftime('%Y%m%d', t.localtime()) in timeList
+			state = t.strftime('%Y%m05', t.localtime()) in timeList
 			if state:
 				page += 1
 				self.URLList.append(URL)
@@ -69,7 +69,7 @@ class tpnSpider:
 			timeInNews = ':'.join(time[3:])
 			article = news.find('div', {'id':'newscontent'}).findAll('p')
 
-			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
+			if t.strftime('%Y/%m/05', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
@@ -80,6 +80,6 @@ class tpnSpider:
 			articleIDList.append(articleID)
 			articleID = 'tpn'+articleID
 			for contents in article:
-				content +=  str(contents)
-			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
+				content +=  str(contents.text)
+			self.NEWS_Lists.append([articleID, article, title, datetime + ' ' + timeInNews, content])
 		return self.NEWS_Lists
