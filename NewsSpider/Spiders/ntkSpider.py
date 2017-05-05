@@ -6,14 +6,14 @@ import requests
 import json
 import re
 
-class NTSpider:
+class ntkSpider:
 	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.URLList = NTSpider.URLList
-		self.ARTICLE_List = NTSpider.ARTICLE_List
-		self.NEWS_Lists = NTSpider.NEWS_Lists
+		self.URLList = ntkSpider.URLList
+		self.ARTICLE_List = ntkSpider.ARTICLE_List
+		self.NEWS_Lists = ntkSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getURL(self):
@@ -28,6 +28,7 @@ class NTSpider:
 			articles = soup.findAll(class_ = 'news_title')
 			for article in articles:
 				articleURL = article.find('a').get('href')
+				print(articleURL)
 				self.ARTICLE_List.append(articleURL)
 		return {'press':'ntk', 'URLList':self.ARTICLE_List}
 
@@ -38,7 +39,11 @@ class NTSpider:
 	def getContent(self):
 		articleIDList = []
 		for article in self.ARTICLE_List:
-			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			if t.strftime('%Y-%m-%d', t.localtime()) not in article.split('/')[5]:
+				continue
+			else:
+				pass
+			driver = webdriver.PhantomJS()
 			r = driver.get(article)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -50,19 +55,12 @@ class NTSpider:
 			datetime ='/'.join(re.split('/', time))[:10]
 			timeInNews = ':'.join(re.split('/', time))[11:16]
 			article = news.findAll('p')
-
-			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
-				continue
-			else:
-				pass
-
 			articleID = ''.join(re.split('/', time))[:12]+'0'
-			print(articleID)
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'ntk'+articleID
 			for contents in article:
-				content +=  str(contents)
+				content +=  str(contents.text)
 			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists

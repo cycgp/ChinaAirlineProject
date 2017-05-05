@@ -2,30 +2,31 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 import json
-import re
 import time as t
+import re
 
-class StormSpider:
+class cntSpider:
 	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.URLList = StormSpider.URLList
-		self.ARTICLE_List = StormSpider.ARTICLE_List
-		self.NEWS_Lists = StormSpider.NEWS_Lists
+		self.URLList = cntSpider.URLList
+		self.ARTICLE_List = cntSpider.ARTICLE_List
+		self.NEWS_Lists = cntSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getURL(self):
+		#Real-time news pages
 		page = 1
 		state = True
 		while state:
 			#Real-time news pages
-			URL = 'http://www.storm.mg/articles/'+str(page)
+			URL = 'http://www.chinatimes.com/realtimenews?page='+str(page)
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
-			timeList = soup.findAll(class_ = 'main_date')
+			timeList = soup.findAll('time')
 			for time in timeList:
-				timeList[timeList.index(time)] = time.text.replace('年','/').replace('月','/').replace('日','').split(' ')[0]
+				timeList[timeList.index(time)] = time.text.split()[1]
 			state = t.strftime('%Y/%m/%d', t.localtime()) in timeList
 			if state:
 				page += 1
@@ -36,11 +37,11 @@ class StormSpider:
 		for URL in self.URLList:
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
-			articles = soup.findAll(class_ = 'main_content')
+			articles = soup.find(class_ = 'listRight').findAll('h2')
 			for article in articles:
-				articleURL = 'http://www.storm.mg'+ article.find('p').find('a').get('href')
+				articleURL = 'http://www.chinatimes.com'+ article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
-		return {'press':'stn', 'URLList':self.ARTICLE_List}
+		return {'press':'cnt', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
 	# 	pass
@@ -51,37 +52,27 @@ class StormSpider:
 		for article in self.ARTICLE_List:
 			r = requests.get(article)
 			soup = bs4(r.text, 'html.parser')
-			news = soup.find(class_ = 'inner-wrap')
+			news = soup.find(class_ = 'page_container')
 			content = ""
 			newsList = []
-			title = str(news.find('h1', {'class':'title'}).contents[0])
-			time = re.split('年|月|日| |:|風傳媒',news.find(class_='date').text)
-			print(time)
+			title = str(news.find('h1').contents[0])
+			time = re.split('年|月|日|:| ', news.find('time').text)#time to list
+			timeInNews = ':'.join(time[4:])
 			datetime = '/'.join(time[:3])
-			timeInNews = ':'.join(time[3:5])
-			article = news.article.findAll('p')
+			article = news.findAll('p')
 
 			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
 				continue
 			else:
 				pass
 
-			print('新聞標題 : ' + title.strip())
-			print('------------------------------')
-			print(datetime + ' ' + timeInNews)
-			print('------------------------------')
-			for contents in article:
-				content +=  str(contents.text)
-			print(content)
-			print('------------------------------')
-
 			articleID = ''.join(time)+'0'
 			print(articleID)
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
-			articleID = 'stn'+articleID
+			articleID = 'cnt'+articleID
 			for contents in article:
-				content +=  str(contents)
+				content +=  str(contents.text)
 			self.NEWS_Lists.append([articleID, title,datetime + ' ' + timeInNews,content])
 		return self.NEWS_Lists

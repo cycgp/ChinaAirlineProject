@@ -5,14 +5,14 @@ import json
 import time as t
 import re
 
-class LTNSpider:
+class ltnSpider:
 	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.URLList = LTNSpider.URLList
-		self.ARTICLE_List = LTNSpider.ARTICLE_List
-		self.NEWS_Lists = LTNSpider.NEWS_Lists
+		self.URLList = ltnSpider.URLList
+		self.ARTICLE_List = ltnSpider.ARTICLE_List
+		self.NEWS_Lists = ltnSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getURL(self):

@@ -5,14 +5,14 @@ import json
 import re
 import time as t
 
-class CNASpider:
+class cnaSpider:
 	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.URLList = CNASpider.URLList
-		self.ARTICLE_List = CNASpider.ARTICLE_List
-		self.NEWS_Lists = CNASpider.NEWS_Lists
+		self.URLList = cnaSpider.URLList
+		self.ARTICLE_List = cnaSpider.ARTICLE_List
+		self.NEWS_Lists = cnaSpider.NEWS_Lists
 	#Get real-time news url
 	def getURL(self):
 		page = 1

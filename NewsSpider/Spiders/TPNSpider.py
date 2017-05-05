@@ -6,14 +6,14 @@ import json
 import time as t
 import re
 
-class TPNSpider:
+class tpnSpider:
 	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.URLList = TPNSpider.URLList
-		self.ARTICLE_List = TPNSpider.ARTICLE_List
-		self.NEWS_Lists = TPNSpider.NEWS_Lists
+		self.URLList = tpnSpider.URLList
+		self.ARTICLE_List = tpnSpider.ARTICLE_List
+		self.NEWS_Lists = tpnSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getURL(self):
@@ -22,7 +22,7 @@ class TPNSpider:
 		while state:
 			#Real-time news pages
 			URL = 'http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD#page-'+str(page)
-			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			driver = webdriver.PhantomJS()
 			r = driver.get(URL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -32,13 +32,13 @@ class TPNSpider:
 			state = t.strftime('%Y%m%d', t.localtime()) in timeList
 			if state:
 				page += 1
-				self.URLList.append(URL)	
+				self.URLList.append(URL)
 			else:
 				page -= 1
-			
+
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\phantomjs.exe')
+			driver = webdriver.PhantomJS()
 			r = driver.get(URL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -67,9 +67,6 @@ class TPNSpider:
 			time = re.split('-| |:', news.find(class_ = 'date').text)
 			datetime = '/'.join(time[:3])
 			timeInNews = ':'.join(time[3:])
-			print(time)
-			print(datetime)
-			print(timeInNews)
 			article = news.find('div', {'id':'newscontent'}).findAll('p')
 
 			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
@@ -77,17 +74,7 @@ class TPNSpider:
 			else:
 				pass
 
-			print('新聞標題 : ' + title)
-			print('------------------------------')
-			print(datetime + ' ' + timeInNews)
-			print('------------------------------')
-			for contents in article:
-			    content +=  str(contents.text)
-			print(content)
-			print('------------------------------')
-
 			articleID = ''.join(time)+'0'
-			print(articleID)
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)

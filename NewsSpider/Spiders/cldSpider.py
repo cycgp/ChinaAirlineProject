@@ -6,14 +6,14 @@ import json
 import re
 import time as t
 
-class CLSpider:
+class cldSpider:
 	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.URLList = CLSpider.URLList
-		self.ARTICLE_List = CLSpider.ARTICLE_List
-		self.NEWS_Lists = CLSpider.NEWS_Lists
+		self.URLList = cldSpider.URLList
+		self.ARTICLE_List = cldSpider.ARTICLE_List
+		self.NEWS_Lists = cldSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getURL(self):
@@ -46,9 +46,6 @@ class CLSpider:
 				articleURL = 'http://www.coolloud.org.tw'+ article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
 		return {'press':'cld', 'URLList':self.ARTICLE_List}
-
-	# def checkUpdate():
-	# 	pass
 
 	#Get Content from article
 	def getContent(self):

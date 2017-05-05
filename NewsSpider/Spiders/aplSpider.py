@@ -6,14 +6,14 @@ import json
 import sys
 import re
 
-class AppleSpider:
+class aplSpider:
 	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.URLList = AppleSpider.URLList
-		self.ARTICLE_List = AppleSpider.ARTICLE_List
-		self.NEWS_Lists = AppleSpider.NEWS_Lists
+		self.URLList = aplSpider.URLList
+		self.ARTICLE_List = aplSpider.ARTICLE_List
+		self.NEWS_Lists = aplSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getURL(self):

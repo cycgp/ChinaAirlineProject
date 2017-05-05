@@ -5,14 +5,14 @@ import json
 import re
 import time as t
 
-class TNLSpider:
+class tnlSpider:
 	URLList = []
 	ARTICLE_List = []
 	NEWS_Lists = []
 	def __init__(self):
-		self.URLList = TNLSpider.URLList
-		self.ARTICLE_List = TNLSpider.ARTICLE_List
-		self.NEWS_Lists = TNLSpider.NEWS_Lists
+		self.URLList = tnlSpider.URLList
+		self.ARTICLE_List = tnlSpider.ARTICLE_List
+		self.NEWS_Lists = tnlSpider.NEWS_Lists
 
 	#Get real-time news url
 	def getURL(self):
@@ -63,8 +63,6 @@ class TNLSpider:
 				continue
 			else:
 				pass
-
-
 
 			articleID = ''.join(re.split('/', time))[:8]+'0'
 			print(articleID)
