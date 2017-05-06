@@ -1,17 +1,8 @@
-from Spiders.aplSpider import aplSpider
-from Spiders.cnaSpider import cnaSpider
-from Spiders.ltnSpider import ltnSpider
-from Spiders.tnlSpider import tnlSpider
-from Spiders.cntSpider import cntSpider
-from Spiders.stmSpider import stmSpider
-from Spiders.cldSpider import cldSpider
-from Spiders.ntkSpider import ntkSpider
-from Spiders.tpnSpider import tpnSpider
-from Spiders.udnSpider import udnSpider
+from Spiders.SpiderFunction import getNewsList, getContent
 import pandas as pd
 
-a = udnSpider()
-a.getURL()
-newsList = a.getContent()
-df = pd.DataFrame(data=newsList, columns=['News ID', 'Title','Time','Content'])
-df.to_csv('newsList.csv', sep=',', encoding='utf-8', index=False)
+if __name__ == '__main__':
+	newsList = getNewsList()
+	newsContentList = getContent(newsList)
+	df = pd.DataFrame(data=newsContentList, columns=['news ID', 'url', 'title','time','content'])
+	df.to_csv('NewsList.csv', sep=',', encoding='utf-8', index=False)
