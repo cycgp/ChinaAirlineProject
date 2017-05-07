@@ -1,5 +1,28 @@
-[INFO  - 2017-05-06T19:45:27.158Z] GhostDriver - Main - running on port 49180
-[INFO  - 2017-05-06T19:45:27.327Z] Session [8dc66eb0-3294-11e7-b24f-11e4b91dd6a8] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2017-05-06T19:45:27.327Z] Session [8dc66eb0-3294-11e7-b24f-11e4b91dd6a8] - page.customHeaders:  - {}
-[INFO  - 2017-05-06T19:45:27.327Z] Session [8dc66eb0-3294-11e7-b24f-11e4b91dd6a8] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2017-05-06T19:45:27.327Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8dc66eb0-3294-11e7-b24f-11e4b91dd6a8
+[INFO  - 2017-05-06T23:16:09.746Z] GhostDriver - Main - running on port 61436
+[INFO  - 2017-05-06T23:16:10.300Z] Session [fd92b560-32b1-11e7-ac90-f5cb9df2198d] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-05-06T23:16:10.300Z] Session [fd92b560-32b1-11e7-ac90-f5cb9df2198d] - page.customHeaders:  - {}
+[INFO  - 2017-05-06T23:16:10.300Z] Session [fd92b560-32b1-11e7-ac90-f5cb9df2198d] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-05-06T23:16:10.300Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: fd92b560-32b1-11e7-ac90-f5cb9df2198d
+[ERROR - 2017-05-06T23:16:14.401Z] Session [fd92b560-32b1-11e7-ac90-f5cb9df2198d] - page.onError - msg: TypeError: undefined is not a constructor (evaluating '$.cookie("page_cover")')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-06T23:16:14.402Z] Session [fd92b560-32b1-11e7-ac90-f5cb9df2198d] - page.onError - stack:
+  success (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:4)
+  p (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  fireWith (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  i (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:3)
+  t (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:3)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-06T23:16:15.743Z] Session [fd92b560-32b1-11e7-ac90-f5cb9df2198d] - page.onError - msg: TypeError: undefined is not a constructor (evaluating '$.cookie("goApp")')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-06T23:16:15.743Z] Session [fd92b560-32b1-11e7-ac90-f5cb9df2198d] - page.onError - stack:
+  (anonymous function) (undefined:18)
+  dispatch (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  dispatch (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:7)
+  handle (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  appendChild (:0)
+  w (https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2195553684947341&format=300x250&output=html&h=250&slotname=4431957394&adk=768154338&adf=2751417936&w=300&avail_w=300&ea=0&flash=0&url=https%3A%2F%2Fudn.com%2F%2Fnews%2Fstory%2F7268%2F2432165%3Ffrom%3Dudn-ch1_breaknews-1-99-news&wgl=0&dt=1494112573904&bpp=10&bdt=169&fdt=13&idt=115&shv=r20170501&cbv=r20170110&saldr=aa&correlator=410726721537&frm=24&ga_vid=1673357325.1494112574&ga_sid=1494112574&ga_hid=1310378758&ga_fc=0&pv=2&iag=14&icsg=2&nhd=2&dssz=2&mdo=0&mso=0&u_tz=480&u_his=1&u_java=0&u_h=768&u_w=1024&u_ah=768&u_aw=1024&u_cd=32&u_nplug=0&u_nmime=0&adx=0&ady=0&biw=-12245933&bih=-12245933&isw=300&ish=250&ifk=4192943159&oid=3&rx=0&eae=2&brdim=0%2C0%2C0%2C0%2C1024%2C0%2C0%2C0%2C300%2C250&vis=1&rsz=%7C%7CceE%7C&abl=NS&ppjl=u&pfx=0&fu=16&bc=1&ifi=1&dtd=143:5)
+
+  phantomjs://platform/console++.js:263 in error

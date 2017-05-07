@@ -43,7 +43,7 @@ class aplSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List):
-		newsLists = []
+		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
 			#get news from url
@@ -71,8 +71,8 @@ class aplSpider:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'apl'+articleID
-			newsLists.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
-		return newsLists
+			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+		return newsList
 
 class cldSpider:
 	URLList = []
@@ -109,16 +109,15 @@ class cldSpider:
 			for article in articles:
 				articleURL = 'http://www.coolloud.org.tw'+ article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
-				print(self.ARTICLE_List)
 		return {'press':'cld', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
 	def getContent(ARTICLE_List):
 		newsLists = []
 		articleIDList = []
-		for article in ARTICLE_List:
+		for articleURL in ARTICLE_List:
 			driver = webdriver.PhantomJS()
-			r = driver.get(article)
+			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(class_ = 'main-container')
@@ -142,9 +141,7 @@ class cldSpider:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'cld'+articleID
-			for contents in article:
-				content +=  contents.text
-			newsLists.append([articleID, article, title, datetime, content])
+			newsLists.append([articleID, articleURL, title, datetime, content])
 		return newsLists
 
 class cnaSpider:
@@ -190,8 +187,8 @@ class cnaSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
-		for article in ARTICLE_List:
-			r = requests.get(article)
+		for articleURL in ARTICLE_List:
+			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'news_article')
 			content = ""
@@ -213,7 +210,7 @@ class cnaSpider:
 			articleID = 'cna'+articleID
 			for contents in article:
 				content +=  str(contents)
-			newsList.append([articleID, article, title, datetime + ' ' + timeInNews, content])
+			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class cntSpider:
@@ -259,12 +256,12 @@ class cntSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
-		for article in ARTICLE_List:
-			r = requests.get(article)
+		for articleURL in ARTICLE_List:
+			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'page_container')
 			content = ""
-			title = str(news.find('h1').contents[0])
+			title = str(news.find('h1').text)
 			time = re.split('年|月|日|:| ', news.find('time').text)#time to list
 			timeInNews = ':'.join(time[4:])
 			datetime = '/'.join(time[:3])
@@ -282,7 +279,7 @@ class cntSpider:
 			articleID = 'cnt'+articleID
 			for contents in article:
 				content +=  str(contents.text)
-			newsList.append([articleID, article, title, datetime + ' ' + timeInNews, content])
+			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class ltnSpider:
@@ -297,12 +294,18 @@ class ltnSpider:
 		#Real-time news pages
 		page = 1
 		state = True
+		TimeList= []
 		while state:
 			#Real-time news pages
 			URL = 'http://news.ltn.com.tw/list/BreakingNews?page='+str(page)
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			timeList = soup.findAll('li', {'class':'lipic'})
+			if timeList == TimeList:
+				state = False
+				page -= 2
+				break
+			TimeList = timeList
 			for time in timeList:
 				state = t.strftime('%Y-%m-%d', t.localtime()) in time.span.text.split()[0]
 			page += 1
@@ -321,13 +324,13 @@ class ltnSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
-		for article in ARTICLE_List:
-			r = requests.get(article)
+		for articleURL in ARTICLE_List:
+			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'content')
 			content = ""
 			try:
-				title = str(news.find('h1').contents[0])
+				title = str(news.find('h1').text)
 			except Exception as e:
 				continue
 			newsText = news.find('div', {'id':'newstext'})
@@ -362,7 +365,7 @@ class ltnSpider:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'ltn'+articleID
-			newsList.append([articleID, article, title, datetime + ' ' + timeInNews, content])
+			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class ntkSpider:
@@ -395,13 +398,13 @@ class ntkSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
-		for article in ARTICLE_List:
-			if t.strftime('%Y-%m-%d', t.localtime()) not in article.split('/')[5]:
+		for articleURL in ARTICLE_List:
+			if t.strftime('%Y-%m-%d', t.localtime()) not in articleURL.split('/')[5]:
 				continue
 			else:
 				pass
 			driver = webdriver.PhantomJS()
-			r = driver.get(article)
+			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(id = 'left_column')
@@ -418,7 +421,7 @@ class ntkSpider:
 			articleID = 'ntk'+articleID
 			for contents in article:
 				content +=  str(contents.text)
-			newsList.append([articleID, article, title, datetime + ' ' + timeInNews, content])
+			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class stmSpider:
@@ -463,8 +466,8 @@ class stmSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
-		for article in ARTICLE_List:
-			r = requests.get(article)
+		for articleURL in ARTICLE_List:
+			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'inner-wrap')
 			content = ""
@@ -488,7 +491,7 @@ class stmSpider:
 				content +=  str(contents.text.strip())
 
 			content = ''.join(re.split(' |[\n]|[\t]|[\r]', content))
-			newsList.append([articleID, article, title, datetime + ' ' + timeInNews, content])
+			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class tnlSpider:
@@ -534,8 +537,8 @@ class tnlSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
-		for article in ARTICLE_List:
-			r = requests.get(article)
+		for articleURL in ARTICLE_List:
+			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'article-title-box')
 			content = ""
@@ -556,7 +559,7 @@ class tnlSpider:
 			for contents in article:
 				content +=  str(contents.text.strip())
 			content = content.strip()
-			newsList.append([articleID, article, title, time + ' 00:00', content])
+			newsList.append([articleID, articleURL, title, time + ' 00:00', content])
 		return newsList
 
 class tpnSpider:
@@ -608,8 +611,8 @@ class tpnSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
-		for article in ARTICLE_List:
-			r = requests.get(article)
+		for articleURL in ARTICLE_List:
+			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(id = 'news')
 			content = ""
@@ -631,7 +634,7 @@ class tpnSpider:
 			articleID = 'tpn'+articleID
 			for contents in article:
 				content +=  str(contents.text)
-			newsList.append([articleID, article, title, datetime + ' ' + timeInNews, content])
+			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class udnSpider:
@@ -673,9 +676,9 @@ class udnSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
-		for article in ARTICLE_List:
+		for articleURL in ARTICLE_List:
 			driver = webdriver.PhantomJS()
-			r = driver.get(article)
+			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(id = 'story_body_content')
@@ -711,5 +714,5 @@ class udnSpider:
 			articleID = 'udn'+articleID
 			for contents in article:
 				content +=  str(contents.text)
-			newsList.append([articleID, article, title, datetime + ' ' + timeInNews, content])
+			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
