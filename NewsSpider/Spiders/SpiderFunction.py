@@ -4,10 +4,7 @@ def getNewsList():
 	print("Getting News List...")
 	print("    Loading Apple News List...", end="", flush=True)
 	aplNewsList = aplSpider().getURL()
-	print("  DONE")
-	print("    Loading Cool Load News List...", end="", flush=True)
-	cldNewsList = cldSpider().getURL()
-	print("  DONE")
+	print("  DONE")s
 	print("    Loading CNA News List...", end="", flush=True)
 	cnaNewsList = cnaSpider().getURL()
 	print("  DONE")
@@ -42,10 +39,6 @@ def getContent(NewsLists):
 		if NewsList['press'] == 'apl':
 			print("    Loading Apple News List...", end="", flush=True)
 			newsContentList.extend(aplSpider.getContent(NewsList['URLList']))
-			print("  DONE")
-		elif NewsList['press'] == 'cld':
-			print("    Loading Cool Load News List...", end="", flush=True)
-			newsContentList.extend(cldSpider.getContent(NewsList['URLList']))
 			print("  DONE")
 		elif NewsList['press'] == 'cna':
 			print("    Loading CNA News List...", end="", flush=True)

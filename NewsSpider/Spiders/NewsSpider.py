@@ -119,6 +119,8 @@ class cldSpider:
 			driver = webdriver.PhantomJS()
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
+			driver.close()
+			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(class_ = 'main-container')
 			content = ""
@@ -406,6 +408,8 @@ class ntkSpider:
 			driver = webdriver.PhantomJS()
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
+			driver.close()
+			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(id = 'left_column')
 			content = ""
@@ -579,6 +583,8 @@ class tpnSpider:
 			driver = webdriver.PhantomJS()
 			r = driver.get(URL)
 			pageSource = driver.page_source
+			driver.close()
+			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			timeList = soup.findAll('div', {'class':'date'})
 			for time in timeList:
@@ -594,6 +600,8 @@ class tpnSpider:
 			driver = webdriver.PhantomJS()
 			r = driver.get(URL)
 			pageSource = driver.page_source
+			driver.close()
+			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			articles = soup.find('div', {'id':'area_list'}).findAll('a')
 			for article in articles:
@@ -680,10 +688,12 @@ class udnSpider:
 			driver = webdriver.PhantomJS()
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
+			driver.close()
+			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(id = 'story_body_content')
 			content = ""
-			title = str(news.find('h1', {'id':'story_art_title'}).contents[0])
+			title = str(news.find('h1', {'id':'story_art_title'}).text)
 			time = news.find('div', {'class':'story_bady_info_author'})
 			span = time.find('span')
 			if span is not None:
