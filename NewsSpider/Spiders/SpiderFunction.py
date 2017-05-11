@@ -4,7 +4,7 @@ def getNewsList():
 	print("Getting News List...")
 	print("    Loading Apple News List...", end="", flush=True)
 	aplNewsList = aplSpider().getURL()
-	print("  DONE")s
+	print("  DONE")
 	print("    Loading CNA News List...", end="", flush=True)
 	cnaNewsList = cnaSpider().getURL()
 	print("  DONE")
@@ -29,7 +29,7 @@ def getNewsList():
 	print("    Loading UDN News List...", end="", flush=True)
 	udnNewsList = udnSpider().getURL()
 	print("  DONE")
-	NewsList = [aplNewsList, cldNewsList, cnaNewsList, cntNewsList, ltnNewsList, ntkNewsList, stmNewsList, tnlNewsList, tpnNewsList, udnNewsList]
+	NewsList = [aplNewsList, cnaNewsList, cntNewsList, ltnNewsList, ntkNewsList, stmNewsList, tnlNewsList, tpnNewsList, udnNewsList]
 	return NewsList
 
 def getContent(NewsLists):

@@ -66,7 +66,7 @@ class aplSpider:
 			for contents in article:
 				content +=  str(contents)
 			#assign news ID
-			articleID = ''.join(time)+'0'
+			articleID = ''.join(time)+'000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -138,7 +138,7 @@ class cldSpider:
 			for contents in article:
 				content +=  contents.text
 
-			articleID = ''.join(time)+'00000'
+			articleID = ''.join(time)+'0000000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -205,7 +205,7 @@ class cnaSpider:
 			else:
 				pass
 
-			articleID = ''.join(time[1:])+'0'
+			articleID = ''.join(time[1:])+'000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -274,7 +274,7 @@ class cntSpider:
 			else:
 				pass
 
-			articleID = ''.join(time)+'0'
+			articleID = ''.join(time)+'000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -362,7 +362,7 @@ class ltnSpider:
 			time = re.split('-|\xa0\xa0|:', time)
 			datetime = '/'.join(time[:3])
 			timeInNews = ':'.join(time[3:])
-			articleID = ''.join(time)+'0'
+			articleID = ''.join(time)+'000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -418,7 +418,7 @@ class ntkSpider:
 			datetime ='/'.join(re.split('/', time))[:10]
 			timeInNews = ':'.join(re.split('/', time))[11:16]
 			article = news.findAll('p')
-			articleID = ''.join(re.split('/', time))[:12]+'0'
+			articleID = ''.join(re.split('/', time))[:12]+'000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -486,7 +486,7 @@ class stmSpider:
 			else:
 				pass
 
-			articleID = ''.join(time)+'0'
+			articleID = ''.join(time)+'000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -555,7 +555,7 @@ class tnlSpider:
 			else:
 				pass
 
-			articleID = ''.join(re.split('/', time))[:8]+'00000'
+			articleID = ''.join(re.split('/', time))[:8]+'0000000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -635,7 +635,7 @@ class tpnSpider:
 			else:
 				pass
 
-			articleID = ''.join(time)+'0'
+			articleID = ''.join(time)+'000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
@@ -717,7 +717,7 @@ class udnSpider:
 				except:
 					pass
 
-			articleID = ''.join(time)+'0'
+			articleID = ''.join(time)+'000'
 			while articleID in articleIDList:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)

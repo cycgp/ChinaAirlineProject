@@ -16,7 +16,7 @@ def writeFile():
 	try:
 		df = pd.read_csv('' + fileName + '.csv')
 		df = df.append(writePandas(), ignore_index=True)
-		df = df.drop_duplicates(keep='last')
+		df = df.drop_duplicates(subset=['url'], keep='last')
 		df.to_csv(fileName+'.csv', sep=',', encoding='utf-8', index=False)
 	except:
 		df = writePandas()
