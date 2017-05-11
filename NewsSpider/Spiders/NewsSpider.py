@@ -115,12 +115,10 @@ class cldSpider:
 	def getContent(ARTICLE_List):
 		newsLists = []
 		articleIDList = []
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
-			driver = webdriver.PhantomJS()
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
-			driver.close()
-			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(class_ = 'main-container')
 			content = ""
@@ -400,16 +398,14 @@ class ntkSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
 			if t.strftime('%Y-%m-%d', t.localtime()) not in articleURL.split('/')[5]:
 				continue
 			else:
 				pass
-			driver = webdriver.PhantomJS()
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
-			driver.close()
-			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(id = 'left_column')
 			content = ""
@@ -577,14 +573,12 @@ class tpnSpider:
 	def getURL(self):
 		page = 1
 		state = True
+		driver = webdriver.PhantomJS()
 		while state:
 			#Real-time news pages
 			URL = 'http://www.peoplenews.tw/list/%E7%B8%BD%E8%A6%BD#page-'+str(page)
-			driver = webdriver.PhantomJS()
 			r = driver.get(URL)
 			pageSource = driver.page_source
-			driver.close()
-			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			timeList = soup.findAll('div', {'class':'date'})
 			for time in timeList:
@@ -596,12 +590,10 @@ class tpnSpider:
 			else:
 				page -= 1
 		#Get articles url from real-time news pages
+		driver = webdriver.PhantomJS()
 		for URL in self.URLList:
-			driver = webdriver.PhantomJS()
 			r = driver.get(URL)
 			pageSource = driver.page_source
-			driver.close()
-			driver.quit()
 			soup = bs4(pageSource, 'html.parser')
 			articles = soup.find('div', {'id':'area_list'}).findAll('a')
 			for article in articles:
@@ -684,45 +676,46 @@ class udnSpider:
 	def getContent(ARTICLE_List):
 		newsList = []
 		articleIDList = []
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
-			driver = webdriver.PhantomJS()
-			r = driver.get(articleURL)
-			pageSource = driver.page_source
-			driver.close()
-			driver.quit()
-			soup = bs4(pageSource, 'html.parser')
-			news = soup.find(id = 'story_body_content')
-			content = ""
-			title = str(news.find('h1', {'id':'story_art_title'}).text)
-			time = news.find('div', {'class':'story_bady_info_author'})
-			span = time.find('span')
-			if span is not None:
-				span.extract()
-			time = re.split('-| |:', time.text)
-			datetime = '/'.join(time[:3])
-			timeInNews = ':'.join(time[3:])
-			article = news.findAll('p')
+			try:
+				r = driver.get(articleURL)
+				pageSource = driver.page_source
+				soup = bs4(pageSource, 'html.parser')
+				news = soup.find(id = 'story_body_content')
+				content = ""
+				title = str(news.find('h1', {'id':'story_art_title'}).text)
+				time = news.find('div', {'class':'story_bady_info_author'})
+				span = time.find('span')
+				if span is not None:
+					span.extract()
+				time = re.split('-| |:', time.text)
+				datetime = '/'.join(time[:3])
+				timeInNews = ':'.join(time[3:])
+				article = news.findAll('p')
 
-			if '今日星座運勢' in title:
-				break
+				if '今日星座運勢' in title:
+					break
 
-			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
-				continue
-			else:
-				pass
-
-			for contents in article:
-				try:
-					content +=  str(contents.text)
-				except:
+				if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
+					continue
+				else:
 					pass
 
-			articleID = ''.join(time)+'000'
-			while articleID in articleIDList:
-				articleID = str(int(articleID)+1)
-			articleIDList.append(articleID)
-			articleID = 'udn'+articleID
-			for contents in article:
-				content +=  str(contents.text)
-			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+				for contents in article:
+					try:
+						content +=  str(contents.text)
+					except:
+						pass
+
+				articleID = ''.join(time)+'000'
+				while articleID in articleIDList:
+					articleID = str(int(articleID)+1)
+				articleIDList.append(articleID)
+				articleID = 'udn'+articleID
+				for contents in article:
+					content +=  str(contents.text)
+				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+			except:
+				print(articleURL)
 		return newsList
