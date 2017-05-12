@@ -1,5 +1,73 @@
-[INFO  - 2017-05-11T13:29:21.932Z] GhostDriver - Main - running on port 58733
-[INFO  - 2017-05-11T13:29:22.072Z] Session [d7e65e30-364d-11e7-aa39-ebcd17405140] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2017-05-11T13:29:22.072Z] Session [d7e65e30-364d-11e7-aa39-ebcd17405140] - page.customHeaders:  - {}
-[INFO  - 2017-05-11T13:29:22.072Z] Session [d7e65e30-364d-11e7-aa39-ebcd17405140] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2017-05-11T13:29:22.072Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d7e65e30-364d-11e7-aa39-ebcd17405140
+[INFO  - 2017-05-12T13:17:33.827Z] GhostDriver - Main - running on port 61451
+[INFO  - 2017-05-12T13:17:33.997Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-05-12T13:17:33.997Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.customHeaders:  - {}
+[INFO  - 2017-05-12T13:17:33.997Z] Session [5c447280-3715-11e7-a893-b727957cf404] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-05-12T13:17:33.997Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5c447280-3715-11e7-a893-b727957cf404
+[ERROR - 2017-05-12T13:17:38.352Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - msg: TypeError: undefined is not a constructor (evaluating '$.cookie("page_cover")')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:17:38.352Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - stack:
+  success (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:4)
+  p (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  fireWith (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  i (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:3)
+  t (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:3)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:17:38.714Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - msg: TypeError: undefined is not a constructor (evaluating '$.cookie("goApp")')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:17:38.714Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - stack:
+  (anonymous function) (undefined:18)
+  dispatch (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  dispatch (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:7)
+  handle (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  appendChild (:0)
+  w (https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2195553684947341&format=300x250&output=html&h=250&slotname=4431957394&adk=768154338&adf=2751417948&w=300&avail_w=300&ea=0&flash=0&url=https%3A%2F%2Fudn.com%2F%2Fnews%2Fstory%2F6656%2F2459580%3Ffrom%3Dudn-ch1_breaknews-1-99-news&wgl=0&dt=1494595057686&bpp=4&bdt=40&fdt=5&idt=84&shv=r20170508&cbv=r20170110&saldr=aa&correlator=2756124747777&frm=24&ga_vid=544792516.1494595058&ga_sid=1494595058&ga_hid=1174220777&ga_fc=0&pv=2&iag=14&icsg=2&nhd=2&dssz=2&mdo=0&mso=0&u_tz=480&u_his=1&u_java=0&u_h=768&u_w=1024&u_ah=768&u_aw=1024&u_cd=32&u_nplug=0&u_nmime=0&adx=0&ady=0&biw=-12245933&bih=-12245933&isw=300&ish=250&ifk=3635079228&oid=3&rx=0&eae=2&brdim=0%2C0%2C0%2C0%2C1024%2C0%2C0%2C0%2C300%2C250&vis=1&rsz=%7C%7CceE%7C&abl=NS&ppjl=u&pfx=0&fu=16&bc=1&ifi=1&dtd=101:1)
+
+  phantomjs://platform/console++.js:263 in error
+[INFO  - 2017-05-12T13:22:33.840Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-05-12T13:27:33.838Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-05-12T13:32:33.844Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2017-05-12T13:33:32.662Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - msg: ReferenceError: Can't find variable: jQuery111302985529776196927_1494596012202ok
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:33:32.662Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - stack:
+  global code (https://pv.udn.com/API/af2.php?g=212331425&a=91604010136&t=7d&f=2&c=%E6%99%82%E5%B0%9A%E5%90%8D%E4%BA%BA&u=https://style.udn.com/style/story/8065/2458478&callback=jQuery111302985529776196927_1494596012202&_=1494596012203:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:33:47.839Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - msg: ReferenceError: Can't find variable: jQuery1113048557136580348015_1494596027410ok
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:33:47.839Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - stack:
+  global code (https://pv.udn.com/API/af2.php?g=1862655988&a=91604010136&t=7d&f=2&c=%E6%99%82%E5%B0%9A%E5%90%8D%E4%BA%BA&u=https://style.udn.com/style/story/8065/2457006&callback=jQuery1113048557136580348015_1494596027410&_=1494596027411:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:34:02.842Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - msg: undefined
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:34:02.842Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - stack:
+  (anonymous function) (https://tpc.googlesyndication.com/pagead/js/r20170508/r20110914/abg.js:22)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:34:09.976Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - msg: ReferenceError: Can't find variable: jQuery111305709144489374012_1494596049349ok
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:34:09.976Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - stack:
+  global code (https://pv.udn.com/API/af2.php?g=978597076&a=91604010136&t=7d&f=2&c=%E6%99%82%E5%B0%9A%E5%90%8D%E4%BA%BA&u=https://style.udn.com/style/story/8065/2456834&callback=jQuery111305709144489374012_1494596049349&_=1494596049350:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:34:14.307Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - msg: ReferenceError: Can't find variable: jQuery111305318177805747837_1494596053865ok
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:34:14.307Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - stack:
+  global code (https://pv.udn.com/API/af2.php?g=212331425&a=91604010136&t=7d&f=2&c=%E6%B5%81%E8%A1%8C%E7%A9%BF%E6%90%AD&u=https://style.udn.com/style/story/8066/2457276&callback=jQuery111305318177805747837_1494596053865&_=1494596053866:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:34:18.644Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - msg: ReferenceError: Can't find variable: jQuery111308784174914471805_1494596058276ok
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-05-12T13:34:18.644Z] Session [5c447280-3715-11e7-a893-b727957cf404] - page.onError - stack:
+  global code (https://pv.udn.com/API/af2.php?g=1041654927&a=91604010136&t=7d&f=2&c=%E6%99%82%E5%B0%9A%E5%90%8D%E4%BA%BA&u=https://style.udn.com/style/story/8065/2456729&callback=jQuery111308784174914471805_1494596058276&_=1494596058277:1)
+
+  phantomjs://platform/console++.js:263 in error

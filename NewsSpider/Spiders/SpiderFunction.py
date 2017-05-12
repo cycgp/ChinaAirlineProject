@@ -32,44 +32,44 @@ def getNewsList():
 	NewsList = [aplNewsList, cnaNewsList, cntNewsList, ltnNewsList, ntkNewsList, stmNewsList, tnlNewsList, tpnNewsList, udnNewsList]
 	return NewsList
 
-def getContent(NewsLists):
+def getContent(NewsLists, record):
 	print('\n Getting content from news list...')
 	newsContentList = []
 	for NewsList in NewsLists:
 		if NewsList['press'] == 'apl':
 			print("    Loading Apple News List...", end="", flush=True)
-			newsContentList.extend(aplSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(aplSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 		elif NewsList['press'] == 'cna':
 			print("    Loading CNA News List...", end="", flush=True)
-			newsContentList.extend(cnaSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(cnaSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 		elif NewsList['press'] == 'cnt':
 			print("    Loading China Times News List...", end="", flush=True)
-			newsContentList.extend(cntSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(cntSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 		elif NewsList['press'] == 'ltn':
 			print("    Loading Liberty Times News List...", end="", flush=True)
-			newsContentList.extend(ltnSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(ltnSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 		elif NewsList['press'] == 'ntk':
 			print("    Loading New Talks News List...", end="", flush=True)
-			newsContentList.extend(ntkSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(ntkSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 		elif NewsList['press'] == 'stm':
 			print("    Loading Storm News List...", end="", flush=True)
-			newsContentList.extend(stmSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(stmSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 		elif NewsList['press'] == 'tnl':
 			print("    Loading The News Lens News List...", end="", flush=True)
-			newsContentList.extend(tnlSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(tnlSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 		elif NewsList['press'] == 'tpn':
 			print("    Loading Taiwan People News News List...", end="", flush=True)
-			newsContentList.extend(tpnSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(tpnSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 		elif NewsList['press'] == 'udn':
 			print("    Loading UDN List...", end="", flush=True)
-			newsContentList.extend(udnSpider.getContent(NewsList['URLList']))
+			newsContentList.extend(udnSpider.getContent(NewsList['URLList'], record))
 			print("  DONE")
 	return  newsContentList

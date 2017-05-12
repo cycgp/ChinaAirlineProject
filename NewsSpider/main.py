@@ -3,24 +3,27 @@ from Spiders.SpiderFunction import getNewsList, getContent
 import pandas as pd
 import time
 
-def writePandas():
+def writePandas(record):
 	newsList = getNewsList()
-	newsContentList = getContent(newsList)
+	newsContentList = getContent(newsList, record)
 	df = pd.DataFrame(data=newsContentList, columns=['news ID', 'url', 'title','time','content'])
 	return df
 
 
 def writeFile():
-	print('\n' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
+	print('\nstart: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
 	fileName = 'NewsList_' + time.strftime('%Y%m%d', time.localtime())
 	try:
 		df = pd.read_csv('' + fileName + '.csv')
-		df = df.append(writePandas(), ignore_index=True)
+		record = df['url'].values.tolist()
+		df = df.append(writePandas(record), ignore_index=True)
 		df = df.drop_duplicates(subset=['url'], keep='last')
 		df.to_csv(fileName+'.csv', sep=',', encoding='utf-8', index=False)
 	except:
-		df = writePandas()
+		df = writePandas(record)
 		df.to_csv(fileName+'.csv', sep=',', encoding='utf-8', index=False)
+
+	print('\nEnd: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
 
 if __name__ == '__main__':
 	writeFile()
