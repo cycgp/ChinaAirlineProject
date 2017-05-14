@@ -1,28 +1,28 @@
-[INFO  - 2017-05-13T18:59:45.772Z] GhostDriver - Main - running on port 50449
-[INFO  - 2017-05-13T18:59:45.902Z] Session [54a64590-380e-11e7-8811-7721ff4f1579] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2017-05-13T18:59:45.902Z] Session [54a64590-380e-11e7-8811-7721ff4f1579] - page.customHeaders:  - {}
-[INFO  - 2017-05-13T18:59:45.902Z] Session [54a64590-380e-11e7-8811-7721ff4f1579] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2017-05-13T18:59:45.902Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 54a64590-380e-11e7-8811-7721ff4f1579
-[INFO  - 2017-05-13T19:04:17.321Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:09:17.322Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:14:17.324Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:19:17.325Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:24:17.326Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:29:17.327Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:34:17.330Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:39:17.348Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:44:17.349Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-dowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:24:10.211Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:29:10.225Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:34:10.231Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:39:10.243Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:44:10.253Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-s - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:24:38.131Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:29:38.147Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:34:38.150Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:39:38.154Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2017-05-13T19:44:38.156Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-- _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase s[INFO  - 201[INFO  - 2017-05-13T19:24:45.799Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase s[INFO  - 201[INFO  - 2017-05-13T19:29:45.802Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase s[INFO  - 201[INFO  - 2017-05-13T19:34:45.803Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase s[INFO  - 201[INFO  - 2017-05-13T19:39:45.804Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase s[INFO  - 201[INFO  - 2017-05-13T19:44:45.804Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-05-14T07:22:27.728Z] GhostDriver - Main - running on port 61298
+[INFO  - 2017-05-14T07:22:27.783Z] Session [15996400-3876-11e7-882f-6fa6e972cb13] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-05-14T07:22:27.783Z] Session [15996400-3876-11e7-882f-6fa6e972cb13] - page.customHeaders:  - {}
+[INFO  - 2017-05-14T07:22:27.783Z] Session [15996400-3876-11e7-882f-6fa6e972cb13] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-05-14T07:22:27.783Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 15996400-3876-11e7-882f-6fa6e972cb13
+[INFO  - 2017-05-14T07:26:00.643Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-05-14T07:31:00.647Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+ [15996400-3876-11e7-882f-6fa6e972cb13] - page.onError - stack:
+  success (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:4)
+  p (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  fireWith (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  i (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:3)
+  t (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:3)
 
+  phantomjs://platform/console++.js:263 in error
+[INFO  - 2017-05-14T07:24:32.965Z][INFO  - 2017-05-14T07:25:11.251Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Ses[INFO  - 2017-05-14T07:29:32.967Z][INFO  - 2017-05-14T07:30:11.252Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+ - page.onError - stack:
+  (anonymous function) (undefined:18)
+  dispatch (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  dispatch (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:7)
+  handle (https://s.udn.com.tw/static/js/dist/bundle.story.js?2017042702:2)
+  appendChild (:0)
+  loadPixels (https://udn-d.openx.net/mw/1.0/jstag:2)
+  (anonymous function) (https://udn-d.openx.net/mw/1.0/jstag:7)
+
+  phantomjs://platform/console++.js:263 in error
+[INFO  - 2017-05-14T07:27:27.732Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2017-05-14T07:32:27.735Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
