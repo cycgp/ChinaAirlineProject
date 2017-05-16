@@ -704,7 +704,6 @@ class udnSpider:
 				self.URLList.append(URL)
 			else:
 				page -= 1
-			print(page)
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
 			r = requests.get(URL)
@@ -720,7 +719,6 @@ class udnSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
 			if articleURL in record:
 				continue
 			try:
@@ -739,9 +737,6 @@ class udnSpider:
 				datetime = '/'.join(time[:3])
 				timeInNews = ':'.join(time[3:])
 				article = news.findAll('p')
-
-				if '今日星座運勢' in title:
-					break
 
 				if t.strftime('%Y/%m/%d', yesterday) not in datetime:
 					continue

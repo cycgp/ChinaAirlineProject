@@ -5,8 +5,6 @@ import pandas as pd
 import schedule
 import time
 
-yesterday = (date.today() - timedelta(1)).timetuple()
-
 def writePandas(record):
 	newsList = getNewsList()
 	newsContentList = getContent(newsList, record)
@@ -39,6 +37,7 @@ def checkPandas(record):
 
 def checkFile():
 	print('\nstart: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
+	yesterday = (date.today() - timedelta(1)).timetuple()
 	fileName = 'NewsList_' + time.strftime('%Y%m%d', yesterday)
 	df = pd.read_csv('' + fileName + '.csv')
 	record = df['url'].values.tolist()
@@ -49,10 +48,11 @@ def checkFile():
 	print('\nEnd: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
 
 if __name__ == '__main__':
-	schedule.every().day.at("09:30").do(writeFile)
-	schedule.every().day.at("15:01").do(writeFile)
-	schedule.every().day.at("20:00").do(writeFile)
-	schedule.every().day.at("00:10").do(checkFile)
+	schedule.every().day.at("07:30").do(writeFile)
+	schedule.every().day.at("11:30").do(writeFile)
+	schedule.every().day.at("17:00").do(writeFile)
+	schedule.every().day.at("21:00").do(writeFile)
+	schedule.every().day.at("00:30").do(checkFile)
 
 	while True:
 		schedule.run_pending()
