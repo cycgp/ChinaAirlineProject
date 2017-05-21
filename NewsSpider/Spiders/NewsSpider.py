@@ -743,6 +743,10 @@ class udnSpider:
 						pass
 
 				articleID = ''.join(time)+'000'
+				if articleID.isdigit():
+					pass
+				else:
+					continue
 				while articleID in articleIDList:
 					articleID = str(int(articleID)+1)
 				articleIDList.append(articleID)

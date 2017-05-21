@@ -8,10 +8,8 @@ import sys
 import time as t
 from datetime import date, timedelta
 
-today = date.today().timetuple()
-yesterday = (date.today() - timedelta(1)).timetuple()
-
 class aplSpider:
+
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -20,6 +18,8 @@ class aplSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
 		state = True
 		while state:
@@ -48,6 +48,8 @@ class aplSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -91,6 +93,8 @@ class cldSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 0
 		state = True
 		while state:
@@ -121,6 +125,8 @@ class cldSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsLists = []
 		articleIDList = []
 		driver = webdriver.PhantomJS()
@@ -163,6 +169,8 @@ class cnaSpider:
 		self.ARTICLE_List = cnaSpider.ARTICLE_List
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
 		state = True
 		while state:
@@ -194,6 +202,8 @@ class cnaSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -234,6 +244,8 @@ class cntSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		#Real-time news pages
 		page = 1
 		state = True
@@ -267,6 +279,8 @@ class cntSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -310,6 +324,8 @@ class ltnSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		#Real-time news pages
 		page = 1
 		state = True
@@ -342,6 +358,8 @@ class ltnSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -400,6 +418,8 @@ class ntkSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		a = t.strftime('%Y-%m-%d', yesterday)
 		#Real-time news pages
 		URL = 'https://newtalk.tw/news/summary/'+str(a)
@@ -419,6 +439,8 @@ class ntkSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		driver = webdriver.PhantomJS()
@@ -459,6 +481,8 @@ class stmSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
 		state = True
 		while state:
@@ -491,6 +515,8 @@ class stmSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -533,6 +559,8 @@ class tnlSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
 		state = True
 		while state:
@@ -566,6 +594,8 @@ class tnlSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -605,6 +635,8 @@ class tpnSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
 		state = True
 		while state:
@@ -647,6 +679,8 @@ class tpnSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -687,6 +721,8 @@ class udnSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
 		state = True
 		while state:
@@ -716,6 +752,8 @@ class udnSpider:
 
 	#Get Content from article
 	def getContent(ARTICLE_List, record):
+		today = date.today().timetuple()
+		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -750,6 +788,10 @@ class udnSpider:
 						pass
 
 				articleID = ''.join(time)+'000'
+				if articleID.isdigit():
+					pass
+				else:
+					continue
 				while articleID in articleIDList:
 					articleID = str(int(articleID)+1)
 				articleIDList.append(articleID)

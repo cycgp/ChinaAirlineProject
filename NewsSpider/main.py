@@ -26,7 +26,8 @@ def writeFile():
 		df = writePandas(record)
 		df.to_csv(fileName+'.csv', sep=',', encoding='utf-8', index=False)
 
-	print('\nEnd: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
+	print('\n'+fileName+'.csv updated')
+	print('End: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
 
 def checkPandas(record):
 	newsList = checkNewsList()
@@ -44,15 +45,18 @@ def checkFile():
 	df = df.append(checkPandas(record), ignore_index=True)
 	df = df.drop_duplicates(subset=['url'], keep='last')
 	df.to_csv(fileName+'.csv', sep=',', encoding='utf-8', index=False)
-
-	print('\nEnd: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
+	print('\n'+fileName+'.csv updated')
+	print('End: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
 
 if __name__ == '__main__':
-	schedule.every().day.at("07:30").do(writeFile)
+	schedule.every().day.at("09:00").do(writeFile)
 	schedule.every().day.at("11:30").do(writeFile)
-	schedule.every().day.at("17:00").do(writeFile)
-	schedule.every().day.at("21:00").do(writeFile)
-	schedule.every().day.at("00:30").do(checkFile)
+	schedule.every().day.at("13:30").do(writeFile)
+	schedule.every().day.at("16:30").do(writeFile)
+	schedule.every().day.at("18:30").do(writeFile)
+	schedule.every().day.at("20:30").do(writeFile)
+	schedule.every().day.at("22:30").do(writeFile)
+	schedule.every().day.at("00:00").do(checkFile)
 
 	while True:
 		schedule.run_pending()
