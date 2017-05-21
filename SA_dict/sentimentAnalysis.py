@@ -73,13 +73,13 @@ def jieba_best_words():
 		word_scores[word] = pos_score + neg_score #一個詞的資訊量等於積極卡方統計量加上消極卡方統計量
 	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:500] #把詞按資訊量倒序排序。number是特徵的維度
 	best_words = set([w for w,s in best_vals])
-	print(best_words)
 	return dict([(word, True) for word in best_words])
 
 def jieba_features(words):
 	return dict([(word, True) for word in words if word in jieba_best_words()])
 
 def extract_features(data):
+	print('extracting features...')
 	feat = []
 	for i in data:
 		feat.append(jieba_features(i))
@@ -92,14 +92,14 @@ if __name__ == "__main__":
 	#get corpus
 	corpus = read_file('docs/test.txt')
 	corpusFeatures = extract_features(corpus)
+	print(corpusFeatures)
 	#classifier
 	clf = joblib.load('classifier.pkl')
 	pred = clf.prob_classify_many(corpusFeatures)
 
-	print(clf.labels())
 	originalText = text()
 	for i in pred:
-		print('\n---\n' + str(pred.index(i)+1) + '\n---\n\nOriginal Text:\n')
+		print('\n---\n' + str(pred.index(i)+1) + '\n---\nOriginal Text:\n')
 		print(originalText[pred.index(i)])
 		print('Positive probability: %2.5f' %i.prob('pos'))
 		print('Negative probability: %2.5f' %i.prob('neg'))
