@@ -8,7 +8,7 @@ from selenium import webdriver
 def generateURL():
 	global URL_List
 	for page in range(0,184):
-		URL = 'https://www.tripadvisor.com.tw/Airline_Review-d8729151-Reviews-Cheap-Flights-or'+str(page)+'-Singapore-Airlines#REVIEWS'
+		URL = 'https://www.tripadvisor.com.tw/Airline_Review-d8729151-Reviews-Cheap-Flights-or'+str(page)+'0-Singapore-Airlines#REVIEWS'
 		#Url of China Airline in Trip Advisor
 		URL_List.append(URL)
 
