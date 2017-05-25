@@ -2,14 +2,14 @@
 from bs4 import BeautifulSoup as bs4
 import json
 import time
-import dryscrape
+from selenium import webdriver
 
 #generate url of Trip Advisor
 def generateURL():
 	global URL_List
-	for page in range(0,40):
-		URL = 'https://www.tripadvisor.com.tw/Airline_Review-d8729049-Reviews-Cheap-Flights-or'+str(page)+'0-China-Airlines#Reviews'
-		#Url of China Airline in Trip Advisor
+	for page in range(0,61):
+		URL = 'https://www.tripadvisor.com.tw/Airline_Review-d8729076-Reviews-Cheap-Flights-or'+str(page)+'0-EVA-Air#REVIEWS'
+
 		URL_List.append(URL)
 
 #get review detail
@@ -17,9 +17,13 @@ def getReviewInfo(review):
 	#print(review.prettify())
 	innerBubble = review.find("div", { "class" : "innerBubble" })
 	quote = innerBubble.find("div", { "class" : "quote" }).span
-	rating = innerBubble.find("div", { "class" : "rating" }).img['alt'].encode('utf-8').split(' ')[0]
-	ratingDate = getDate(innerBubble.find("span", { "class" : "ratingDate" }))
-	comment = getTextFromTag(innerBubble.find("p", { "class" : "partial_entry" }))
+	try:
+		rating = innerBubble.find("div", { "class" : "rating" }).span['alt'].split('.')[0]
+	except KeyError:
+		rating = innerBubble.find("div", { "class" : "rating" }).img['alt'].split(' ')[0]
+	ratingDate = getDate(innerBubble.find("span", { "class" : "ratingDate" })).decode('utf-8')
+	comment = getTextFromTag(innerBubble.find("p", { "class" : "partial_entry" })).replace(' ','').replace('\n','')
+
 	try:
 		labels = innerBubble.findAll("span", { "class" : "categoryLabel" }) #set of labels
 		area = getTextFromTag(labels[0])
@@ -62,7 +66,7 @@ def getDate(ratingDate):
 	try:
 		ratingDate = ratingDate['title'].encode('utf-8')
 	except:
-		ratingDate = getTextFromTag(ratingDate).split('的')[0]
+		ratingDate = getTextFromTag(ratingDate).split('的')[0].encode('utf-8')
 	return ratingDate
 
 #get origin and destination
@@ -73,7 +77,7 @@ def getRouteDetail(route):
 	return [origin,destination]
 
 def getTextFromTag(tag):
-	return tag.contents[0].encode('utf-8')
+	return tag.contents[0]
 
 def main():
 	generateURL()
@@ -81,10 +85,10 @@ def main():
 	for URL in URL_List:
 		time.sleep(1)
 		#use dryscrape instead of request to run javascript
-		session = dryscrape.Session()
-		session.visit(URL)
-		response = session.body()
-		soup = bs4(response, 'html.parser')
+		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+		r = driver.get(URL)
+		pageSource = driver.page_source
+		soup = bs4(pageSource, 'html.parser')
 		reviews = soup.findAll("div", { "class" : "reviewSelector" })
 		for review in reviews:
 			getReviewInfo(review)
@@ -95,5 +99,5 @@ if __name__ == '__main__':
 	URL_List= []
 	main()
 	#Pagination
-	with open('data.json', 'w') as outfile:
+	with open('data_BR.json', 'w', encoding='utf-8') as outfile:
 	    json.dump(list2json, outfile, indent=4, sort_keys=True, ensure_ascii=False)

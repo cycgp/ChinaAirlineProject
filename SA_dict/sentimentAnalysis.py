@@ -8,7 +8,11 @@ from nltk.probability import  FreqDist,ConditionalFreqDist
 from nltk.metrics import  BigramAssocMeasures
 #import sci-kit learn
 import sklearn
+from sklearn.naive_bayes import  MultinomialNB
 from sklearn.externals import joblib
+from nltk.classify.scikitlearn import  SklearnClassifier
+#word list shuffle
+from random import shuffle
 
 #get original text
 def text():
@@ -98,6 +102,7 @@ if __name__ == "__main__":
 	pred = clf.prob_classify_many(corpusFeatures)
 
 	originalText = text()
+	print(originalText)
 	for i in pred:
 		print('\n---\n' + str(pred.index(i)+1) + '\n---\nOriginal Text:\n')
 		print(originalText[pred.index(i)])

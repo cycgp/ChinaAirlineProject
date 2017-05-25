@@ -19,8 +19,8 @@ def main():
 
     texts_num = 0
 
-    output = open('data_seg.txt','w')
-    with open('data_zh_tw.txt','r') as content :
+    output = open('data_seg.txt','w', encoding='utf-8')
+    with open('data_zh_tw.txt','r', encoding='utf-8') as content :
         for line in content:
             line = line.strip('\n')
             words = jieba.cut(line, cut_all=False)
