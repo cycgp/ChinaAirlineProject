@@ -90,28 +90,12 @@ def build_features(topRank):
 if __name__ == "__main__":
 	jieba.set_dictionary('jieba_dict/dict.txt.big')
 
-	posFeatures,negFeatures =  build_features(500)#獲得訓練資料
-	posLength = int(len(posFeatures)*0.8)
-	negLength = int(len(negFeatures)*0.8)
+	posFeatures,negFeatures =  build_features(1500)#獲得訓練資料
 
-	shuffle(posFeatures) #把文本的排列随机化
-	shuffle(negFeatures) #把文本的排列随机化
-
-	train =  posFeatures[:posLength]+negFeatures[:negLength]#訓練集(80%)
-	test = posFeatures[posLength:]+negFeatures[negLength:]#預測集(驗證集)(20%)
-	data,tag = zip(*test)#分離測試集合的資料和標籤，便於驗證和測試
+	train =  posFeatures+negFeatures#訓練集(80%)
 
 	MultinomialNB_classifier = SklearnClassifier(MultinomialNB()) #在nltk中使用scikit-learn的介面
 	MultinomialNB_classifier.train(train) #訓練分類器
-	pred = MultinomialNB_classifier.prob_classify_many(data) #對測試集的資料進行分類，給出預測的標籤
-	for i in pred:
-		print('\n---\n' + str(pred.index(i)+1) + '\n---\nOriginal Text:\n')
-		print(test[pred.index(i)])
-		print('Positive probability: %2.5f' %i.prob('pos'))
-		print('Negative probability: %2.5f' %i.prob('neg'))
-		print('Emotion: ' + i.max())
-	accuracy = nltk.classify.accuracy(MultinomialNB_classifier,test)
-	print(accuracy)
 
 	joblib.dump(MultinomialNB_classifier, 'classifier.pkl')
 

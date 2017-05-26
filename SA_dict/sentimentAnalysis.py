@@ -1,4 +1,4 @@
-#coding:utf-8
+#coding:utf8
 import jieba
 #import nltk
 import nltk
@@ -12,7 +12,7 @@ from sklearn.externals import joblib
 
 #get original text
 def text():
-	f1 = open('docs/test.txt','r',encoding='utf-8')
+	f1 = open('docs/test.txt','r',encoding='utf8')
 	line1 = f1.readline()
 	str = ''
 
@@ -26,8 +26,8 @@ def text():
 #Generate corpus
 def read_file(filename):
 	jieba.load_userdict("jieba_dict/userdict.txt")
-	stop = [line.strip() for line in  open('jieba_dict/stopwords.txt','r',encoding='utf-8').readlines()]#停用詞
-	f = open(filename,'r',encoding='utf-8')
+	stop = [line.strip() for line in  open('jieba_dict/stopwords.txt','r',encoding='utf8').readlines()]#停用詞
+	f = open(filename,'r',encoding='utf8')
 	line = f.readline()
 	str = []
 
@@ -71,7 +71,7 @@ def jieba_best_words():
 		pos_score = BigramAssocMeasures.chi_sq(cond_word_fd['pos'][word],  (freq, pos_word_count), total_word_count) #計算積極詞的卡方統計量，這裡也可以計算互資訊等其它統計量
 		neg_score = BigramAssocMeasures.chi_sq(cond_word_fd['neg'][word],  (freq, neg_word_count), total_word_count) #同理
 		word_scores[word] = pos_score + neg_score #一個詞的資訊量等於積極卡方統計量加上消極卡方統計量
-	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:500] #把詞按資訊量倒序排序。number是特徵的維度
+	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:1500] #把詞按資訊量倒序排序。number是特徵的維度
 	best_words = set([w for w,s in best_vals])
 	return dict([(word, True) for word in best_words])
 
@@ -82,7 +82,7 @@ def extract_features(datas):
 	for data in datas:
 		a = {}
 		for item in data:
-			if item in feature.keys():
+			if item in feature.keys() and item is not '\n':
 				a[item]='True'
 		posWords = a #為積極文字賦予"pos"
 		corpusFeatures.append(posWords)
