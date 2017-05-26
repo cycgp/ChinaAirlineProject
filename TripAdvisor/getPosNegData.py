@@ -3,7 +3,7 @@ import json
 
 datas = []
 
-with open('data.json', encoding='utf-8') as json_data:
+with open('./data_json/data.json', encoding='utf-8') as json_data:
     datas = json.load(json_data)
 
 pos = open("pos.txt","w", encoding='utf-8')
