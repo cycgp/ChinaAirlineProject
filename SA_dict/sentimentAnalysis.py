@@ -8,11 +8,7 @@ from nltk.probability import  FreqDist,ConditionalFreqDist
 from nltk.metrics import  BigramAssocMeasures
 #import sci-kit learn
 import sklearn
-from sklearn.naive_bayes import  MultinomialNB
 from sklearn.externals import joblib
-from nltk.classify.scikitlearn import  SklearnClassifier
-#word list shuffle
-from random import shuffle
 
 #get original text
 def text():
@@ -79,15 +75,18 @@ def jieba_best_words():
 	best_words = set([w for w,s in best_vals])
 	return dict([(word, True) for word in best_words])
 
-def jieba_features(words):
-	return dict([(word, True) for word in words if word in jieba_best_words()])
-
-def extract_features(data):
+def extract_features(datas):
 	print('extracting features...')
-	feat = []
-	for i in data:
-		feat.append(jieba_features(i))
-	return feat
+	feature = jieba_best_words()
+	corpusFeatures = []
+	for data in datas:
+		a = {}
+		for item in data:
+			if item in feature.keys():
+				a[item]='True'
+		posWords = a #為積極文字賦予"pos"
+		corpusFeatures.append(posWords)
+	return corpusFeatures
 
 if __name__ == "__main__":
 
@@ -96,16 +95,17 @@ if __name__ == "__main__":
 	#get corpus
 	corpus = read_file('docs/test.txt')
 	corpusFeatures = extract_features(corpus)
-	print(corpusFeatures)
 	#classifier
 	clf = joblib.load('classifier.pkl')
 	pred = clf.prob_classify_many(corpusFeatures)
 
 	originalText = text()
-	print(originalText)
 	for i in pred:
 		print('\n---\n' + str(pred.index(i)+1) + '\n---\nOriginal Text:\n')
 		print(originalText[pred.index(i)])
+		print(corpusFeatures[pred.index(i)])
 		print('Positive probability: %2.5f' %i.prob('pos'))
 		print('Negative probability: %2.5f' %i.prob('neg'))
+		score = i.prob('pos')-i.prob('neg')
+		print('score: ' + str(score))
 		print('Emotion: ' + i.max())
