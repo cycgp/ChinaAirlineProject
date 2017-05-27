@@ -73,6 +73,7 @@ def jieba_best_words():
 		word_scores[word] = pos_score + neg_score #一個詞的資訊量等於積極卡方統計量加上消極卡方統計量
 	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:1500] #把詞按資訊量倒序排序。number是特徵的維度
 	best_words = set([w for w,s in best_vals])
+	print(best_words)
 	return dict([(word, True) for word in best_words])
 
 def extract_features(datas):
@@ -82,6 +83,7 @@ def extract_features(datas):
 	for data in datas:
 		a = {}
 		for item in data:
+			item = item.replace('\ufeff','')
 			if item in feature.keys() and item is not '\n':
 				a[item]='True'
 		posWords = a #為積極文字賦予"pos"
@@ -102,7 +104,7 @@ if __name__ == "__main__":
 	originalText = text()
 	for i in pred:
 		print('\n---\n' + str(pred.index(i)+1) + '\n---\nOriginal Text:\n')
-		print(originalText[pred.index(i)])
+		print(originalText[pred.index(i)].replace('\ufeff',''))
 		print(corpusFeatures[pred.index(i)])
 		print('Positive probability: %2.5f' %i.prob('pos'))
 		print('Negative probability: %2.5f' %i.prob('neg'))
