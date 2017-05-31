@@ -22,8 +22,10 @@ def getReviewInfo(review):
 	except KeyError:
 		rating = innerBubble.find("div", { "class" : "rating" }).img['alt'].split(' ')[0]
 	ratingDate = getDate(innerBubble.find("span", { "class" : "ratingDate" })).decode('utf-8')
-	comment = getTextFromTag(innerBubble.find("p", { "class" : "partial_entry" })).replace(' ','').replace('\n','')
-	
+	try:
+		comment = getTextFromTag(review.findAll("div", { "class" : "entry" })[1]).replace(' ','').replace('\n','')
+	except:
+		comment = getTextFromTag(innerBubble.find("p", { "class" : "partial_entry" })).replace(' ','').replace('\n','')
 
 	try:
 		labels = innerBubble.findAll("span", { "class" : "categoryLabel" }) #set of labels
@@ -80,15 +82,25 @@ def getRouteDetail(route):
 	return [origin,destination]
 
 def getTextFromTag(tag):
-	return tag.contents[0]
+	return tag.text
 
 def main():
 	generateURL()
 	global URL_List
 	for URL in URL_List:
 		time.sleep(1)
+		#use dryscrape instead of request to run javascript
 		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
-		r = driver.get(URL)
+		driver.get(URL)
+		pageSource = driver.page_source
+		soup = bs4(pageSource, 'html.parser')
+		moreLinkID = soup.findAll("div", { 'class' : 'reviewSelector'})
+		articleID =  moreLinkID[0]['id']
+		script = "      ta.util.cookie.setPIDCookie(4444); ta.call('ta.servlet.Reviews.expandReviews', {type: 'dummy'}, ta.id('" + articleID + "'), '" + articleID + "', '1', 4444);"
+		driver.execute_script(script)
+		script = "return document.getElementsByTagName('html')[0].innerHTML;"
+		time.sleep(3)
+		html = driver.execute_script(script)
 		pageSource = driver.page_source
 		soup = bs4(pageSource, 'html.parser')
 		reviews = soup.findAll("div", { "class" : "reviewSelector" })

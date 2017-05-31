@@ -44,10 +44,12 @@ def jieba_best_words():
 
 	for items in read_file('docs/pos_tw.txt'):#把集合的集合變成集合
 		for item in items:
+			item = item.replace('\ufeff','').replace('\n','')
 			posWords.append(item)
 
 	for items in read_file('docs/neg_tw.txt'):
 		for item in items:
+			item = item.replace('\ufeff','').replace('\n','')
 			negWords.append(item)
 
 

@@ -1,0 +1,2022 @@
+[<div class="reviewSelector track_back" data-scroll="REVIEWS" id="review_439713618">
+<div class="review basic_review inlineReviewUpdate provider0 first" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_C4630A0EE6C2232B3A5243B50C636BE0-SRC_439713618" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_C4630A0EE6C2232B3A5243B50C636BE0 ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_0" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_C4630A0EE6C2232B3A5243B50C636BE0" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> Fish-wood...</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_C4630A0EE6C2232B3A5243B50C636BE0-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_06">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_1" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_2" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">269則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_C4630A0EE6C2232B3A5243B50C636BE0-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon lazy " height="20" id="lazyload_1369647435_3" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+25人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r439713618-China_Airlines-World.html#REVIEWS" id="rn439713618" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">特別的機上廣播</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="4.0 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<span class="ratingDate">2016年11月24日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+高雄到韓國仁川旅遊，主要目的是韓國賞楓。因為高雄到仁川是短程飛行，飛行時間只有不到三小時，如果是桃園出發，可能接近兩小時。
+第一次飛行作737，經濟艙一排六個人，兩邊各三個座位，座椅的空間不大，
+因為回程時剛好在靠窗，要出去時，必須大腳踏過兩個人的中間，其他兩個人都不
+想動，回想起來，應該座椅前後寬六七十左右。要約五排才可...
+</p><div class="aboveCategoryLabels"></div>
+<span class="partnerRvw">
+<span class="taLnk hvrIE6 tr439713618 moreLink ulBlueLinks" onclick="      ta.util.cookie.setPIDCookie(4444); ta.call('ta.servlet.Reviews.expandReviews', {type: 'dummy'}, ta.id('review_439713618'), 'review_439713618', '1', 4444);
+  ">
+更多  </span>
+<span class="ui_icon caret-down"></span>
+<div class="categoryLabels">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">高雄市 - 首爾</span>
+</div>
+</div>
+<div class="belowCategoryLabelsAbbreviated"></div>
+</span>
+<p></p>
+</div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq439713618_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq439713618 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmAkUm3Uv0tEn1dmAkUm3Uv0zH1U0pSM1fd3mKbKzszs3fXXmX7mboXdm7oKf3m37zsK0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3Xozxb7aXnuq8xX7NuvgzCdINlUKn9fdThlVD9d3zzivqnmtxGRNJwwMHxdOcvy2x2GSAGaAOyxMx2JzCxMD2GJemkEXxbo3ynnbexbxEMxXga7TjTrAjxMqIq8RjVxdATxdqito9q8mHxEHCxdDx5yKXgAqIqnqn3blq8pq8xMObx5yMxdtqiqQxXnkvx5lxMzzcy5OzsjSZZqIqQx2Inr9ExXx5HU'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Fish-woodcut-man</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_439713618" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '439713618')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_4" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0 first" style="display: block;">
+<a class="" name="UR439713618"></a>
+<div class="extended provider0 first" id="UR439713618">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_C4630A0EE6C2232B3A5243B50C636BE0-SRC_439713618" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_C4630A0EE6C2232B3A5243B50C636BE0 ">
+<a onclick="">
+<img class="avatar" height="74" src="https://static.tacdn.com/img2/generic/site/no_user_photo-v1.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_C4630A0EE6C2232B3A5243B50C636BE0" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">Fish-woodcut-man</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_C4630A0EE6C2232B3A5243B50C636BE0-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_06">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_06.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_06.png" width="20">
+<span class="badgeText">269則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_C4630A0EE6C2232B3A5243B50C636BE0-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+25人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r439713618-China_Airlines-World.html#CHECK_RATES_CONT" id="r439713618" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">特別的機上廣播</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="4 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s40" src="https://static.tacdn.com/img2/x.gif" width="56">
+</img></span>
+<span class="ratingDate">2016年11月24日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+高雄到韓國仁川旅遊，主要目的是韓國賞楓。因為高雄到仁川是短程飛行，飛行時間只有不到三小時，如果是桃園出發，可能接近兩小時。<br>第一次飛行作737，經濟艙一排六個人，兩邊各三個座位，座椅的空間不大，<br>因為回程時剛好在靠窗，要出去時，必須大腳踏過兩個人的中間，其他兩個人都不<br>想動，回想起來，應該座椅前後寬六七十左右。要約五排才可以看一個液晶螢幕<br>的播出，真不方便。有些越大洋的班機有個人選擇的視聽選擇。 <br>飛機起飛不久，座艙長照例，播出中華航空公司感謝各位搭乘高雄到仁川的班機，<br>也感謝XXX公司的尊榮旅客們，搭乘本次班機前往仁川。<br>居然廣播我們公司，真是一個很難得的機會。畢竟小公司怎會被廣播！<br>班級滿客是160人，去程大概有空位，約二三十個，我們公司這一次旅遊總共有<br>接近八十人，就佔有所有旅客的一半，被廣播真是感覺好好。
+</br></br></br></br></br></br></br></br></br></p>
+</div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2016年9月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">餐飲</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="2 分 (共 5 分)" class="ui_bubble_rating bubble_2"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="2 分 (共 5 分)" class="ui_bubble_rating bubble_2"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="expanded lessLink">
+<span class="taLnk collapse ulBlueLinks no_cpu ">
+收起 
+</span>
+<span class="textArrow_more ui_icon caret-up"></span>
+<div class="categoryLabels">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">高雄市 - 首爾</span>
+</div>
+</div>
+<div class="belowCategoryLabelsExpanded"></div>
+</div>
+<div class="helpful redesigned white_btn_container " id="helpfulq439713618_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq439713618 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmAkUm3Uv0tEn1dmAkUm3Uv0zH1U0pSM1fd3mKbKzszs3fXXmX7mboXdm7oKf3m37zsK0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbfINqIC3TxGDxMqI7xEvvjzCxdazz2vmoieyDMuxbGTDx5aTsppUrSJq8qQocMJDvxXqQhHejRGzCeuxdx2xXyOnrmzsxGyKjeXzCxXxEaUAUOx5cCxXp5xM2yCgddU9pVTxXTlxbqicvx2qnx2tpxGzCJxMqiNCdzCCqQZAMtUxdpx5kTsJqIHe9wexbkdGSx2x5a5RszzsqQh73gfzCXzCxbnSqi'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Fish-woodcut-man</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_439713618" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '439713618')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+<div class="large">
+<div class="ad iab_inlineBanner">
+<div class="adInner gptAd" id="gpt-ad-728x90-c"></div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_439482753">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_91CC141C9635C7D180F22DEC828AC0E8-SRC_439482753" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_91CC141C9635C7D180F22DEC828AC0E8 ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_5" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_91CC141C9635C7D180F22DEC828AC0E8" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> Uly H</span>
+</div>
+</div>
+<div class="location">
+台灣台北市
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_91CC141C9635C7D180F22DEC828AC0E8-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_01">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_6" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_7" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">4則評論</span> </img></div>
+</div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r439482753-China_Airlines-World.html#REVIEWS" id="rn439482753" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">親切又貼心的航空公司</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="5.0 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<span class="ratingDate">2016年11月23日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+輕鬆愉快的舒適旅程，讓我到香港商務一派輕鬆。透過華航玉璽聯名卡，不但享有金卡優先checkin的服務，拿到行李也是掛商務艙等級，可以優先提領。更有機會拿到升等的小確幸。
+</p>
+</div>
+<div class="aboveCategoryLabels"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">亞洲</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 香港</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq439482753_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq439482753 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmAdvXkom0tEn1dmAdvXkom0zH1U0pSM1AUffUdUfA3mofkxMUvKqnXXxMzsfvXvbfKzsv0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbZkClxXTZxbVsE35xdZqipezC2AImVq8xdbCTxbmyLzCqIxdlxdsfNxMtsfLiDKcbzClx2x5RhaZMxGmMqIGx2axXNbmAjzCHCi23qILzCJd2RAx2xbXnyxbp7JxdxMuIXex5zzxXjRHrwyDfboM2nbq8fkGxbu5DbnNUKNbKuScsxM3xGqnx5xEk5DqnDhekqIxMgnZcuvuwhmS2qnAxbc'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Uly H</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_439482753" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '439482753')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_8" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR439482753"></a>
+<div class="extended provider0" id="UR439482753">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_91CC141C9635C7D180F22DEC828AC0E8-SRC_439482753" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_91CC141C9635C7D180F22DEC828AC0E8 ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/03/ca/3e/9a/facebook-avatar.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_91CC141C9635C7D180F22DEC828AC0E8" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">Uly H</span>
+</div>
+</div>
+<div class="location">
+台灣台北市
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_91CC141C9635C7D180F22DEC828AC0E8-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_01">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_01.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_02.png" width="20">
+<span class="badgeText">4則評論</span> </img></div>
+</div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r439482753-China_Airlines-World.html#CHECK_RATES_CONT" id="r439482753" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">親切又貼心的航空公司</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="5 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s50" src="https://static.tacdn.com/img2/x.gif" width="70">
+</img></span>
+<span class="ratingDate">2016年11月23日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+輕鬆愉快的舒適旅程，讓我到香港商務一派輕鬆。透過華航玉璽聯名卡，不但享有金卡優先checkin的服務，拿到行李也是掛商務艙等級，可以優先提領。更有機會拿到升等的小確幸。
+</p>
+<div class="reviewItem inlineRoomTip">
+<b>旅行秘訣：</b> 華航玉璽卡可享有金卡優先checkin服務
+<div class="taLnk hvrIE6" onclick="ta.call('ta.overlays.Factory.showAirlineTipsOverlay',event,this,'zhTW');">查看更多旅遊秘訣</div>
+</div>
+</div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2016年11月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">餐飲</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">亞洲</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 香港</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="helpful redesigned white_btn_container " id="helpfulq439482753_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq439482753 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmAdvXkom0tEn1dmAdvXkom0zH1U0pSM1AUffUdUfA3mofkxMUvKqnXXxMzsfvXvbfKzsv0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbzsLmrthoSqnS5T3qIjT5SOx5xMaxXNhjwnqIoKv3wrq8cXUG39CLqix2Dq8qQIEtqnruTrRR3xEtnL9fJGx2GJtT9axEOGENx2qQTx59xXUTmwcbUniddflKwzCRIrLxGvzzywCilVqQSIfCRx2Jx5qIdKJZcSEvxdUzCkXo9svNzCzCxGbkfXq8Sudkl7uzzHNfSux2ucxdR7V'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Uly H</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_439482753" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '439482753')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_439287031">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_6C4818D06E97A4D58FD5DD8E536AC99C-SRC_439287031" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_6C4818D06E97A4D58FD5DD8E536AC99C ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_9" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_6C4818D06E97A4D58FD5DD8E536AC99C" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> Piousfait...</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_6C4818D06E97A4D58FD5DD8E536AC99C-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_05">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_10" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_11" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">42則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_6C4818D06E97A4D58FD5DD8E536AC99C-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon lazy " height="20" id="lazyload_1369647435_12" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+4人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r439287031-China_Airlines-World.html#REVIEWS" id="rn439287031" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">搭過一次...</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="3.0 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<span class="ratingDate">2016年11月22日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+當天可能是我運氣不好,亂流不斷,不管是起降或是飛行途中,亂流都沒停過,生平第一次暈機就在華航...如果不是因為當時台灣只有華航直飛印度德里...我想我應該不會選擇華航, 機上餐點好不好吃我也忘記了,因為當時的亂流強到空服員無法發餐甚至站立, 降落時也各種不舒服...
+</p>
+</div>
+<div class="aboveCategoryLabels"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">亞洲</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">高雄市 - 新德里</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq439287031_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq439287031 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmAXvkKmU0tEn1dmAXvkKmU0zH1U0pSM13fdvUvxMK3zsAkbdxMovqnxMoxMxMvzsom3bfAAf0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbfJysHxXCgkTJderbxdTqIzCiCjuxEHEXauM2fXcvXGZxENLhRDVVbJZHbJvqnoxdOVzzqn7hmSzzNqQzsxG2E7RkItL3urEM9xdirMo5bskbycxXxGGq8RILMzzqnqiSEObkxXxbzsNzs3zsUZMELbLxEaCq8svlwcyhxGebkUxGnuJygaqitcxE7jhbzs5qQszsqIgDxGkunRLG'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Piousfaith</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_439287031" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '439287031')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_13" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR439287031"></a>
+<div class="extended provider0" id="UR439287031">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_6C4818D06E97A4D58FD5DD8E536AC99C-SRC_439287031" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_6C4818D06E97A4D58FD5DD8E536AC99C ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/03/5a/1e/b2/piousfaith.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_6C4818D06E97A4D58FD5DD8E536AC99C" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">Piousfaith</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_6C4818D06E97A4D58FD5DD8E536AC99C-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_05">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_05.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_05.png" width="20">
+<span class="badgeText">42則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_6C4818D06E97A4D58FD5DD8E536AC99C-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+4人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r439287031-China_Airlines-World.html#CHECK_RATES_CONT" id="r439287031" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">搭過一次...</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="3 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s30" src="https://static.tacdn.com/img2/x.gif" width="42">
+</img></span>
+<span class="ratingDate">2016年11月22日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+當天可能是我運氣不好,亂流不斷,不管是起降或是飛行途中,亂流都沒停過,生平第一次暈機就在華航...如果不是因為當時台灣只有華航直飛印度德里...我想我應該不會選擇華航, 機上餐點好不好吃我也忘記了,因為當時的亂流強到空服員無法發餐甚至站立, 降落時也各種不舒服...
+</p>
+</div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2015年12月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">餐飲</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="2 分 (共 5 分)" class="ui_bubble_rating bubble_2"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">亞洲</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">高雄市 - 新德里</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="helpful redesigned white_btn_container " id="helpfulq439287031_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq439287031 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmAXvkKmU0tEn1dmAXvkKmU0zH1U0pSM13fdvUvxMK3zsAkbdxMovqnxMoxMxMvzsom3bfAAf0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbzsAbdmKxdxMlqIt2xGkiUk9q8jzCqQnVlApbRniIHxb9vA2OjrqIJzCIq8pjDxEv3kRrriDXq8ixbx2kqQfEzsxMZ7ZKxXpjL9zsfxEvEjqiZ2obqIqIASETrzCdLKaxbZjJLZq87KixXhozsLogxXw2XpZCdzCnyGxbxdclezztLzCGbpjmcUhqibsSUaxGySpmUESxMkywxGzCrUq8R'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Piousfaith</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_439287031" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '439287031')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_439074971">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_4FDB3CAF1C19CDC7A5069711BC9DFB7E-SRC_439074971" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_4FDB3CAF1C19CDC7A5069711BC9DFB7E ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_14" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_4FDB3CAF1C19CDC7A5069711BC9DFB7E" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> jeromek1</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_4FDB3CAF1C19CDC7A5069711BC9DFB7E-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_06">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_15" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_16" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">76則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_4FDB3CAF1C19CDC7A5069711BC9DFB7E-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon lazy " height="20" id="lazyload_1369647435_17" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+5人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r439074971-China_Airlines-World.html#REVIEWS" id="rn439074971" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">服務人員親切，對會員待遇也不錯的航空公司</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="5.0 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<span class="ratingDate">2016年11月21日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+本身是天合聯盟的超級菁英會員(Elite Plus)，所以在選位子的時候可以選擇二樓的商務艙機位(也是第一次做到兩層的大型飛機，很新鮮～)，所以整趟的飛行過程都相當舒適。除了空間大之外，影音的硬體也是比經濟艙的好很多，也有很多目前院線的電影可以觀賞。
+也因為會員的身分，可以直接利用商務艙櫃檯check in，整體流程都相當快速...
+</p><div class="aboveCategoryLabels"></div>
+<span class="partnerRvw">
+<span class="taLnk hvrIE6 tr439074971 moreLink ulBlueLinks" onclick="      ta.util.cookie.setPIDCookie(4444); ta.call('ta.servlet.Reviews.expandReviews', {type: 'dummy'}, ta.id('review_439074971'), 'review_439074971', '1', 4444);
+  ">
+更多  </span>
+<span class="ui_icon caret-down"></span>
+<div class="categoryLabels">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 沖繩市</span>
+</div>
+</div>
+<div class="belowCategoryLabelsAbbreviated"></div>
+</span>
+<p></p>
+</div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq439074971_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq439074971 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmAKkdAkU0tEn1dmAKkdAkU0zH1U0pSM1dqnxM7mfbqnUfUAfxMfkboK3AkUU7fAxMqn7kzs0npEEeJIV1U0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbRqIMIuHxMSq8Dzs7x2qijjMUEEKJq8yaGDo55U7jeqIKqnZaJeelxXsZq8IZJyvNxdJyzs7hiLoeMJxGMqQqnHCtxdxXwdHSXuqibh5wbtNNzsIwriqIio3AIxEzzqIU9kdKNwCIx5rtMpgGzskvNRItqQzsCIKzsNAugfqnGzzx2ZdmivCdUcszCSjexXqQUsRzsg2lyxXkq8xbRc'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="numHlp">
+<span class="numHlpIn">1</span>
+</span>
+<span class="helpful_text">感謝 jeromek1</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_439074971" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '439074971')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_18" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR439074971"></a>
+<div class="extended provider0" id="UR439074971">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_4FDB3CAF1C19CDC7A5069711BC9DFB7E-SRC_439074971" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_4FDB3CAF1C19CDC7A5069711BC9DFB7E ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/04/01/a0/d2/facebook-avatar.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_4FDB3CAF1C19CDC7A5069711BC9DFB7E" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">jeromek1</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_4FDB3CAF1C19CDC7A5069711BC9DFB7E-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_06">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_06.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_06.png" width="20">
+<span class="badgeText">76則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_4FDB3CAF1C19CDC7A5069711BC9DFB7E-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+5人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r439074971-China_Airlines-World.html#CHECK_RATES_CONT" id="r439074971" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">服務人員親切，對會員待遇也不錯的航空公司</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="5 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s50" src="https://static.tacdn.com/img2/x.gif" width="70">
+</img></span>
+<span class="ratingDate">2016年11月21日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+本身是天合聯盟的超級菁英會員(Elite Plus)，所以在選位子的時候可以選擇二樓的商務艙機位(也是第一次做到兩層的大型飛機，很新鮮～)，所以整趟的飛行過程都相當舒適。除了空間大之外，影音的硬體也是比經濟艙的好很多，也有很多目前院線的電影可以觀賞。<br>也因為會員的身分，可以直接利用商務艙櫃檯check in，整體流程都相當快速有效率，櫃檯人員相當專業與親切。<br>行李也因為會員而掛上優先行李，所以在沖繩提取行李時也相當快速就拿到了。<br>機上餐點的話，由於目的地是沖繩，飛行時間很短暫(小於1小時)，所以餐點是卷餅類的點心，口味就是一般般，不是特別好吃就是了，但是一般來說，經濟艙的機上餐點也是不用太期待的，除非是坐商務艙才能吃的好一些 XD
+</br></br></br></p>
+<div class="reviewItem inlineRoomTip">
+<b>旅行秘訣：</b> 官網預定有機會有更有會的票價喔
+<div class="taLnk hvrIE6" onclick="ta.call('ta.overlays.Factory.showAirlineTipsOverlay',event,this,'zhTW');">查看更多旅遊秘訣</div>
+</div>
+</div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2016年10月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">餐飲</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="expanded lessLink">
+<span class="taLnk collapse ulBlueLinks no_cpu ">
+收起 
+</span>
+<span class="textArrow_more ui_icon caret-up"></span>
+<div class="categoryLabels">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 沖繩市</span>
+</div>
+</div>
+<div class="belowCategoryLabelsExpanded"></div>
+</div>
+<div class="helpful redesigned white_btn_container " id="helpfulq439074971_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq439074971 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmAKkdAkU0tEn1dmAKkdAkU0zH1U0pSM1dqnxM7mfbqnUfUAfxMfkboK3AkUU7fAxMqn7kzs0npEEeJIV1U0EJIVqiJcpV1U0Ii9VC1rZlU3XozxblNDwVqIn59Okmx2E99uzsnISxGTKHqIMyhxXTtxEUoH5zszzDKVx5HCbdG2LDdNx5SyxERnIE3x2w9jUqiMeDDqIxM7UjaxdqQx2JbgrOk7xXbiGvwnyS5x5uzCbxGTbDZ5cq8cmswmxMmTHv7pZxEAxEdxGO9xbVDNCUzC9xbRvxGxdAcDx2HrqISCbKwMdaVxMo2Mx5x2EodC2l'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="numHlp">
+<span class="numHlpIn">1</span>
+</span>
+<span class="helpful_text">感謝 jeromek1</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_439074971" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '439074971')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_438898370">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_ABCE16681667EA2725970A7039F965A7-SRC_438898370" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_ABCE16681667EA2725970A7039F965A7 ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_19" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_ABCE16681667EA2725970A7039F965A7" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> ShihLC</span>
+</div>
+</div>
+<div class="location">
+台灣台北市
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_ABCE16681667EA2725970A7039F965A7-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_03">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_20" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_21" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">9則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_ABCE16681667EA2725970A7039F965A7-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon lazy " height="20" id="lazyload_1369647435_22" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+6人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r438898370-China_Airlines-World.html#REVIEWS" id="rn438898370" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">還算舒服，但機上視聽設備稍有不足</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="3.0 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<span class="ratingDate">2016年11月21日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+座椅、洗手間等都還算舒適
+餐點也還ok
+服務態度也算親切。
+不過松山飛羽田的飛機
+不知道是不是空間較小的關係，機上配的視聽娛樂螢幕較小
+觸控系統也沒有很優良，甚至去程的螢幕觸控功能似乎是故障的
+不過先前搭乘別的航線倒是沒有這個問題。
+</p>
+</div>
+<div class="aboveCategoryLabels"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 東京</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq438898370_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438898370 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmvvAvmkK0tEn1dmvvAvmkK0zH1U0pSM1b7fzsU33vU33kzsbXkXoAkKbkKmAqnA3obk0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxblxGvvrNazsn92aJVZtCaugux5qIUaIU7mTMXlJXoExMGXeknJMgXDwzsEdObetCdtpqIbX9C3NxGDqIexMULcUVjLmxXGNflbAZujmLlTHrlSx27GLEJqI3qnxMxXqIMyqnx2eHKuJ5lwcaDga9j7ha2KJx2Laewv3q8zzoslXzClxGCtZGdA7xEXazCkRveq8DxXGe'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 ShihLC</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438898370" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438898370')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_23" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR438898370"></a>
+<div class="extended provider0" id="UR438898370">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_ABCE16681667EA2725970A7039F965A7-SRC_438898370" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_ABCE16681667EA2725970A7039F965A7 ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/06/68/52/08/shihlc.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_ABCE16681667EA2725970A7039F965A7" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">ShihLC</span>
+</div>
+</div>
+<div class="location">
+台灣台北市
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_ABCE16681667EA2725970A7039F965A7-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_03">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_03.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_03.png" width="20">
+<span class="badgeText">9則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_ABCE16681667EA2725970A7039F965A7-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+6人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r438898370-China_Airlines-World.html#CHECK_RATES_CONT" id="r438898370" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">還算舒服，但機上視聽設備稍有不足</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="3 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s30" src="https://static.tacdn.com/img2/x.gif" width="42">
+</img></span>
+<span class="ratingDate">2016年11月21日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+座椅、洗手間等都還算舒適<br>餐點也還ok<br>服務態度也算親切。<br>不過松山飛羽田的飛機<br>不知道是不是空間較小的關係，機上配的視聽娛樂螢幕較小<br>觸控系統也沒有很優良，甚至去程的螢幕觸控功能似乎是故障的<br>不過先前搭乘別的航線倒是沒有這個問題。
+</br></br></br></br></br></br></p>
+</div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2016年10月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="2 分 (共 5 分)" class="ui_bubble_rating bubble_2"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="2 分 (共 5 分)" class="ui_bubble_rating bubble_2"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 東京</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="helpful redesigned white_btn_container " id="helpfulq438898370_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438898370 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmvvAvmkK0tEn1dmvvAvmkK0zH1U0pSM1b7fzsU33vU33kzsbXkXoAkKbkKmAqnA3obk0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbfkuZuCOqQezsxbVxbx2mzz9lxX2hM2ggOyINsxEXdqiylZf7zCwEOsf2jkRNcGy2drilUtxXqiCsVOUmnzCx5bExM7fzsetNaqnMmotlSLZzzeIeuAhsXmw5mqIngJKmzsmDn9x2etlqQtELg7xMGblbzsXflZeeVNNoxdJebemV3zzwbx5DZDpex2GVOfpreqIhGumqn'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 ShihLC</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438898370" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438898370')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_438641770">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_2826D7354FB3FA58E9CA53E4792BDE8A-SRC_438641770" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_2826D7354FB3FA58E9CA53E4792BDE8A ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_24" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_2826D7354FB3FA58E9CA53E4792BDE8A" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> Y1741GEke...</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_2826D7354FB3FA58E9CA53E4792BDE8A-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_03">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_25" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_26" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">8則評論</span> </img></div>
+</div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r438641770-China_Airlines-World.html#REVIEWS" id="rn438641770" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">整體水準之上</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="5.0 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<span class="ratingDate">2016年11月20日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+飛機是新的波音777-300er，座艙裡面乾淨整潔舒適。空服員態度親切、笑容可掬。餐食略有比過去味道下降，但整體感覺還是水準之上。
+</p>
+</div>
+<div class="aboveCategoryLabels"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">豪華經濟艙</span>
+<span class="categoryLabel">上海市 - 台北市</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq438641770_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438641770 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmv3dUkkK0tEn1dmv3dUkkK0zH1U0pSM1XvX3xMkmodqn7mqnbovzsAfbomzsdkAX7xMzsvb0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbwzCl7x59zsxGNtsGDsbxGUdXxMpCvtuxbzzTxXzzzCcycjgcxGq8zCmpKuZdzzIq8HrZoxEGSjJqiJ2xMezCVzsxbaoCmhs7OpAo5JXx57S3UqiuNdf9yKCxMHxGySvSAopnhxbq85ZmwzzLqQhRzs2zCxbqiSLwviAI3mDudxEAbNiShozsAxMUk9KxXzCqnkxdeIx2qnx5xXtKxbAzz92KeqQ'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Y1741GEkevinh</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438641770" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438641770')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_27" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR438641770"></a>
+<div class="extended provider0" id="UR438641770">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_2826D7354FB3FA58E9CA53E4792BDE8A-SRC_438641770" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_2826D7354FB3FA58E9CA53E4792BDE8A ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/59/avatar031.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_2826D7354FB3FA58E9CA53E4792BDE8A" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">Y1741GEkevinh</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_2826D7354FB3FA58E9CA53E4792BDE8A-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_03">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_03.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_03.png" width="20">
+<span class="badgeText">8則評論</span> </img></div>
+</div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r438641770-China_Airlines-World.html#CHECK_RATES_CONT" id="r438641770" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">整體水準之上</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="5 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s50" src="https://static.tacdn.com/img2/x.gif" width="70">
+</img></span>
+<span class="ratingDate">2016年11月20日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+飛機是新的波音777-300er，座艙裡面乾淨整潔舒適。空服員態度親切、笑容可掬。餐食略有比過去味道下降，但整體感覺還是水準之上。
+</p>
+</div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2016年11月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">餐飲</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">豪華經濟艙</span>
+<span class="categoryLabel">上海市 - 台北市</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="helpful redesigned white_btn_container " id="helpfulq438641770_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438641770 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmv3dUkkK0tEn1dmv3dUkkK0zH1U0pSM1XvX3xMkmodqn7mqnbovzsAfbomzsdkAX7xMzsvb0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3Xozxb5bzCqnxbGzCGxXexd3wCjufXxMDDmNzzxdlxXbJXxbduCeDizsyLu9h9qiTx5gZq8r92qQkO7eydpLSIOpOcnbq8As9x5cAwx2NEEaqItouqIxMxbqnTNxGZjSxdKZx2fMdeArx2qizzbDuzzxbMexXmbx5SnKxXexd9sgUrHxMx2CLkkvGtzsxXwOfzsISgzs2HzzEK7MVyzzxEHJq8JgdnzC'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Y1741GEkevinh</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438641770" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438641770')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_438411303">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_E1A27DBB435430F8DEEE872B8FC16DA4-SRC_438411303" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_E1A27DBB435430F8DEEE872B8FC16DA4 ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_28" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_E1A27DBB435430F8DEEE872B8FC16DA4" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> Han C</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_E1A27DBB435430F8DEEE872B8FC16DA4-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_06">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_29" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_30" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">47則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_E1A27DBB435430F8DEEE872B8FC16DA4-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon lazy " height="20" id="lazyload_1369647435_31" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+10人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r438411303-China_Airlines-World.html#REVIEWS" id="rn438411303" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">用心服務的航空公司</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="5.0 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<span class="ratingDate">2016年11月19日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+每次出國都會用這家航空，服務真的比長榮用心很多。不會像長榮一樣愛理不理，甚至很敷衍。有時在忙碌時，請求空服員幫忙，雖然比較慢得到答覆，但是他們會帶著抱歉來回覆您，這都不打緊，重點是還記得客人的需求。哪像長榮，常常都忘記...。
+</p>
+</div>
+<div class="media thumbCols3">
+<div class="thumbnails">
+<div class="photosInline">
+<ul>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229294816-r438411303-China_Airlines-World.html#229294816 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229294816}); return false;">
+<img alt="" class="reviewInlineImage" height="50" id="lazyload_1369647435_32" src="https://static.tacdn.com/img2/x.gif" width="50"> </img></span>
+</li>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229294823-r438411303-China_Airlines-World.html#229294823 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229294823}); return false;">
+<img alt="" class="reviewInlineImage" height="50" id="lazyload_1369647435_33" src="https://static.tacdn.com/img2/x.gif" width="50"> </img></span>
+</li>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229294808-r438411303-China_Airlines-World.html#229294808 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229294808}); return false;">
+<img alt="" class="reviewInlineImage" height="50" id="lazyload_1369647435_34" src="https://static.tacdn.com/img2/x.gif" width="50"> </img></span>
+</li>
+</ul>
+</div> </div> </div>
+<div class="aboveCategoryLabels"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 東京</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq438411303_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438411303 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmvdUUmKm0tEn1dmvdUUmKm0zH1U0pSM1zsUbXkxM77dmodmKqnvxMzszszsvkX7vqnfU3xMbd0npEEeJIV1U0EJIVqiJcpV1U0Ii9VC1rZlU3Xozxbx2GzCexMVfx5fzsHu2E3EXr7SD9bpXdrqixXM7AN5bggHAU2qIMviIbDxdEzzzCpxbwkUzsxbhmy9Nx2CGzzxdjmbIGxdj5KuK9N5uqizCG3lEJefcwqimbe2bDsH3xMU5x2gqiOVzCVx5XppT3p7jTydrJ7lsxEepN27Kq8zzsG3qiyMSnEkvcq8zsq8MnXgrex5cqIKowTgh'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="numHlp">
+<span class="numHlpIn">1</span>
+</span>
+<span class="helpful_text">感謝 Han C</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438411303" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438411303')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_35" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR438411303"></a>
+<div class="extended provider0" id="UR438411303">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_E1A27DBB435430F8DEEE872B8FC16DA4-SRC_438411303" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_E1A27DBB435430F8DEEE872B8FC16DA4 ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/0d/7b/2b/10/han-n.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_E1A27DBB435430F8DEEE872B8FC16DA4" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">Han C</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_E1A27DBB435430F8DEEE872B8FC16DA4-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_06">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_06.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_05.png" width="20">
+<span class="badgeText">47則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_E1A27DBB435430F8DEEE872B8FC16DA4-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+10人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r438411303-China_Airlines-World.html#CHECK_RATES_CONT" id="r438411303" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">用心服務的航空公司</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="5 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s50" src="https://static.tacdn.com/img2/x.gif" width="70">
+</img></span>
+<span class="ratingDate">2016年11月19日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+每次出國都會用這家航空，服務真的比長榮用心很多。不會像長榮一樣愛理不理，甚至很敷衍。有時在忙碌時，請求空服員幫忙，雖然比較慢得到答覆，但是他們會帶著抱歉來回覆您，這都不打緊，重點是還記得客人的需求。哪像長榮，常常都忘記...。
+</p>
+</div>
+<div class="media thumbCols3">
+<div class="thumbnails">
+<div class="photosInline">
+<ul>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229294816-r438411303-China_Airlines-World.html#229294816 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229294816}); return false;">
+<img alt="" height="50" src="https://media-cdn.tripadvisor.com/media/photo-t/0d/aa/c2/e0/caption.jpg" width="50">
+</img></span>
+</li>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229294823-r438411303-China_Airlines-World.html#229294823 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229294823}); return false;">
+<img alt="" height="50" src="https://media-cdn.tripadvisor.com/media/photo-t/0d/aa/c2/e7/caption.jpg" width="50">
+</img></span>
+</li>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229294808-r438411303-China_Airlines-World.html#229294808 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229294808}); return false;">
+<img alt="" height="50" src="https://media-cdn.tripadvisor.com/media/photo-t/0d/aa/c2/d8/caption.jpg" width="50">
+</img></span>
+</li>
+</ul>
+</div> </div> </div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2016年11月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">餐飲</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 東京</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="helpful redesigned white_btn_container " id="helpfulq438411303_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438411303 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmvdUUmKm0tEn1dmvdUUmKm0zH1U0pSM1zsUbXkxM77dmodmKqnvxMzszszsvkX7vqnfU3xMbd0npEEeJIV1U0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbNheKRzzMxEDx5yxbxdDEHHXTxMkhuXczsJzsCTIGGALD93gCkxMx2uzChZnjx5xdd7NRHxGqQLf7AwxX2x2Uoku59ugrxXvAGUm9GujTtXCuqnx29snxdOTxMUR2qnpK2xGhKzzx5nxMgqQGdEzzAGSnzCprqQJliCfSDOu3flxGxGLL9ZexdjkxEn2VfMcKcxdq8T2qnrnHxd7wzCf'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="numHlp">
+<span class="numHlpIn">1</span>
+</span>
+<span class="helpful_text">感謝 Han C</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438411303" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438411303')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_438309317">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_E75E2A2E45ABA0E4C194DDB4524FA14D-SRC_438309317" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_E75E2A2E45ABA0E4C194DDB4524FA14D ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_36" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_E75E2A2E45ABA0E4C194DDB4524FA14D" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> Littlehei</span>
+</div>
+</div>
+<div class="location">
+香港
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_E75E2A2E45ABA0E4C194DDB4524FA14D-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_02">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_37" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_38" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">3則評論</span> </img></div>
+</div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r438309317-China_Airlines-World.html#REVIEWS" id="rn438309317" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">飛機硬件一般，不過勝在有一群優秀服務人員</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="4.0 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<span class="ratingDate">2016年11月18日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+11月初與朋友們乘坐中華航空前往台北，是早去晚回的班機。先說前往台北的去程，機艙相當寬敞，是242的格局，但感覺飛機已有相當機齡，椅子等有點殘舊，機上僅有的娛樂設備並不是完全能夠使用，光就自己那部而言，全程並不能觀賞任何節目，幸而飛行時間較短，與朋友聊天足以抵去時間，所幸機組人員十分熱情，服務態度優秀，餐點亦相當美味；回程是晚上...
+</p><div class="aboveCategoryLabels"></div>
+<span class="partnerRvw">
+<span class="taLnk hvrIE6 tr438309317 moreLink ulBlueLinks" onclick="      ta.util.cookie.setPIDCookie(4444); ta.call('ta.servlet.Reviews.expandReviews', {type: 'dummy'}, ta.id('review_438309317'), 'review_438309317', '1', 4444);
+  ">
+更多  </span>
+<span class="ui_icon caret-down"></span>
+<div class="categoryLabels">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">香港 - 台北市</span>
+</div>
+</div>
+<div class="belowCategoryLabelsAbbreviated"></div>
+</span>
+<p></p>
+</div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq438309317_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438309317 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmvmKAmUk0tEn1dmvmKAmUk0zH1U0pSM1zskozsXbXzsdob7bKzsdfUAdxMxM7doXdqnbUdxM0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbqnComXmmqnIxdwTxGMukgxMH5qQqnq8uONx2qitx2UzCzCbq8x2x5qiqQqi2ZfzztiszCnzCMdqITaq8bhHxE9wrMHUNxXIJzznqn3zzzzbx25mx2LzzvcivaVmmjhazCDKMlxGbxXq8fbzsjmjVTqnODOqix5nSNrGHIwfscEfOx5erSEAklKZpKAxEzsOx2zCuRA5Kmuc5xGxdDq8cJsEERpNxb'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Littlehei</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438309317" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438309317')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_39" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR438309317"></a>
+<div class="extended provider0" id="UR438309317">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_E75E2A2E45ABA0E4C194DDB4524FA14D-SRC_438309317" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_E75E2A2E45ABA0E4C194DDB4524FA14D ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/01/2a/fd/8c/avatar.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_E75E2A2E45ABA0E4C194DDB4524FA14D" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">Littlehei</span>
+</div>
+</div>
+<div class="location">
+香港
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_E75E2A2E45ABA0E4C194DDB4524FA14D-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_02">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_02.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_02.png" width="20">
+<span class="badgeText">3則評論</span> </img></div>
+</div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r438309317-China_Airlines-World.html#CHECK_RATES_CONT" id="r438309317" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">飛機硬件一般，不過勝在有一群優秀服務人員</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="4 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s40" src="https://static.tacdn.com/img2/x.gif" width="56">
+</img></span>
+<span class="ratingDate">2016年11月18日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+11月初與朋友們乘坐中華航空前往台北，是早去晚回的班機。先說前往台北的去程，機艙相當寬敞，是242的格局，但感覺飛機已有相當機齡，椅子等有點殘舊，機上僅有的娛樂設備並不是完全能夠使用，光就自己那部而言，全程並不能觀賞任何節目，幸而飛行時間較短，與朋友聊天足以抵去時間，所幸機組人員十分熱情，服務態度優秀，餐點亦相當美味；回程是晚上7點多的，中型機，沒有任何個人娛樂系統，依然比較無聊，但同樣的餐點相當有特色，小點心附上台灣特色方塊酥，而機組人員的甜美笑容及熱情態度相當令人歡喜。
+</p>
+</div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2016年11月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">餐飲</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="expanded lessLink">
+<span class="taLnk collapse ulBlueLinks no_cpu ">
+收起 
+</span>
+<span class="textArrow_more ui_icon caret-up"></span>
+<div class="categoryLabels">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">香港 - 台北市</span>
+</div>
+</div>
+<div class="belowCategoryLabelsExpanded"></div>
+</div>
+<div class="helpful redesigned white_btn_container " id="helpfulq438309317_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438309317 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmvmKAmUk0tEn1dmvmKAmUk0zH1U0pSM1zskozsXbXzsdob7bKzsdfUAdxMxM7doXdqnbUdxM0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbRgmzCqIEEx5xMsq8qicgEZOtCccnCckxGxM2rxXbfelxb2r9xMlx5bk9sVxdTxM29uOwJSLZzCfVvxbeaJwqnAfXKHIKuxG3q8xMzC5yx2EGxb2TiyfxX5ECjnqQ5Rs532Z2X2MjxMnG3EqnbqiwkZ23xb7OxGsphaxGZRkwv2vxMqQS5yNoNioC3NauxGAmzCdxbq8T3S3fJ7pG'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Littlehei</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438309317" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438309317')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_438271013">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_5FC86F7AE92C91F7FB940F0C0879559A-SRC_438271013" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_5FC86F7AE92C91F7FB940F0C0879559A ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_40" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_5FC86F7AE92C91F7FB940F0C0879559A" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> AJKC2000</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_5FC86F7AE92C91F7FB940F0C0879559A-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_06">
+第 <span><img alt="" class="icon lazy" height="20" id="lazyload_1369647435_41" src="https://static.tacdn.com/img2/x.gif" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_42" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">91則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_5FC86F7AE92C91F7FB940F0C0879559A-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon lazy " height="20" id="lazyload_1369647435_43" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+32人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r438271013-China_Airlines-World.html#REVIEWS" id="rn438271013" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">服務態度一級棒！</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="5.0 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<span class="ratingDate">2016年11月18日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+中華航空的服務，一直以來都是很親切的！我很喜歡華航的服務，地勤人員也是很親切的對待，加上自助報到的行李托運也是很快速。飛機上的餐點，即使是經濟艙也是很美味，飲料也是不吝嗇！
+如果中華航空有航班的話，我還是都喜歡搭乘這家航空公司的！
+</p>
+</div>
+<div class="media thumbCols3">
+<div class="thumbnails">
+<div class="photosInline">
+<ul>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229848605-r438271013-China_Airlines-World.html#229848605 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229848605}); return false;">
+<img alt="" class="reviewInlineImage" height="50" id="lazyload_1369647435_44" src="https://static.tacdn.com/img2/x.gif" width="50"> </img></span>
+</li>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229848585-r438271013-China_Airlines-World.html#229848585 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229848585}); return false;">
+<img alt="" class="reviewInlineImage" height="50" id="lazyload_1369647435_45" src="https://static.tacdn.com/img2/x.gif" width="50"> </img></span>
+</li>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229848572-r438271013-China_Airlines-World.html#229848572 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229848572}); return false;">
+<img alt="" class="reviewInlineImage" height="50" id="lazyload_1369647435_46" src="https://static.tacdn.com/img2/x.gif" width="50"> </img></span>
+</li>
+</ul>
+</div> </div> </div>
+<div class="aboveCategoryLabels"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">東南亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 河內</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq438271013_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438271013 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmvXkUKUm0tEn1dmvXkUKUm0zH1U0pSM1oqnfv3qnkbzsAXfAUqnkqn7AdKqnKfKvkAooAb0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbRfgMmXCv7xMEfyGANNOx2MfxbzzyrzCqilDO9xMZ7Raqnvf5HHbKapEsCegxMJLy9MlsExdTZCpCHmZZxMSlzz3LAIqiEDUXE2DmxMk9Spn9gdzzfgEGLC9x2D3bXTxMqQmlLf9udtqQKEsEx2lxbxMGpHhC5szsx2qQqQcxbu7jNSVnRxGqix5xXUvzznx2yHmAiUri7xbvS'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 AJKC2000</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438271013" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438271013')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_47" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR438271013"></a>
+<div class="extended provider0" id="UR438271013">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_5FC86F7AE92C91F7FB940F0C0879559A-SRC_438271013" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_5FC86F7AE92C91F7FB940F0C0879559A ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/0c/b0/ea/7c/ajkc2000.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_5FC86F7AE92C91F7FB940F0C0879559A" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">AJKC2000</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_5FC86F7AE92C91F7FB940F0C0879559A-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="levelBadge badge lvl_06">
+第 <span><img alt="" class="icon" height="20/" src="https://static.tacdn.com/img2/badges/20px/lvl_06.png" width="20"/></span> 級評論家 </div>
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_06.png" width="20">
+<span class="badgeText">91則評論</span> </img></div>
+</div>
+<div class="helpfulVotesBadge badge no_cpu" data-anchorwidth="90" id="UID_5FC86F7AE92C91F7FB940F0C0879559A-HV" onclick="ta.util.cookie.setPIDCookie('15983'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'helpful_count');">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/Appreciated.png" width="20">
+<span class="badgeText">
+32人推薦 </span>
+</img></div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r438271013-China_Airlines-World.html#CHECK_RATES_CONT" id="r438271013" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">服務態度一級棒！</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="5 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s50" src="https://static.tacdn.com/img2/x.gif" width="70">
+</img></span>
+<span class="ratingDate">2016年11月18日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+中華航空的服務，一直以來都是很親切的！我很喜歡華航的服務，地勤人員也是很親切的對待，加上自助報到的行李托運也是很快速。飛機上的餐點，即使是經濟艙也是很美味，飲料也是不吝嗇！<br>如果中華航空有航班的話，我還是都喜歡搭乘這家航空公司的！
+</br></p>
+</div>
+<div class="media thumbCols3">
+<div class="thumbnails">
+<div class="photosInline">
+<ul>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229848605-r438271013-China_Airlines-World.html#229848605 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229848605}); return false;">
+<img alt="" height="50" src="https://media-cdn.tripadvisor.com/media/photo-t/0d/b3/36/1d/caption.jpg" width="50">
+</img></span>
+</li>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229848585-r438271013-China_Airlines-World.html#229848585 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229848585}); return false;">
+<img alt="" height="50" src="https://media-cdn.tripadvisor.com/media/photo-t/0d/b3/36/09/caption.jpg" width="50">
+</img></span>
+</li>
+<li class=" ThumbNailContainer">
+<span class="u_/LocationPhotoDirectLink-g1-d8729049-i229848572-r438271013-China_Airlines-World.html#229848572 fkASDF" onclick="ta.trackEventOnPage('Reviews','user_photo','image');ta.util.cookie.setPIDCookie(5042); requireCallLast('ta/media/viewerScaffold', 'load', {detail:8729049, geo:1, filter:2, imageId:229848572}); return false;">
+<img alt="" height="50" src="https://media-cdn.tripadvisor.com/media/photo-t/0d/b3/35/fc/caption.jpg" width="50">
+</img></span>
+</li>
+</ul>
+</div> </div> </div>
+<div class="rating-list">
+<div class="recommend">
+<span class="recommend-titleInline noRatings">於 2016年11月 旅行</span>
+</div>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">東南亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">台北市 - 河內</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="helpful redesigned white_btn_container " id="helpfulq438271013_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq438271013 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmvXkUKUm0tEn1dmvXkUKUm0zH1U0pSM1oqnfv3qnkbzsAXfAUqnkqn7AdKqnKfKvkAooAb0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3Xozxbblrq8XxG3qnSLDx2ExdfOzsxEO5XDdzCzCS9zsx5xM9jRzCUIri9GZdRwZx5TOKxEcrguxXV7x2xEDEROxMRx2Amkzz7xGiwqQzszz7Vqnk9ni2knzseUxbwtaOsOx2ndx2RkXKqInZUlbnvAHwSzsKSZmqIfzsizsGLHRdyysIxGqIovDDepx2OxXJHCpzzaox5lMfyivUixG5hKDkTR'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 AJKC2000</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_438271013" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '438271013')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>, <div class="reviewSelector " id="review_437736449">
+<div class="review basic_review inlineReviewUpdate provider0" style="display: none;">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_7CFA92D7203C8F5619F12B354799C72C-SRC_437736449" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_7CFA92D7203C8F5619F12B354799C72C ">
+<a onclick="">
+<img class="avatar" height="74" id="lazyload_1369647435_48" src="https://static.tacdn.com/img2/x.gif" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_7CFA92D7203C8F5619F12B354799C72C" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')"> Tsz Ching...</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_7CFA92D7203C8F5619F12B354799C72C-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="reviewerBadge badge">
+<img alt="" class="icon lazy" height="20" id="lazyload_1369647435_49" src="https://static.tacdn.com/img2/x.gif" width="20">
+<span class="badgeText">2則評論</span> </img></div>
+</div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="wrap">
+<div class="quote">
+<a href="/ShowUserReviews-g1-d8729049-r437736449-China_Airlines-World.html#REVIEWS" id="rn437736449" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); ta.util.cookie.setPIDCookie('4442');">“<span class="noQuotes">不錯的服務</span>”</a>
+</div>
+<div class="rating reviewItemInline">
+<span alt="5.0 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<span class="ratingDate">2016年11月16日的評論
+</span>
+</div>
+<div class="entry">
+<p class="partial_entry">
+空服員人員非常有禮貌，也會滿足乘客的需要。餐點也是熱的。
+一切都很好，但建議飛台中的航班也可以提供個人娛樂系統，因為一個多小時坐在座位有點悶
+</p>
+</div>
+<div class="aboveCategoryLabels"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">香港 - 台中市</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="wrap">
+<div class="helpful redesigned white_btn_container " id="helpfulq437736449_collapsed">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq437736449 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII26mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmkkm3ddA0tEn1dmkkm3ddA0zH1U0pSM1kfqnbAXxMkXKmfvqno3UAqnUX7modkAAfkXf0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbxbRozsCosfnXqQTjcvdOqnjpq8xd9qnueOqibLazsK3qiiAIqQqich5TELzCgnqIxdGffvMuULqiq8x5q8GooLTfdl7mRzCi3rpumAzC3q8SgGIL7xGqQKCJUdyLwbEzCybxX9uzCrqQmxd9EqItLxdqnxGCVoeCIpCdp7MzCxbORqQryalxb3xExdgJrkJqIRVxGyCeULwckkxbOazCDk'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');" style="font-size: 12px;">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Tsz Ching C</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="wrap reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_437736449" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '437736449')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" id="lazyload_1369647435_50" src="https://static.tacdn.com/img2/x.gif" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+</div>
+</div>
+</div> </div> </div><div class="review dyn_full_review inlineReviewUpdate provider0" style="display: block;">
+<a class="" name="UR437736449"></a>
+<div class="extended provider0" id="UR437736449">
+<div class="col1of2">
+<div class="member_info">
+<div class="memberOverlayLink" data-anchorwidth="90" id="UID_7CFA92D7203C8F5619F12B354799C72C-SRC_437736449" onmouseover="requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'user_name_photo');">
+<div class="avatar profile_7CFA92D7203C8F5619F12B354799C72C ">
+<a onclick="">
+<img class="avatar" height="74" src="https://media-cdn.tripadvisor.com/media/photo-l/01/2a/fd/9d/avatar.jpg" width="74">
+</img></a>
+</div>
+<div class="username mo">
+<span class="expand_inline scrname mbrName_7CFA92D7203C8F5619F12B354799C72C" onclick="ta.trackEventOnPage('Reviews', 'show_reviewer_info_window', 'user_name_name_click')">Tsz Ching C</span>
+</div>
+</div>
+<div class="location">
+</div>
+</div>
+<div class="memberBadging g10n">
+<div class="no_cpu" data-anchorwidth="90" id="UID_7CFA92D7203C8F5619F12B354799C72C-CONT" onclick="ta.util.cookie.setPIDCookie('15984'); requireCallIfReady('members/memberOverlay', 'initMemberOverlay', event, this, this.id, 'Reviews', 'review_count');">
+<div class="reviewerBadge badge">
+<img alt="" class="icon" height="20" src="https://static.tacdn.com/img2/badges/20px/rev_01.png" width="20">
+<span class="badgeText">2則評論</span> </img></div>
+</div>
+</div>
+</div>
+<div class="col2of2">
+<div class="innerBubble">
+<div class="quote"><a href="/ShowUserReviews-g1-d8729049-r437736449-China_Airlines-World.html#CHECK_RATES_CONT" id="r437736449" onclick="ta.setEvtCookie('Reviews','title','',0,this.href); setPID();">“<span class="noQuotes">不錯的服務</span>”</a></div>
+<div class="rating reviewItemInline">
+<span class="rate sprite-rating_s rating_s"> <img alt="5 分 (共 5 分)" class="sprite-rating_s_fill rating_s_fill s50" src="https://static.tacdn.com/img2/x.gif" width="70">
+</img></span>
+<span class="ratingDate">2016年11月16日的評論
+</span>
+</div>
+<div class="entry">
+<p>
+空服員人員非常有禮貌，也會滿足乘客的需要。餐點也是熱的。<br>一切都很好，但建議飛台中的航班也可以提供個人娛樂系統，因為一個多小時坐在座位有點悶
+</br></p>
+</div>
+<div class="rating-list">
+<ul class="recommend">
+<li>
+<span class="recommend-titleInline">於 2016年8月 旅行</span>
+<ul class="recommend-column first">
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">座椅舒適度</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">客戶服務 (例如：服務態度、關心度、親切度)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">清潔與衛生</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">餐飲</div>
+</li>
+</ul>
+<ul class="recommend-column">
+<li class="recommend-answer">
+<span alt="4 分 (共 5 分)" class="ui_bubble_rating bubble_4"></span>
+<div class="recommend-description">伸腿空間</div>
+</li>
+<li class="recommend-answer">
+<span alt="3 分 (共 5 分)" class="ui_bubble_rating bubble_3"></span>
+<div class="recommend-description">機上娛樂 (無線網路、電視、電影)</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">物有所值</div>
+</li>
+<li class="recommend-answer">
+<span alt="5 分 (共 5 分)" class="ui_bubble_rating bubble_5"></span>
+<div class="recommend-description">報到與登機 (例如：效率、登機門服務)</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="aboveCategoryLabelsExpanded"></div>
+<div class="wrap">
+<div class="allLabels">
+<span class="categoryLabel">北亞</span>
+<span class="categoryLabel">經濟艙</span>
+<span class="categoryLabel">香港 - 台中市</span>
+</div>
+</div>
+<div class="belowCategoryLabelsFull"></div>
+<div class="helpful redesigned white_btn_container " id="helpfulq437736449_expanded">
+<span class="isHelpful">推薦？</span> <div class="tgt_helpfulq437736449 rnd_white_thank_btn" onclick="ta.call('ta.servlet.Reviews.helpfulVoteHandlerOb', event, this, 'LeJIVqd4EVIpECri1GII2t6mbqgqguuuxizSxiniaxiIuqgbSEcSCVQQoqnQQeVsSVuqHMvkXAKdAqHxfqHxtqHqncSyGItqHiEUKKqHfGSCJqHbSEcSCVt6XoXmqoTpcdmkkm3ddA0tEn1dmkkm3ddA0zH1U0pSM1kfqnbAXxMkXKmfvqno3UAqnUX7modkAAfkXf0npEEeJIV1K0EJIVqiJcpV1U0Ii9VC1rZlU3XozxbNiqnwLzCjzsIqIzsCvuzzqQNzCxdzCx5rxE3q8qnixGxXguxMmxEbJ2HNx2xGpTzCqnqIxbaryrModGruIdx2q82lOjJCx2ZjxMZpx5iOqixXnvUqIx5OzzA3XwZhlx2OxG2mhsdzspeXxbiAqQr5sn7zCsK5aMfXxXAKxXeOKsqnLq8ARvJqnJJNxXqnsxbkxMtG7xdUynsvdx2LJxGC7tDxXdTEaSg'); ta.trackEventOnPage('HELPFUL_VOTE_TEST', 'helpfulvotegiven_v2');">
+<span class="helpful_thumbs_up white ui_icon thumbs-up-fill"></span>
+<span class="helpful_thumbs_up green ui_icon thumbs-up-fill"></span>
+<span class="helpful_text">感謝 Tsz Ching C</span> </div>
+</div>
+<div class="tooltips vertically_centered">
+<div class="reportProblem">
+<span class="problem collapsed taLnk" data-content="對於這個評論有疑問嗎？" data-position="above" data-tooltip="" id="ReportIAP_437736449" onclick="ta.trackEventOnPage('Report_IAP', 'Report_Button_Clicked', 'member'); ta.call('ta.servlet.Reviews.iapFlyout', event, this, '437736449')" onmouseover="if (!this.getAttribute('data-first')) {ta.trackEventOnPage('Reviews', 'report_problem', 'hover_over_flag'); this.setAttribute('data-first', 1)} uiOverlay(event, this)">
+<img alt="" height="14" src="https://static.tacdn.com/img2/icons/gray_flag.png" width="13">
+<span class="reportTxt">舉報</span> </img></span>
+</div>
+</div>
+<div class="userLinks">
+<div class="askQuestion">
+</div>
+</div>
+<div class="note">
+該評論乃TripAdvisor會員主觀個人意見，不代表TripAdvisor LLC公司。 </div>
+</div>
+</div>
+</div>
+</div>
+</div>]
