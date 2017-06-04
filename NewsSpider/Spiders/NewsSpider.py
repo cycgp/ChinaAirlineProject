@@ -1,3 +1,5 @@
+
+
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
 import json
@@ -118,7 +120,7 @@ class cldSpider:
 	def getContent(ARTICLE_List, record):
 		newsLists = []
 		articleIDList = []
-		driver = webdriver.PhantomJS()
+		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
 		for articleURL in ARTICLE_List:
 			t.sleep(0.5)
 			if articleURL in record:
@@ -416,7 +418,7 @@ class ntkSpider:
 	def getContent(ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
-		driver = webdriver.PhantomJS()
+		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
 		for articleURL in ARTICLE_List:
 			t.sleep(0.5)
 			if articleURL in record:
@@ -712,7 +714,7 @@ class udnSpider:
 			if articleURL in record:
 				continue
 			try:
-				driver = webdriver.PhantomJS()
+				driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
 				soup = bs4(pageSource, 'html.parser')

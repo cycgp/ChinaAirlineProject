@@ -53,7 +53,7 @@ class aplSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			#get news from url
@@ -131,7 +131,7 @@ class cldSpider:
 		articleIDList = []
 		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			r = driver.get(articleURL)
@@ -207,7 +207,7 @@ class cnaSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -284,7 +284,7 @@ class cntSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			try:
@@ -363,7 +363,7 @@ class ltnSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -445,7 +445,7 @@ class ntkSpider:
 		articleIDList = []
 		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			if t.strftime('%Y-%m-%d', yesterday) not in articleURL.split('/')[5]:
@@ -520,7 +520,7 @@ class stmSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -599,7 +599,7 @@ class tnlSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -684,7 +684,7 @@ class tpnSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(0.5)
+			t.sleep(random.randint(2,6))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
