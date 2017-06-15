@@ -1,4 +1,11 @@
 from Spiders.NewsSpiderCheck import aplSpider, cldSpider, cnaSpider, cntSpider, ltnSpider, ntkSpider, stmSpider, tnlSpider, tpnSpider, udnSpider
+import logging
+import time
+
+logging.basicConfig(level=logging.INFO,
+					format='[%(levelname)-4s - %(asctime)-4s] %(message)s',
+					datefmt='%Y-%m-%d %H:%M:%S ',
+					handlers = [logging.FileHandler('error-'+time.strftime('%Y%m%d%H%M%S', time.localtime())+'.log', 'w', 'utf-8'),])
 
 def checkNewsList():
 	print("checking News List...")
@@ -38,38 +45,84 @@ def checkContent(NewsLists, record):
 	for NewsList in NewsLists:
 		if NewsList['press'] == 'apl':
 			print("    Loading Apple News List...", end="", flush=True)
-			newsContentList.extend(aplSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(aplSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				# root 輸出
+				logging.exception('Apple News List problems : \n')				
+				pass
 		elif NewsList['press'] == 'cna':
 			print("    Loading CNA News List...", end="", flush=True)
-			newsContentList.extend(cnaSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(cnaSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				logging.exception('CNA News List problems : \n')
+				pass
 		elif NewsList['press'] == 'cnt':
 			print("    Loading China Times News List...", end="", flush=True)
-			newsContentList.extend(cntSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(cntSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				logging.exception('China Times News List problems : \n')
+				pass
 		elif NewsList['press'] == 'ltn':
 			print("    Loading Liberty Times News List...", end="", flush=True)
-			newsContentList.extend(ltnSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(ltnSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				logging.exception('Liberty Times News List problems : \n')
+				pass
 		elif NewsList['press'] == 'ntk':
 			print("    Loading New Talks News List...", end="", flush=True)
-			newsContentList.extend(ntkSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(ntkSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				logging.exception('New Talks News List problems : \n')
+				pass
 		elif NewsList['press'] == 'stm':
 			print("    Loading Storm News List...", end="", flush=True)
-			newsContentList.extend(stmSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(stmSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				logging.exception('Storm News List problems : \n')
+				pass
 		elif NewsList['press'] == 'tnl':
 			print("    Loading The News Lens News List...", end="", flush=True)
-			newsContentList.extend(tnlSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(tnlSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				logging.exception('News Lens News List problems : \n')
+				pass
 		elif NewsList['press'] == 'tpn':
 			print("    Loading Taiwan People News News List...", end="", flush=True)
-			newsContentList.extend(tpnSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(tpnSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				logging.exception('Taiwan People News News List problems : \n')
+				pass
 		elif NewsList['press'] == 'udn':
 			print("    Loading UDN List...", end="", flush=True)
-			newsContentList.extend(udnSpider.getContent(NewsList['URLList'], record))
-			print("  DONE")
+			try:
+				newsContentList.extend(udnSpider.getContent(NewsList['URLList'], record))
+				print("  DONE")
+			except:
+				print('  FAILED')
+				logging.exception('UDN List problems : \n')
+				pass
 	return  newsContentList

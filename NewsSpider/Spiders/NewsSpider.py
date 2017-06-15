@@ -1,12 +1,9 @@
-
-
 #coding:utf-8
 from bs4 import BeautifulSoup as bs4
 import json
 import re
 import requests
 from selenium import webdriver
-import sys
 import time as t
 import random
 
@@ -481,7 +478,7 @@ class stmSpider:
 			for article in articles:
 				articleURL = 'http://www.storm.mg'+ article.find('p').find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
-		return {'press':'stn', 'URLList':self.ARTICLE_List}
+		return {'press':'stm', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
 	# 	pass
