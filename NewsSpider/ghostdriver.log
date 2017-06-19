@@ -12,3 +12,4 @@
   (anonymous function) (https://rec.udn.com/er.js?1497904927475:1)
 
   phantomjs://platform/console++.js:263 in error
+[INFO  - 2017-06-19T20:46:11.230Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
