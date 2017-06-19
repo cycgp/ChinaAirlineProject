@@ -8,7 +8,7 @@ import sys
 import time as t
 from datetime import date, timedelta
 
-class aplSpider:
+class aplSpiderCheck:
 
 	URLList = []
 	ARTICLE_List = []
@@ -84,7 +84,7 @@ class aplSpider:
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
-class cldSpider:
+class cldSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -161,7 +161,7 @@ class cldSpider:
 			newsLists.append([articleID, articleURL, title, datetime, content])
 		return newsLists
 
-class cnaSpider:
+class cnaSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -235,7 +235,7 @@ class cnaSpider:
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
-class cntSpider:
+class cntSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -315,7 +315,7 @@ class cntSpider:
 				pass
 		return newsList
 
-class ltnSpider:
+class ltnSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -409,7 +409,7 @@ class ltnSpider:
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
-class ntkSpider:
+class ntkSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -472,7 +472,7 @@ class ntkSpider:
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
-class stmSpider:
+class stmSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -550,7 +550,7 @@ class stmSpider:
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
-class tnlSpider:
+class tnlSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -626,7 +626,7 @@ class tnlSpider:
 			newsList.append([articleID, articleURL, title, time + ' 00:00', content])
 		return newsList
 
-class tpnSpider:
+class tpnSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -712,7 +712,7 @@ class tpnSpider:
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
-class udnSpider:
+class udnSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):

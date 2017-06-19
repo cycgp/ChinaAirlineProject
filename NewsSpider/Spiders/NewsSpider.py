@@ -42,7 +42,7 @@ class aplSpider:
 		return {'press':'apl', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -115,10 +115,10 @@ class cldSpider:
 		return {'press':'cld', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsLists = []
 		articleIDList = []
-		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
 			t.sleep(random.randint(2,6))
 			if articleURL in record:
@@ -190,7 +190,7 @@ class cnaSpider:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -262,7 +262,7 @@ class cntSpider:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -336,7 +336,7 @@ class ltnSpider:
 		return {'press':'ltn', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -413,10 +413,10 @@ class ntkSpider:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
-		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
 			t.sleep(random.randint(2,6))
 			if articleURL in record:
@@ -484,7 +484,7 @@ class stmSpider:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -558,7 +558,7 @@ class tnlSpider:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -636,7 +636,7 @@ class tpnSpider:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -704,7 +704,7 @@ class udnSpider:
 		return {'press':'udn', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
@@ -712,7 +712,7 @@ class udnSpider:
 			if articleURL in record:
 				continue
 			try:
-				driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+				driver = webdriver.PhantomJS()
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
 				soup = bs4(pageSource, 'html.parser')

@@ -1,16 +1,14 @@
 from datetime import date, timedelta
 from Spiders.SpiderFunctions import getNewsList, getContent
-from Spiders.SpiderCheckFunctions import checkNewsList, checkContent
 import pandas as pd
 import schedule
 import time
 
 def writePandas(record):
-	newsList = getNewsList()
-	newsContentList = getContent(newsList, record)
+	newsList = getNewsList('new')
+	newsContentList = getContent('new', newsList, record)
 	df = pd.DataFrame(data=newsContentList, columns=['news ID', 'url', 'title','time','content'])
 	return df
-
 
 def writeFile():
 	print('\nstart: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
@@ -30,8 +28,8 @@ def writeFile():
 	print('End: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
 
 def checkPandas(record):
-	newsList = checkNewsList()
-	newsContentList = checkContent(newsList, record)
+	newsList = getNewsList('check')
+	newsContentList = getContent('check', newsList, record)
 	df = pd.DataFrame(data=newsContentList, columns=['news ID', 'url', 'title','time','content'])
 	return df
 
@@ -49,6 +47,7 @@ def checkFile():
 	print('End: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
 
 if __name__ == '__main__':
+	writeFile()
 	schedule.every().day.at("09:00").do(writeFile)
 	schedule.every().day.at("11:30").do(writeFile)
 	schedule.every().day.at("13:30").do(writeFile)

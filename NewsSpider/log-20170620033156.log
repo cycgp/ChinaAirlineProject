@@ -1,0 +1,52 @@
+[ERROR - 2017-06-20 04:32:17 ] New Talks List problems : 
+Traceback (most recent call last):
+  File "main.py", line 18, in writeFile
+    df = pd.read_csv('' + fileName + '.csv')
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 646, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 389, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 730, in __init__
+    self._make_engine(self.engine)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 923, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/usr/local/lib/python3.6/site-packages/pandas/io/parsers.py", line 1390, in __init__
+    self._reader = _parser.TextReader(src, **kwds)
+  File "pandas/parser.pyx", line 373, in pandas.parser.TextReader.__cinit__ (pandas/parser.c:4184)
+  File "pandas/parser.pyx", line 667, in pandas.parser.TextReader._setup_parser_source (pandas/parser.c:8449)
+FileNotFoundError: File b'NewsList_20170620.csv' does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/Henry/Documents/ChinaAirlineProject/NewsSpider/Spiders/SpiderFunctions.py", line 36, in getContent
+    print("    Loading " + press[index] + " List...", end="", flush=True)
+  File "/Users/Henry/Documents/ChinaAirlineProject/NewsSpider/Spiders/NewsSpider.py", line 428, in getContent
+    r = driver.get(articleURL)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 264, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py", line 464, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/remote_connection.py", line 526, in _request
+    resp = opener.open(request, timeout=self._timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/urllib/request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/urllib/request.py", line 1321, in do_open
+    r = h.getresponse()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
