@@ -1,5 +1,5 @@
 from Spiders.NewsSpider import aplSpider, cldSpider, cnaSpider, cntSpider, ltnSpider, ntkSpider, stmSpider, tnlSpider, tpnSpider, udnSpider
-from Spiders.NewsSpiderCheck import aplSpiderCheck, cldSpiderCheck, cnaSpiderCheck, cntSpiderCheck, ltnSpiderCheck, ntkSpiderCheck, stmSpiderCheck, tnlSpiderCheck, tpnSpiderCheck, udnSpider
+from Spiders.NewsSpiderCheck import aplSpiderCheck, cldSpiderCheck, cnaSpiderCheck, cntSpiderCheck, ltnSpiderCheck, ntkSpiderCheck, stmSpiderCheck, tnlSpiderCheck, tpnSpiderCheck, udnSpiderCheck
 import logging
 import time
 
@@ -19,9 +19,9 @@ def getNewsList(state):
 	for i in range(0,9):
 		print('    Loading ' + press[i] + ' List...', end="", flush=True)
 		try:
-			if state = 'new':
+			if state == 'new':
 				newsList = spiders[i].getURL()
-			elif state = 'check':
+			elif state == 'check':
 				newsList = spidersCheck[i].getURL()
 			NewsLists.append(newsList)
 			print("  DONE")
@@ -38,9 +38,9 @@ def getContent(state, NewsLists, record):
 		index = pressAbbr.index(NewsList['press'])
 		print("    Loading " + press[index] + " List...", end="", flush=True)
 		try:
-			if state = 'new':
+			if state == 'new':
 				newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
-			elif state = 'check':
+			elif state == 'check':
 				newsContentList.extend(spidersCheck[index].getContent(NewsList['URLList'], record))
 			print("  DONE")
 		except:

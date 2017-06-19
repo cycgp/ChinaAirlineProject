@@ -13,8 +13,8 @@ class aplSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = aplSpider.URLList
-		self.ARTICLE_List = aplSpider.ARTICLE_List
+		self.URLList = aplSpiderCheck.URLList
+		self.ARTICLE_List = aplSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -53,7 +53,7 @@ class aplSpiderCheck:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			#get news from url
@@ -88,8 +88,8 @@ class cldSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = cldSpider.URLList
-		self.ARTICLE_List = cldSpider.ARTICLE_List
+		self.URLList = cldSpiderCheck.URLList
+		self.ARTICLE_List = cldSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -129,9 +129,9 @@ class cldSpiderCheck:
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsLists = []
 		articleIDList = []
-		driver = webdriver.PhantomJS()
+		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			r = driver.get(articleURL)
@@ -165,8 +165,8 @@ class cnaSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = cnaSpider.URLList
-		self.ARTICLE_List = cnaSpider.ARTICLE_List
+		self.URLList = cnaSpiderCheck.URLList
+		self.ARTICLE_List = cnaSpiderCheck.ARTICLE_List
 	#Get real-time news url
 	def getURL(self):
 		today = date.today().timetuple()
@@ -207,7 +207,7 @@ class cnaSpiderCheck:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -239,8 +239,8 @@ class cntSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = cntSpider.URLList
-		self.ARTICLE_List = cntSpider.ARTICLE_List
+		self.URLList = cntSpiderCheck.URLList
+		self.ARTICLE_List = cntSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -284,7 +284,7 @@ class cntSpiderCheck:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			try:
@@ -319,8 +319,8 @@ class ltnSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = ltnSpider.URLList
-		self.ARTICLE_List = ltnSpider.ARTICLE_List
+		self.URLList = ltnSpiderCheck.URLList
+		self.ARTICLE_List = ltnSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -363,7 +363,7 @@ class ltnSpiderCheck:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -413,8 +413,8 @@ class ntkSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = ntkSpider.URLList
-		self.ARTICLE_List = ntkSpider.ARTICLE_List
+		self.URLList = ntkSpiderCheck.URLList
+		self.ARTICLE_List = ntkSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -443,9 +443,9 @@ class ntkSpiderCheck:
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
-		driver = webdriver.PhantomJS()
+		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			if t.strftime('%Y-%m-%d', yesterday) not in articleURL.split('/')[5]:
@@ -476,8 +476,8 @@ class stmSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = stmSpider.URLList
-		self.ARTICLE_List = stmSpider.ARTICLE_List
+		self.URLList = stmSpiderCheck.URLList
+		self.ARTICLE_List = stmSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -520,7 +520,7 @@ class stmSpiderCheck:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -554,8 +554,8 @@ class tnlSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = tnlSpider.URLList
-		self.ARTICLE_List = tnlSpider.ARTICLE_List
+		self.URLList = tnlSpiderCheck.URLList
+		self.ARTICLE_List = tnlSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -599,7 +599,7 @@ class tnlSpiderCheck:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -630,8 +630,8 @@ class tpnSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = tpnSpider.URLList
-		self.ARTICLE_List = tpnSpider.ARTICLE_List
+		self.URLList = tpnSpiderCheck.URLList
+		self.ARTICLE_List = tpnSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -684,7 +684,7 @@ class tpnSpiderCheck:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(2,6))
+			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			r = requests.get(articleURL)
@@ -716,8 +716,8 @@ class udnSpiderCheck:
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
-		self.URLList = udnSpider.URLList
-		self.ARTICLE_List = udnSpider.ARTICLE_List
+		self.URLList = udnSpiderCheck.URLList
+		self.ARTICLE_List = udnSpiderCheck.ARTICLE_List
 
 	#Get real-time news url
 	def getURL(self):
@@ -760,7 +760,7 @@ class udnSpiderCheck:
 			if articleURL in record:
 				continue
 			try:
-				driver = webdriver.PhantomJS()
+				driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
 				soup = bs4(pageSource, 'html.parser')
