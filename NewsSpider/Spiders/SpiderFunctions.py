@@ -14,10 +14,10 @@ spiders = [aplSpider(), cnaSpider(), cntSpider(), ltnSpider(), ntkSpider(), stmS
 spidersCheck = [aplSpiderCheck(), cnaSpiderCheck(), cntSpiderCheck(), ltnSpiderCheck(), ntkSpiderCheck(), stmSpiderCheck(), tnlSpiderCheck(), tpnSpiderCheck(), udnSpiderCheck()]
 
 def getNewsList(state):
-	print("Getting News List...")
+	print("\nGetting News List...")
 	NewsLists = []
-	for i in range(0,9):
-		print('    Loading ' + press[i] + ' List...', end="", flush=True)
+	for i in range(0,len(press)):
+		print('\n    Loading ' + press[i] + ' List...', end="", flush=True)
 		try:
 			if state == 'new':
 				newsList = spiders[i].getURL()
@@ -32,19 +32,19 @@ def getNewsList(state):
 	return NewsLists
 
 def getContent(state, NewsLists, record):
-	print('\n Getting content from news list...')
+	print('\nGetting content from news list...')
 	newsContentList = []
 	for NewsList in NewsLists:
 		index = pressAbbr.index(NewsList['press'])
-		print("    Loading " + press[index] + " List...", end="", flush=True)
+		print("\n    Loading " + press[index] + " List...")
 		try:
 			if state == 'new':
 				newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
 			elif state == 'check':
 				newsContentList.extend(spidersCheck[index].getContent(NewsList['URLList'], record))
-			print("  DONE")
+			print('\r        [---DONE---]  '+time.strftime('%Y/%m/%d %H:%M:%S', time.localtime())+'                                         ')
 		except:
-			print('  FAILED')
+			print('\r        [--FAILED--]  '+time.strftime('%Y/%m/%d %H:%M:%S', time.localtime())+'                                         ')
 			logging.exception(press[index]+' List problems : \n')
 			pass
 	return  newsContentList

@@ -11,7 +11,7 @@ def writePandas(record):
 	return df
 
 def writeFile():
-	print('\nstart: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
+	print('\nstart: ' + time.strftime('%Y/%m/%d %H:%M:%S', time.localtime()) + '\n')
 	fileName = 'NewsList_' + time.strftime('%Y%m%d', time.localtime())
 	try:
 		df = pd.read_csv('' + fileName + '.csv')
@@ -35,7 +35,7 @@ def checkPandas(record):
 
 
 def checkFile():
-	print('\nstart: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
+	print('\nstart: ' + time.strftime('%Y/%m/%d %H:%M:%S', time.localtime()) + '\n')
 	yesterday = (date.today() - timedelta(1)).timetuple()
 	fileName = 'NewsList_' + time.strftime('%Y%m%d', yesterday)
 	df = pd.read_csv('' + fileName + '.csv')
@@ -47,7 +47,7 @@ def checkFile():
 	print('End: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')
 
 if __name__ == '__main__':
-	writeFile()
+	#writeFile()
 	schedule.every().day.at("09:00").do(writeFile)
 	schedule.every().day.at("11:30").do(writeFile)
 	schedule.every().day.at("13:30").do(writeFile)
@@ -56,6 +56,6 @@ if __name__ == '__main__':
 	schedule.every().day.at("20:30").do(writeFile)
 	schedule.every().day.at("22:30").do(writeFile)
 	schedule.every().day.at("00:00").do(checkFile)
-
+	print('Next Run: ' + time.strftime('%Y/%m/%d %H:%M:%S', schedule.next_run().timetuple()) + '\n')
 	while True:
 		schedule.run_pending()

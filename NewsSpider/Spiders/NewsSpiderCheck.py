@@ -7,6 +7,7 @@ from selenium import webdriver
 import sys
 import time as t
 from datetime import date, timedelta
+import random
 
 class aplSpiderCheck:
 
@@ -47,15 +48,15 @@ class aplSpiderCheck:
 		return {'press':'apl', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			#get news from url
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
@@ -124,16 +125,16 @@ class cldSpiderCheck:
 		return {'press':'cld', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsLists = []
 		articleIDList = []
-		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -201,15 +202,15 @@ class cnaSpiderCheck:
 		return {'press':'cna', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'news_article')
@@ -278,15 +279,15 @@ class cntSpiderCheck:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -357,15 +358,15 @@ class ltnSpiderCheck:
 		return {'press':'ltn', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'content')
@@ -438,20 +439,20 @@ class ntkSpiderCheck:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
-		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
 			if t.strftime('%Y-%m-%d', yesterday) not in articleURL.split('/')[5]:
 				continue
 			else:
 				pass
+			t.sleep(random.randint(1,3))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -514,15 +515,15 @@ class stmSpiderCheck:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'inner-wrap')
@@ -593,15 +594,15 @@ class tnlSpiderCheck:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'article-title-box')
@@ -678,15 +679,15 @@ class tpnSpiderCheck:
 	# 	pass
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			t.sleep(random.randint(1,3))
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(id = 'news')
@@ -751,7 +752,7 @@ class udnSpiderCheck:
 		return {'press':'udn', 'URLList':self.ARTICLE_List}
 
 	#Get Content from article
-	def getContent(ARTICLE_List, record):
+	def getContent(self, ARTICLE_List, record):
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
@@ -759,8 +760,9 @@ class udnSpiderCheck:
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
+			t.sleep(random.randint(1,3))
 			try:
-				driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+				driver = webdriver.PhantomJS()
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
 				soup = bs4(pageSource, 'html.parser')
