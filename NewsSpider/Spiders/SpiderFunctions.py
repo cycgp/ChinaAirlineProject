@@ -6,15 +6,19 @@ import time
 logging.basicConfig(level=logging.INFO,
 					format='[%(levelname)-4s - %(asctime)-4s] %(message)s',
 					datefmt='%Y-%m-%d %H:%M:%S ',
-					handlers = [logging.FileHandler('log-'+time.strftime('%Y%m%d%H%M%S', time.localtime())+'.log', 'w', 'utf-8'),])
+					handlers = [logging.FileHandler('newsSpider'+'.log', 'a', 'utf-8'),])
 
 press = ['Apple', 'CNA', 'China Times', 'Liberty Times', 'New Talks', 'Storm', 'The News Lens', 'Taiwan People News', 'UDN']
 pressAbbr = ['apl', 'cna', 'cnt', 'ltn', 'ntk', 'stm', 'tnl', 'tpn', 'udn']
 spiders = [aplSpider(), cnaSpider(), cntSpider(), ltnSpider(), ntkSpider(), stmSpider(), tnlSpider(), tpnSpider(), udnSpider()]
 spidersCheck = [aplSpiderCheck(), cnaSpiderCheck(), cntSpiderCheck(), ltnSpiderCheck(), ntkSpiderCheck(), stmSpiderCheck(), tnlSpiderCheck(), tpnSpiderCheck(), udnSpiderCheck()]
+# press = ['Liberty Times']
+# pressAbbr = ['ltn']
+# spiders = [ltnSpider()]
+# spidersCheck = [ltnSpiderCheck()]
 
 def getNewsList(state):
-	print("\nGetting News List...")
+	print("Getting News List...")
 	NewsLists = []
 	for i in range(0,len(press)):
 		print('\n    Loading ' + press[i] + ' List...', end="", flush=True)
@@ -27,16 +31,18 @@ def getNewsList(state):
 			print("  DONE")
 		except:
 			print('  FAILED')
-			logging.exception(press[index]+' List problems : \n')
+			logging.exception(press[i]+' List problems : \n')
 			pass
+
+	print('\n')
 	return NewsLists
 
 def getContent(state, NewsLists, record):
-	print('\nGetting content from news list...')
+	print('Getting content from news list...\n')
 	newsContentList = []
 	for NewsList in NewsLists:
 		index = pressAbbr.index(NewsList['press'])
-		print("\n    Loading " + press[index] + " List...")
+		print("    Loading " + press[index] + " List...")
 		try:
 			if state == 'new':
 				newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
