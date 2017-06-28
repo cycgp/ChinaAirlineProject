@@ -8,7 +8,6 @@ import multiprocessing
 import numpy as np
 from gensim.models.word2vec import Word2Vec
 from gensim.corpora.dictionary import Dictionary
-
 from keras.preprocessing import sequence
 from keras.models import Sequential
 from keras.layers.embeddings import Embedding
@@ -21,26 +20,43 @@ import pandas as pd
 import sys
 sys.setrecursionlimit(1000000)
 # set parameters:
-vocab_dim = 200
-maxlen = 300
+vocab_dim = 100
+maxlen = 600
 n_iterations = 5  # ideally more..
-n_exposures = 10 #字典最小詞頻
-window_size = 7
-batch_size = 128
-epochs = 5
-input_length = 300
+n_exposures = 3 #字典最小詞頻
+window_size = 5
+batch_size = 16
+epochs = 20
+input_length = 600
 cpu_count = multiprocessing.cpu_count()
 
 
 #加载训练文件
+# def loadfile():
+# 	neg=pd.read_excel('data/neg.xls',header=None,index=None)
+# 	pos=pd.read_excel('data/pos.xls',header=None,index=None)
+#
+# 	combined=np.concatenate((pos[0], neg[0]))
+# 	y = np.concatenate((np.ones(len(pos),dtype=int), np.zeros(len(neg),dtype=int)))
+#
+# 	return combined,y
 def loadfile():
-	neg=pd.read_excel('data/neg.xls',header=None,index=None)
-	pos=pd.read_excel('data/pos.xls',header=None,index=None)
+    posWords = []
+    negWords = []
 
-	combined=np.concatenate((pos[0], neg[0]))
-	y = np.concatenate((np.ones(len(pos),dtype=int), np.zeros(len(neg),dtype=int)))
+    with open('test_data/pos_tw.txt', 'r', encoding='utf-8') as items:
+        for item in items:
+            posWords.append(item)
+    with open('test_data/neg_tw.txt', 'r', encoding='utf-8') as items:
+        for item in items:
+            negWords.append(item)
 
-	return combined,y
+    pos = np.array(posWords)
+    neg = np.array(negWords)
+
+    combined=np.concatenate((pos, neg))
+    y = np.concatenate((np.ones(len(pos),dtype=int), np.zeros(len(neg),dtype=int)))
+    return combined,y
 
 #对句子经行分词，并去掉换行符
 def tokenizer(text):
@@ -184,7 +200,7 @@ def lstm_predict(string):
 		print(string,' negative')
 
 if __name__=='__main__':
-	#train()
+	train()
 	#string='电池充完了电连手机都打不开.简直烂的要命.真是金玉其外,败絮其中!连5号电池都不如'
 	#string='牛逼的手机，从3米高的地方摔下去都没坏，质量非常好'
 	#string='酒店的环境非常好，价格也便宜，值得推荐'
