@@ -385,26 +385,44 @@ class ltnSpiderCheck:
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'content')
+			if soup.find(class_ = 'whitecon articlebody') is not None:
+				news = soup.find(class_ = 'whitecon articlebody')
+			elif soup.find(class_ = 'news_content') is not None:
+				news = soup.find(class_ = 'news_content')
+			elif soup.find(class_ = 'main-content') is not None:
+				news = soup.find(class_ = 'main-content')
 			content = ""
-			try:
-				title = str(news.find('h1').text)
-			except Exception as e:
+
+			if news.find('h1') is not None:
+				title = ''.join(re.split(' |[\n]|[\t]|[\r]', str(news.find('h1').text)))
+			else:
+				title = ''.join(re.split(' |[\n]|[\t]|[\r]', str(news.find('h2').text)))
+
+			if 'TAIPEI TIMES' in title:
 				continue
-			newsText = news.find('div', {'id':'newstext'})
-			try:
-				time = newsText.span.text
-			except:
-				continue
-			newsSoup = bs4(str(newsText), 'html.parser')
-			try:
-				newsSoup.ul.decompose()
-			except:
-				pass
-			try:
-				article = newsSoup.findAll('p')
-			except:
-				pass
-			if t.strftime('%Y-%m-%d', yesterday) not in time.split()[0] or 'TAIPEI TIMES' in title:
+
+			if news.find('div',{'class':'text'}) is not None:
+				time = news.find('div',{'class':'text'}).span.text
+			elif news.find(class_ = 'c_time') is not None:
+				time = news.find(class_ = 'c_time').text
+			elif news.find(class_ = 'date') is not None:
+				time = news.find(class_ = 'date').text
+			elif news.find(class_ = 'pic750') is not None:
+				time = news.find(class_ = 'pic750').text
+			elif news.find(class_ = 'label-date') is not None:
+				if t.strftime('%b. %d %Y', t.localtime()) in news.find(class_ = 'label-date').text:
+					time = t.strftime('%Y-%m-%d 00:00', t.localtime())
+
+			if news.find('div',{'class':'text'}) is not None:
+				article = news.find('div',{'class':'text'}).findAll('p')
+			elif news.find('div',{'class':'new_p'}) is not None:
+				article = news.find('div',{'class':'new_p'}).findAll('p')
+			elif news.find('div',{'class':'content'}) is not None:
+				article = news.find('div',{'class':'content'}).findAll('p')
+			elif news.find('div',{'class':'boxTitle'}) is not None:
+				article = news.find('div',{'class':'boxTitle'}).findAll('p')
+
+			if t.strftime('%Y-%m-%d', yesterday) not in time.split()[0]:
 				continue
 			else:
 				pass
@@ -414,7 +432,7 @@ class ltnSpiderCheck:
 			content = ''.join(re.split(' |[\n]|[\t]|[\r]', content))
 
 
-			time = re.split('-|\xa0\xa0|:', time)
+			time = re.split('-| |:',time)
 			datetime = '/'.join(time[:3])
 			timeInNews = ':'.join(time[3:])
 			articleID = ''.join(time)+'000'

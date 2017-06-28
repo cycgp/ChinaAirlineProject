@@ -12,10 +12,10 @@ press = ['Apple', 'CNA', 'China Times', 'Liberty Times', 'New Talks', 'Storm', '
 pressAbbr = ['apl', 'cna', 'cnt', 'ltn', 'ntk', 'stm', 'tnl', 'tpn', 'udn']
 spiders = [aplSpider(), cnaSpider(), cntSpider(), ltnSpider(), ntkSpider(), stmSpider(), tnlSpider(), tpnSpider(), udnSpider()]
 spidersCheck = [aplSpiderCheck(), cnaSpiderCheck(), cntSpiderCheck(), ltnSpiderCheck(), ntkSpiderCheck(), stmSpiderCheck(), tnlSpiderCheck(), tpnSpiderCheck(), udnSpiderCheck()]
-# press = ['Liberty Times']
-# pressAbbr = ['ltn']
-# spiders = [ltnSpider()]
-# spidersCheck = [ltnSpiderCheck()]
+#press = ['Liberty Times']
+#pressAbbr = ['ltn']
+#spiders = [ltnSpider()]
+#spidersCheck = [ltnSpiderCheck()]
 
 def getNewsList(state):
 	print("Getting News List...")

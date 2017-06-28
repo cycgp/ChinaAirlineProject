@@ -1,2 +1,354 @@
 [INFO - 2017-06-26 09:00:00 ] Running job Every 1 day at 09:00:00 do writeFile() (last run: [never], next run: 2017-06-26 09:00:00)
 [INFO - 2017-06-26 11:30:00 ] Running job Every 1 day at 11:30:00 do writeFile() (last run: [never], next run: 2017-06-26 11:30:00)
+[ERROR - 2017-06-28 00:34:16 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 27, in getNewsList
+    newsList = spiders[i].getURL()
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 334, in getURL
+    t.sleep(random.randint(1,2))
+KeyboardInterrupt
+[ERROR - 2017-06-28 00:42:36 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 389, in getContent
+    print(time)
+UnboundLocalError: local variable 'time' referenced before assignment
+[ERROR - 2017-06-28 00:44:02 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 388, in getContent
+    article = newsSoup.findAll('p',{'class':'text'}).text
+NameError: name 'newsSoup' is not defined
+[ERROR - 2017-06-28 00:44:56 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 388, in getContent
+    article = news.findAll('p',{'class':'text'}).text
+AttributeError: 'ResultSet' object has no attribute 'text'
+[ERROR - 2017-06-28 00:46:02 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 396, in getContent
+    if t.strftime('%Y-%m-%d', t.localtime()) not in time.split()[0]:
+UnboundLocalError: local variable 'time' referenced before assignment
+[ERROR - 2017-06-28 00:49:50 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 396, in getContent
+    print(time)
+UnboundLocalError: local variable 'time' referenced before assignment
+[ERROR - 2017-06-28 00:52:18 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 372, in getContent
+    if str(news.find('h1').text) is not None:
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 00:54:48 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 372, in getContent
+    if str(news.find('h1').text) is not None:
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 00:55:14 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 372, in getContent
+    if str(news.find('h1').text) is not None:
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 00:56:46 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 375, in getContent
+    title = str(news.find('h2').text)
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 00:58:55 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 376, in getContent
+    title = str(news.find('h2').text)
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 01:01:12 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 376, in getContent
+    title = str(news.find('h2').text)
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 01:03:23 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 377, in getContent
+    title = str(news.find('h2').text)
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 01:04:30 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 377, in getContent
+    title = str(news.find('h2').text)
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 01:07:26 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 377, in getContent
+    title = str(news.find('h2').text)
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 01:08:32 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 378, in getContent
+    title = str(news.find('h2').text)
+AttributeError: 'NoneType' object has no attribute 'text'
+[ERROR - 2017-06-28 01:10:06 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 363, in getContent
+    t.sleep(random.randint(2,3))
+KeyboardInterrupt
+[ERROR - 2017-06-28 01:12:14 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 401, in getContent
+    print('\n'+time)
+UnboundLocalError: local variable 'time' referenced before assignment
+[ERROR - 2017-06-28 01:16:04 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 402, in getContent
+    print('\n'+article)
+TypeError: must be str, not ResultSet
+[ERROR - 2017-06-28 01:17:14 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 402, in getContent
+    print('\n'+article)
+TypeError: must be str, not ResultSet
+[ERROR - 2017-06-28 01:20:29 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 402, in getContent
+    print('\n'+article)
+TypeError: must be str, not ResultSet
+[ERROR - 2017-06-28 01:21:10 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 423, in getContent
+    articleID = str(int(articleID)+1)
+ValueError: invalid literal for int() with base 10: '20170628 0054000'
+[ERROR - 2017-06-28 01:22:15 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 392, in getContent
+    article = news.find('div',{'class':'text'}).findAll('p').text
+AttributeError: 'ResultSet' object has no attribute 'text'
+[ERROR - 2017-06-28 01:29:07 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 420, in getContent
+    articleID = str(int(articleID)+1)
+ValueError: invalid literal for int() with base 10: '2017-06-28 00:54000'
+[ERROR - 2017-06-28 01:30:25 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 420, in getContent
+    articleID = str(int(articleID)+1)
+ValueError: invalid literal for int() with base 10: '2017-06-28 00:54000'
+[ERROR - 2017-06-28 01:38:09 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 413, in getContent
+    print('\n'+time)
+UnboundLocalError: local variable 'time' referenced before assignment
+[ERROR - 2017-06-28 01:39:41 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 413, in getContent
+    print('\n'+time)
+UnboundLocalError: local variable 'time' referenced before assignment
+[ERROR - 2017-06-28 01:54:56 ] China Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 289, in getContent
+    t.sleep(random.randint(2,3))
+KeyboardInterrupt
+[ERROR - 2017-06-28 13:36:12 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 362, in getContent
+    t.sleep(random.randint(2,3))
+KeyboardInterrupt
+[ERROR - 2017-06-28 13:36:13 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File ".\main.py", line 21, in writeFile
+    df.to_csv(fileName+'.csv', sep=',', encoding='utf-8', index=False)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\pandas\core\frame.py", line 1403, in to_csv
+    formatter.save()
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\pandas\io\formats\format.py", line 1571, in save
+    compression=self.compression)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\pandas\io\common.py", line 382, in _get_handle
+    f = open(path_or_buf, mode, encoding=encoding)
+PermissionError: [Errno 13] Permission denied: 'NewsList_20170628.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 27, in getNewsList
+    newsList = spiders[i].getURL()
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 334, in getURL
+    t.sleep(random.randint(1,2))
+KeyboardInterrupt
+[ERROR - 2017-06-28 18:09:08 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 374, in getContent
+    title = str(news.find('h1').replace('\n','').replace('\t','')).text
+TypeError: 'NoneType' object is not callable
+[ERROR - 2017-06-28 18:55:03 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 27, in getNewsList
+    newsList = spiders[i].getURL()
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 334, in getURL
+    t.sleep(random.randint(1,2))
+KeyboardInterrupt
+[ERROR - 2017-06-28 18:56:25 ] Liberty Times List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 27, in getNewsList
+    newsList = spiders[i].getURL()
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 332, in getURL
+    return {'press':'ltn', 'URLList':self.ARTICLE_List}
+KeyboardInterrupt
+[ERROR - 2017-06-28 21:57:55 ] New Talks List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 74, in start
+    stdout=self.log_file, stderr=self.log_file)
+  File "C:\Users\Bob\Anaconda3\lib\subprocess.py", line 707, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\Bob\Anaconda3\lib\subprocess.py", line 990, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系統找不到指定的檔案。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 48, in getContent
+    newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpider.py", line 457, in getContent
+    driver = webdriver.PhantomJS()
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\selenium\webdriver\phantomjs\webdriver.py", line 52, in __init__
+    self.service.start()
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'phantomjs' executable needs to be in PATH. 
+
+[INFO - 2017-06-29 00:00:00 ] Running job Every 1 day at 00:00:00 do checkFile() (last run: [never], next run: 2017-06-29 00:00:00)
+[ERROR - 2017-06-29 00:01:51 ] Apple List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Bob\Anaconda3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\Bob\Anaconda3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Bob\Anaconda3\lib\http\client.py", line 266, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Bob\Anaconda3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\Bob\Anaconda3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Bob\Anaconda3\lib\http\client.py", line 266, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 29, in getNewsList
+    newsList = spidersCheck[i].getURL()
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpiderCheck.py", line 43, in getURL
+    r = requests.get(URL)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\requests\api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\requests\sessions.py", line 502, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\requests\sessions.py", line 612, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\requests\adapters.py", line 490, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))
+[ERROR - 2017-06-29 00:27:31 ] New Talks List problems : 
+Traceback (most recent call last):
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 74, in start
+    stdout=self.log_file, stderr=self.log_file)
+  File "C:\Users\Bob\Anaconda3\lib\subprocess.py", line 707, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\Bob\Anaconda3\lib\subprocess.py", line 990, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系統找不到指定的檔案。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\SpiderFunctions.py", line 50, in getContent
+    newsContentList.extend(spidersCheck[index].getContent(NewsList['URLList'], record))
+  File "C:\Users\Bob\Documents\GitHub\ChinaAirlineProject\NewsSpider\Spiders\NewsSpiderCheck.py", line 481, in getContent
+    driver = webdriver.PhantomJS()
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\selenium\webdriver\phantomjs\webdriver.py", line 52, in __init__
+    self.service.start()
+  File "C:\Users\Bob\Anaconda3\lib\site-packages\selenium\webdriver\common\service.py", line 81, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'phantomjs' executable needs to be in PATH. 
+
