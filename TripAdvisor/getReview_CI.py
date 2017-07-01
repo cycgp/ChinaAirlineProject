@@ -7,20 +7,27 @@ import re
 #generate url of Trip Advisor
 def generateURL():
 	global URL_List
-	for page in range(0,46):
+	page = 0
+	state = True
+	while  state:
 		URL = 'https://www.tripadvisor.com.tw/Airline_Review-d8729049-Reviews-Cheap-Flights-or'+str(page)+'0-China-Airlines#Reviews'
-		#Url of China Airline in Trip Advisor
-		URL_List.append(URL)
-
+		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+		driver.get(URL)
+		pageSource = driver.page_source
+		soup = bs4(pageSource, 'html.parser')
+		state = 'next' not in soup.find('div',{'class':'unified pagination '}).span['class'][:3]
+		if state:
+			page += 1
+			URL_List.append(URL)
+		else:
+			page -= 1
+		
 #get review detail
 def getReviewInfo(review):
 	#print(review.prettify())
 	innerBubble = review.find("div", { "class" : "innerBubble" })
 	quote = innerBubble.find("div", { "class" : "quote" }).span
-	try:
-		rating = innerBubble.find("div", { "class" : "rating" }).span['alt'].split('.')[0]
-	except KeyError:
-		rating = innerBubble.find("div", { "class" : "rating" }).img['alt'].split(' ')[0]
+	rating = innerBubble.find("div", { "class" : "rating reviewItemInline" }).span['class'][1].split('bubble_')[1].replace('0','')
 	ratingDate = getDate(innerBubble.find("span", { "class" : "ratingDate" })).decode('utf-8')
 	try:
 		comment = getTextFromTag(review.findAll("div", { "class" : "entry" })[1]).replace(' ','').replace('\n','')
