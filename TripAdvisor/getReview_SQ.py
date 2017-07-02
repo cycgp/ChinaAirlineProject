@@ -5,22 +5,6 @@ import time
 from selenium import webdriver
 
 #generate url of Trip Advisor
-def generateURL():
-	global URL_List
-	page = 0
-	state = True
-	while  state:
-		URL = 'https://www.tripadvisor.com.tw/Airline_Review-d8729151-Reviews-Cheap-Flights-or'+str(page)+'0-Singapore-Airlines#REVIEWS'
-		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
-		driver.get(URL)
-		pageSource = driver.page_source
-		soup = bs4(pageSource, 'html.parser')
-		state = 'next' not in soup.find('div',{'class':'unified pagination '}).span['class'][:3]
-		if state:
-			page += 1
-			URL_List.append(URL)
-		else:
-			page -= 1
 	
 #get review detail
 def getReviewInfo(review):
@@ -90,15 +74,16 @@ def getTextFromTag(tag):
 	return tag.text
 
 def main():
-	generateURL()
-	global URL_List
-	for URL in URL_List:
-		time.sleep(1)
-		#use dryscrape instead of request to run javascript
+	page = 0
+	state = True
+	while  state:
+		URL = 'https://www.tripadvisor.com.tw/Airline_Review-d8729151-Reviews-Cheap-Flights-or'+str(page)+'0-Singapore-Airlines#REVIEWS'
 		driver = webdriver.PhantomJS(executable_path = 'C:\\Users\\Bob\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
 		driver.get(URL)
 		pageSource = driver.page_source
 		soup = bs4(pageSource, 'html.parser')
+		state = 'next' not in soup.find('div',{'class':'unified pagination '}).span['class'][:3]
+		time.sleep(1)
 		moreLinkID = soup.findAll("div", { 'class' : 'reviewSelector'})
 		articleID =  moreLinkID[0]['id']
 		script = "      ta.util.cookie.setPIDCookie(4444); ta.call('ta.servlet.Reviews.expandReviews', {type: 'dummy'}, ta.id('" + articleID + "'), '" + articleID + "', '1', 4444);"
@@ -111,6 +96,7 @@ def main():
 		reviews = soup.findAll("div", { "class" : "reviewSelector" })
 		for review in reviews:
 			getReviewInfo(review)
+		page += 1
 
 if __name__ == '__main__':
 	subjectCount = 0
