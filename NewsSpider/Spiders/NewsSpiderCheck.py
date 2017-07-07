@@ -507,7 +507,7 @@ class ntkSpiderCheck:
 			for contents in article:
 				content +=  str(contents.text)
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
-		driver.Dispose()
+		driver.quit()
 		return newsList
 
 class stmSpiderCheck:
@@ -857,5 +857,5 @@ class udnSpiderCheck:
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
 				pass
-		driver.Dispose()
+		driver.quit()
 		return newsList
