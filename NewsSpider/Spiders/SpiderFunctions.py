@@ -1,5 +1,6 @@
 from Spiders.NewsSpider import aplSpider, cldSpider, cnaSpider, cntSpider, ltnSpider, ntkSpider, stmSpider, tnlSpider, tpnSpider, udnSpider
 from Spiders.NewsSpiderCheck import aplSpiderCheck, cldSpiderCheck, cnaSpiderCheck, cntSpiderCheck, ltnSpiderCheck, ntkSpiderCheck, stmSpiderCheck, tnlSpiderCheck, tpnSpiderCheck, udnSpiderCheck
+from Spiders.threading import getURLThread, getContentThread
 import logging
 import time
 
@@ -12,6 +13,8 @@ press = ['Apple', 'CNA', 'China Times', 'Liberty Times', 'New Talks', 'Storm', '
 pressAbbr = ['apl', 'cna', 'cnt', 'ltn', 'ntk', 'stm', 'tnl', 'tpn', 'udn']
 spiders = [aplSpider(), cnaSpider(), cntSpider(), ltnSpider(), ntkSpider(), stmSpider(), tnlSpider(), tpnSpider(), udnSpider()]
 spidersCheck = [aplSpiderCheck(), cnaSpiderCheck(), cntSpiderCheck(), ltnSpiderCheck(), ntkSpiderCheck(), stmSpiderCheck(), tnlSpiderCheck(), tpnSpiderCheck(), udnSpiderCheck()]
+getNewsListThreads = []
+getContentThreads = []
 #press = ['Liberty Times']
 #pressAbbr = ['ltn']
 #spiders = [ltnSpider()]
@@ -21,20 +24,27 @@ def getNewsList(state):
 	print("Getting News List...")
 	NewsLists = []
 	for i in range(0,len(press)):
-		print('\n    Loading ' + press[i] + ' List...', end="", flush=True)
 		try:
 			if state == 'new':
-				newsList = spiders[i].getURL()
+				newThread = getURLThread(pressAbbr[i]+'Thread', spiders[i])
+				#newsList = spiders[i].getURL()
 			elif state == 'check':
-				newsList = spidersCheck[i].getURL()
-			NewsLists.append(newsList)
-			print("  DONE")
+				newThread = getURLThread(pressAbbr[i]+'Thread', spidersCheck[i])
+			getNewsListThreads.append(newThread)
 		except:
-			print('  FAILED')
 			logging.exception(press[i]+' List problems : \n')
 			pass
 
-	print('\n')
+	for  thread in getNewsListThreads:
+		thread.start()
+
+	for  thread in getNewsListThreads:
+		thread.join()
+
+	for  thread in getNewsListThreads:
+		NewsLists.append(thread.newsList)
+
+	print('\n    [--Exiting getNewsList Threads--]\n')
 	return NewsLists
 
 def getContent(state, NewsLists, record):
@@ -42,15 +52,24 @@ def getContent(state, NewsLists, record):
 	newsContentList = []
 	for NewsList in NewsLists:
 		index = pressAbbr.index(NewsList['press'])
-		print("    Loading " + press[index] + " List...")
 		try:
 			if state == 'new':
-				newsContentList.extend(spiders[index].getContent(NewsList['URLList'], record))
+				newThread = getContentThread(pressAbbr[index]+'Thread', spiders[index], NewsList['URLList'], record)
 			elif state == 'check':
-				newsContentList.extend(spidersCheck[index].getContent(NewsList['URLList'], record))
-			print('\r        [---DONE---]  '+time.strftime('%Y/%m/%d %H:%M:%S', time.localtime())+'                                         ')
+				newThread = getContentThread(pressAbbr[index]+'Thread', spidersCheck[index], NewsList['URLList'], record)
+			getContentThreads.append(newThread)
 		except:
-			print('\r        [--FAILED--]  '+time.strftime('%Y/%m/%d %H:%M:%S', time.localtime())+'                                         ')
 			logging.exception(press[index]+' List problems : \n')
 			pass
+
+	for  thread in getContentThreads:
+		thread.start()
+
+	for  thread in getContentThreads:
+		thread.join()
+
+	for  thread in getContentThreads:
+		newsContentList.extend(thread.newsList)
+
+	print('\n    [--Exiting getContent Threads--]\n')
 	return  newsContentList

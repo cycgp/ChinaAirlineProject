@@ -19,14 +19,16 @@ import jieba
 import pandas as pd
 import sys
 sys.setrecursionlimit(1000000)
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # set parameters:
 vocab_dim = 100
 maxlen = 600
 n_iterations = 5  # ideally more..
-n_exposures = 3 #字典最小詞頻
-window_size = 5
-batch_size = 16
-epochs = 20
+n_exposures = 5 #字典最小詞頻
+window_size = 7
+batch_size = 512
+epochs = 40
 input_length = 600
 cpu_count = multiprocessing.cpu_count()
 
@@ -41,22 +43,22 @@ cpu_count = multiprocessing.cpu_count()
 #
 # 	return combined,y
 def loadfile():
-    posWords = []
-    negWords = []
+	posWords = []
+	negWords = []
 
-    with open('test_data/pos_tw.txt', 'r', encoding='utf-8') as items:
-        for item in items:
-            posWords.append(item)
-    with open('test_data/neg_tw.txt', 'r', encoding='utf-8') as items:
-        for item in items:
-            negWords.append(item)
+	with open('test_data/pos_tw.txt', 'r', encoding='utf-8') as items:
+		for item in items:
+			posWords.append(item)
+	with open('test_data/neg_tw.txt', 'r', encoding='utf-8') as items:
+		for item in items:
+			negWords.append(item)
 
-    pos = np.array(posWords)
-    neg = np.array(negWords)
+	pos = np.array(posWords)
+	neg = np.array(negWords)
 
-    combined=np.concatenate((pos, neg))
-    y = np.concatenate((np.ones(len(pos),dtype=int), np.zeros(len(neg),dtype=int)))
-    return combined,y
+	combined=np.concatenate((pos, neg))
+	y = np.concatenate((np.ones(len(pos),dtype=int), np.zeros(len(neg),dtype=int)))
+	return combined,y
 
 #对句子经行分词，并去掉换行符
 def tokenizer(text):
@@ -64,7 +66,9 @@ def tokenizer(text):
 		removing the breaks for new lines and finally splitting on the
 		whitespace
 	'''
-	text = [jieba.lcut(document.replace('\n', '')) for document in text]
+	jieba.load_userdict("jieba_dict/userdict.txt")
+	stop = [line.strip() for line in open('jieba_dict/stopwords.txt','r',encoding='utf-8').readlines()]#停用詞
+	text = [list(set(jieba.cut(document, cut_all=False))-set(stop)) for document in text]
 	return text
 
 #创建词语字典，并返回每个词语的索引，词向量，以及每个句子所对应的词语索引
@@ -74,11 +78,10 @@ def create_dictionaries(model=None,
 		1- Creates a word to index mapping
 		2- Creates a word to vector mapping
 		3- Transforms the Training and Testing Dictionaries
-
 	'''
 	if (combined is not None) and (model is not None):
 		gensim_dict = Dictionary()
-		gensim_dict.doc2bow(model.vocab.keys(),
+		gensim_dict.doc2bow(model.wv.vocab.keys(),
 							allow_update=True)
 		w2indx = {v: k+1 for k, v in gensim_dict.items()}#所有频数超过10的词语的索引
 		w2vec = {word: model[word] for word in w2indx.keys()}#所有频数超过10的词语的词向量
@@ -111,7 +114,7 @@ def word2vec_train(combined):
 					 workers=cpu_count,
 					 iter=n_iterations)
 	model.build_vocab(combined)
-	model.train(combined, total_examples=model.corpus_count)
+	model.train(combined, total_examples=model.corpus_count, epochs=model.iter)
 	model.save('lstm_data/Word2vec_model.pkl')
 	index_dict, word_vectors,combined = create_dictionaries(model=model,combined=combined)
 	return   index_dict, word_vectors,combined
@@ -136,8 +139,8 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
 						input_length=input_length))  # Adding Input Length
 
 	model.add(Dropout(0.2))
-	model.add(LSTM(128))
-	model.add(Dense(units=256,
+	model.add(LSTM(32))
+	model.add(Dense(units=128,
 					activation='relu'))
 	model.add(Dropout(0.2))
 	model.add(Dense(units=1, activation='sigmoid'))

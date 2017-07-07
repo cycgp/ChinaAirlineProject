@@ -1,0 +1,36 @@
+[INFO  - 2017-07-05T19:20:16.673Z] GhostDriver - Main - running on port 51415
+[INFO  - 2017-07-05T19:20:17.840Z] Session [fad625d0-61b6-11e7-a0d6-a7639080fdbe] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-07-05T19:20:17.840Z] Session [fad625d0-61b6-11e7-a0d6-a7639080fdbe] - page.customHeaders:  - {}
+[INFO  - 2017-07-05T19:20:17.840Z] Session [fad625d0-61b6-11e7-a0d6-a7639080fdbe] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-07-05T19:20:17.840Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: fad625d0-61b6-11e7-a0d6-a7639080fdbe
+[ERROR - 2017-07-05T19:20:18.783Z] Session [fad625d0-61b6-11e7-a0d6-a7639080fdbe] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-05T19:20:18.783Z] Session [fad625d0-61b6-11e7-a0d6-a7639080fdbe] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499282418592:1)
+  mainProcess (https://rec.udn.com/er.js?1499282418592:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499282418592:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-05T19:20:20.063Z] Session [fad625d0-61b6-11e7-a0d6-a7639080fdbe] - page.onError - msg: ReferenceError: Can't find variable: Promise
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-07-05T19:20:20.063Z] Session [fad625d0-61b6-11e7-a0d6-a7639080fdbe] - page.onError - stack:
+  n (https://man.vm5apis.com/dist/adn-web-sdk.js:10)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:9)
+  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:17)
+  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:9)
+  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:17)
+  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:8)
+  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:4)
+  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+
+  phantomjs://platform/console++.js:263 in error
