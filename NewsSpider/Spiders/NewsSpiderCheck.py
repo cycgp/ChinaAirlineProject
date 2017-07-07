@@ -26,7 +26,7 @@ class aplSpiderCheck:
 		while state:
 			#Real-time news pages
 			URL = 'http://www.appledaily.com.tw/realtimenews/section/new/'+str(page)
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			soup = soup.find('time').text.replace(' / ','')
@@ -39,7 +39,7 @@ class aplSpiderCheck:
 				page -= 1
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find_all(class_ = 'rtddt')
@@ -60,7 +60,7 @@ class aplSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			#get news from url
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
@@ -105,7 +105,7 @@ class cldSpiderCheck:
 		while state:
 			#Real-time news pages
 			URL = 'http://www.coolloud.org.tw/story?page='+str(page)
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			timeList = soup.findAll('span', {'class':'date-display-single'})
@@ -121,7 +121,7 @@ class cldSpiderCheck:
 
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.findAll('div', {'class':'field-content pc-style'})
@@ -142,7 +142,7 @@ class cldSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -185,7 +185,7 @@ class cnaSpiderCheck:
 		while state:
 			#Real-time news pages
 			URL = 'http://www.cna.com.tw/list/aall-'+str(page)+'.aspx'
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			if  soup.find('div', {'class':'article_list'}) is None:
@@ -202,7 +202,7 @@ class cnaSpiderCheck:
 				page -= 1
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find(class_ = 'article_list').findAll('li')
@@ -222,7 +222,7 @@ class cnaSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'news_article')
@@ -265,7 +265,7 @@ class cntSpiderCheck:
 		while state:
 			#Real-time news pages
 			URL = 'http://www.chinatimes.com/realtimenews?page='+str(page)
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			timeList = soup.findAll('time')
@@ -280,7 +280,7 @@ class cntSpiderCheck:
 				page -= 1
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find(class_ = 'listRight').findAll('h2')
@@ -303,7 +303,7 @@ class cntSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -351,7 +351,7 @@ class ltnSpiderCheck:
 		while state:
 			#Real-time news pages
 			URL = 'http://news.ltn.com.tw/list/breakingnews/all/'+str(page)
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			timeList = soup.find('ul', {'class':'list imm'}).findAll('span')
@@ -361,7 +361,7 @@ class ltnSpiderCheck:
 			self.URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find_all('a', {'class' : 'ph'})
@@ -381,7 +381,7 @@ class ltnSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'content')
@@ -460,7 +460,7 @@ class ntkSpiderCheck:
 		self.URLList.append(URL)
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.findAll(class_ = 'news_title')
@@ -488,7 +488,7 @@ class ntkSpiderCheck:
 				pass
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -507,6 +507,7 @@ class ntkSpiderCheck:
 			for contents in article:
 				content +=  str(contents.text)
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+		driver.Dispose()
 		return newsList
 
 class stmSpiderCheck:
@@ -525,7 +526,7 @@ class stmSpiderCheck:
 		while state:
 			#Real-time news pages
 			URL = 'http://www.storm.mg/articles/'+str(page)
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			timeList = soup.findAll(class_ = 'main_date')
@@ -540,7 +541,7 @@ class stmSpiderCheck:
 				page -= 1
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.findAll(class_ = 'main_content')
@@ -563,7 +564,7 @@ class stmSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -576,7 +577,7 @@ class stmSpiderCheck:
 				article = news.article.findAll('p')
 			except:
 				pass
-				
+
 			if t.strftime('%Y/%m/%d', yesterday) not in datetime:
 				continue
 			else:
@@ -610,7 +611,7 @@ class tnlSpiderCheck:
 		while state:
 			#Real-time news pages
 			URL = 'https://www.thenewslens.com/news?page='+str(page)
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			timeList = soup.findAll(class_ = 'time')
@@ -626,7 +627,7 @@ class tnlSpiderCheck:
 
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find_all(class_ = 'info-box')
@@ -649,7 +650,7 @@ class tnlSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'article-title-box')
@@ -736,7 +737,7 @@ class tpnSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(id = 'news')
@@ -778,7 +779,7 @@ class udnSpiderCheck:
 		while state:
 			#Real-time news pages
 			URL = 'https://udn.com/news/breaknews/1/99/'+str(page)+'#breaknews'
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			timeList = soup.findAll(class_ = 'dt')
@@ -793,7 +794,7 @@ class udnSpiderCheck:
 				page -= 1
 		#Get articles url from real-time news pages
 		for URL in self.URLList:
-			t.sleep(random.randint(1,2))
+			t.sleep(random.randint(3,5))
 			r = requests.get(URL)
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find(id = 'breaknews_body').find_all('dt')
@@ -808,14 +809,14 @@ class udnSpiderCheck:
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(2,3))
+			t.sleep(random.randint(4,6))
 			try:
-				driver = webdriver.PhantomJS()
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
 				soup = bs4(pageSource, 'html.parser')
@@ -856,4 +857,5 @@ class udnSpiderCheck:
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
 				pass
+		driver.Dispose()
 		return newsList
