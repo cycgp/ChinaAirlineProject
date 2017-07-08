@@ -358,6 +358,8 @@ class ltnSpider:
 					continue
 				t.sleep(random.randint(4,6))
 				r = requests.get(articleURL)
+				sys.stdout.write('\r             ' + ' '*65)
+				sys.stdout.write('\r        URL: ' + articleURL[:65])
 				soup = bs4(r.text, 'html.parser')
 				if soup.find(class_ = 'whitecon articlebody') is not None:
 					news = soup.find(class_ = 'whitecon articlebody')
@@ -418,7 +420,8 @@ class ltnSpider:
 				articleID = 'ltn'+articleID
 
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
-			except:
+			except Exception as e:
+				print(e)
 				pass
 		return newsList
 
