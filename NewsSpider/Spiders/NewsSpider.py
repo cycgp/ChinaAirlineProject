@@ -483,7 +483,6 @@ class ntkSpider:
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
 				pass
-		driver.quit()
 		return newsList
 
 class stmSpider:
@@ -811,5 +810,4 @@ class udnSpider:
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
 				pass
-		driver.quit()
 		return newsList
