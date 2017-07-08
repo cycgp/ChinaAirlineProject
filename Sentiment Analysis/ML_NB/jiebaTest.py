@@ -118,7 +118,7 @@ def score(classifier):
 
 if __name__ == "__main__":
 
-    TOPRANK = [500, 1000, 1500, 2000, 2500, 3000, 3500]
+    TOPRANK = [1000, 1500, 2000, 2500, 3000, 4000, 5000]
 
     accuracyScores = []
     for i in range(0,6):
@@ -130,7 +130,7 @@ if __name__ == "__main__":
     jieba.set_dictionary('jieba_dict/dict.txt.big')
 
     #執行100次
-    for i in range(1,11):
+    for i in range(1,101):
         for n in range(0,len(TOPRANK)):
             posFeatures,negFeatures =  build_features(TOPRANK[n])#獲得訓練資料
             posLength = int(len(posFeatures)*0.8)
@@ -161,7 +161,7 @@ if __name__ == "__main__":
         'SGDClassifier': accuracyScore[5]
         }
 
-    df = pd.DataFrame(datas, index=['500', '1000', '1500', '2000', '2500', '3000', '3500'])
+    df = pd.DataFrame(datas, index=['1000', '1500', '2000', '2500', '3000', '4000', '5000'])
     print(tabulate(df, headers='keys', tablefmt='psql'))
 
 

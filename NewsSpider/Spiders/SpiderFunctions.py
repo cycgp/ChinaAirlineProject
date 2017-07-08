@@ -13,14 +13,13 @@ press = ['Apple', 'CNA', 'China Times', 'Liberty Times', 'New Talks', 'Storm', '
 pressAbbr = ['apl', 'cna', 'cnt', 'ltn', 'ntk', 'stm', 'tnl', 'tpn', 'udn']
 spiders = [aplSpider(), cnaSpider(), cntSpider(), ltnSpider(), ntkSpider(), stmSpider(), tnlSpider(), tpnSpider(), udnSpider()]
 spidersCheck = [aplSpiderCheck(), cnaSpiderCheck(), cntSpiderCheck(), ltnSpiderCheck(), ntkSpiderCheck(), stmSpiderCheck(), tnlSpiderCheck(), tpnSpiderCheck(), udnSpiderCheck()]
-getNewsListThreads = []
-getContentThreads = []
 #press = ['Liberty Times']
 #pressAbbr = ['ltn']
 #spiders = [ltnSpider()]
 #spidersCheck = [ltnSpiderCheck()]
 
 def getNewsList(state):
+	getNewsListThreads = []
 	print("Getting News List...")
 	NewsLists = []
 	for i in range(0,len(press)):
@@ -48,6 +47,7 @@ def getNewsList(state):
 	return NewsLists
 
 def getContent(state, NewsLists, record):
+	getContentThreads = []
 	print('Getting content from news list...\n')
 	newsContentList = []
 	for NewsList in NewsLists:

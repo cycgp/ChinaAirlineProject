@@ -1,360 +1,142 @@
-[INFO  - 2017-07-07T19:03:09.300Z] GhostDriver - Main - running on port 54185
-[INFO  - 2017-07-07T19:03:09.465Z] Session [eab37720-6346-11e7-a4fe-395de3fd3059] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2017-07-07T19:03:09.465Z] Session [eab37720-6346-11e7-a4fe-395de3fd3059] - page.customHeaders:  - {}
-[INFO  - 2017-07-07T19:03:09.465Z] Session [eab37720-6346-11e7-a4fe-395de3fd3059] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2017-07-07T19:03:09.465Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: eab37720-6346-11e7-a4fe-395de3fd3059
-[ERROR - 2017-07-07T19:03:48.625Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[INFO  - 2017-07-08T10:40:07.747Z] GhostDriver - Main - running on port 54690
+[INFO  - 2017-07-08T10:40:08.387Z] Session [cfca7de0-63c9-11e7-ad1f-69cf36586d66] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-07-08T10:40:08.388Z] Session [cfca7de0-63c9-11e7-ad1f-69cf36586d66] - page.customHeaders:  - {}
+[INFO  - 2017-07-08T10:40:08.388Z] Session [cfca7de0-63c9-11e7-ad1f-69cf36586d66] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-07-08T10:40:08.388Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: cfca7de0-63c9-11e7-ad1f-69cf36586d66
+[INFO  - 2017-07-08T10:45:07.751Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:03:48.625Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454228442:1)
-  mainProcess (https://rec.udn.com/er.js?1499454228442:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454228442:1)
+[ERROR - 2017-07-08T10:40:33.363Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510433195:1)
+  mainProcess (https://rec.udn.com/er.js?1499510433195:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510433195:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:03:59.201Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:40:46.435Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:03:59.201Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454239129:1)
-  mainProcess (https://rec.udn.com/er.js?1499454239129:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454239129:1)
+[ERROR - 2017-07-08T10:40:46.435Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510446147:1)
+  mainProcess (https://rec.udn.com/er.js?1499510446147:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510446147:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:08.277Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:40:58.358Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:08.277Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454248093:1)
-  mainProcess (https://rec.udn.com/er.js?1499454248093:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454248093:1)
+[ERROR - 2017-07-08T10:40:58.358Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510458100:1)
+  mainProcess (https://rec.udn.com/er.js?1499510458100:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510458100:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:22.582Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:41:10.702Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:22.582Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454262254:1)
-  mainProcess (https://rec.udn.com/er.js?1499454262254:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454262254:1)
+[ERROR - 2017-07-08T10:41:10.702Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510470392:1)
+  mainProcess (https://rec.udn.com/er.js?1499510470392:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510470392:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:33.454Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:41:46.303Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:33.454Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454273127:1)
-  mainProcess (https://rec.udn.com/er.js?1499454273127:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454273127:1)
+[ERROR - 2017-07-08T10:41:46.303Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510505815:1)
+  mainProcess (https://rec.udn.com/er.js?1499510505815:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510505815:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:43.802Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:41:58.276Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:43.802Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454283605:1)
-  mainProcess (https://rec.udn.com/er.js?1499454283605:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454283605:1)
+[ERROR - 2017-07-08T10:41:58.276Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510517923:1)
+  mainProcess (https://rec.udn.com/er.js?1499510517923:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510517923:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:54.325Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:42:11.821Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:04:54.325Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454294013:1)
-  mainProcess (https://rec.udn.com/er.js?1499454294013:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454294013:1)
+[ERROR - 2017-07-08T10:42:11.821Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510531355:1)
+  mainProcess (https://rec.udn.com/er.js?1499510531355:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510531355:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:05:13.906Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: ReferenceError: Can't find variable: Promise
+[ERROR - 2017-07-08T10:42:30.152Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:05:13.906Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  n (https://man.vm5apis.com/dist/adn-web-sdk.js:10)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:9)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:17)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:9)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:17)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:8)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:4)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+[ERROR - 2017-07-08T10:42:30.152Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510549791:1)
+  mainProcess (https://rec.udn.com/er.js?1499510549791:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510549791:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:05:20.713Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:44:29.602Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:05:20.713Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454320495:1)
-  mainProcess (https://rec.udn.com/er.js?1499454320495:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454320495:1)
+[ERROR - 2017-07-08T10:44:29.602Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510669090:1)
+  mainProcess (https://rec.udn.com/er.js?1499510669090:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510669090:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:05:50.954Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:44:41.083Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:05:50.955Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454350836:1)
-  mainProcess (https://rec.udn.com/er.js?1499454350836:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454350836:1)
+[ERROR - 2017-07-08T10:44:41.083Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510680985:1)
+  mainProcess (https://rec.udn.com/er.js?1499510680985:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510680985:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:05:52.552Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: ReferenceError: Can't find variable: Promise
+[ERROR - 2017-07-08T10:44:52.234Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:05:52.552Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  n (https://man.vm5apis.com/dist/adn-web-sdk.js:10)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:9)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:17)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:9)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:17)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:8)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:4)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
+[ERROR - 2017-07-08T10:44:52.235Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510691938:1)
+  mainProcess (https://rec.udn.com/er.js?1499510691938:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510691938:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:06:16.937Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:45:02.409Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:06:16.938Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454376607:1)
-  mainProcess (https://rec.udn.com/er.js?1499454376607:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454376607:1)
+[ERROR - 2017-07-08T10:45:02.409Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510702125:1)
+  mainProcess (https://rec.udn.com/er.js?1499510702125:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510702125:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:06:25.018Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[INFO  - 2017-07-08T10:45:07.927Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2017-07-08T10:45:38.657Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:06:25.019Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454384942:1)
-  mainProcess (https://rec.udn.com/er.js?1499454384942:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454384942:1)
+[ERROR - 2017-07-08T10:45:38.658Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510738181:1)
+  mainProcess (https://rec.udn.com/er.js?1499510738181:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510738181:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:06:36.079Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:45:51.036Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:06:36.079Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454395889:1)
-  mainProcess (https://rec.udn.com/er.js?1499454395889:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454395889:1)
+[ERROR - 2017-07-08T10:45:51.036Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510750826:1)
+  mainProcess (https://rec.udn.com/er.js?1499510750826:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510750826:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:06:53.037Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
+[ERROR - 2017-07-08T10:46:01.326Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:06:53.039Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454412804:1)
-  mainProcess (https://rec.udn.com/er.js?1499454412804:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454412804:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:01.233Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:01.233Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454421133:1)
-  mainProcess (https://rec.udn.com/er.js?1499454421133:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454421133:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:20.562Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:20.562Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454440292:1)
-  mainProcess (https://rec.udn.com/er.js?1499454440292:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454440292:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:29.029Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:29.029Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454448781:1)
-  mainProcess (https://rec.udn.com/er.js?1499454448781:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454448781:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:38.403Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:38.403Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454458285:1)
-  mainProcess (https://rec.udn.com/er.js?1499454458285:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454458285:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:49.495Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:07:49.505Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454469317:1)
-  mainProcess (https://rec.udn.com/er.js?1499454469317:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454469317:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:08:01.612Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:08:01.614Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454481451:1)
-  mainProcess (https://rec.udn.com/er.js?1499454481451:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454481451:1)
-
-  phantomjs://platform/console++.js:263 in error
-[INFO  - 2017-07-07T19:08:09.303Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[ERROR - 2017-07-07T19:08:11.393Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:08:11.393Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454491257:1)
-  mainProcess (https://rec.udn.com/er.js?1499454491257:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454491257:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:08:20.424Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:08:20.426Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454500309:1)
-  mainProcess (https://rec.udn.com/er.js?1499454500309:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454500309:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:09:07.830Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:09:07.831Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454547625:1)
-  mainProcess (https://rec.udn.com/er.js?1499454547625:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454547625:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:09:16.677Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:09:16.677Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454556431:1)
-  mainProcess (https://rec.udn.com/er.js?1499454556431:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454556431:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:09:25.568Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:09:25.569Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454565304:1)
-  mainProcess (https://rec.udn.com/er.js?1499454565304:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454565304:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:09:55.063Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:09:55.063Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454594975:1)
-  mainProcess (https://rec.udn.com/er.js?1499454594975:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454594975:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:04.712Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:04.713Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454604612:1)
-  mainProcess (https://rec.udn.com/er.js?1499454604612:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454604612:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:14.247Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:14.247Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454614149:1)
-  mainProcess (https://rec.udn.com/er.js?1499454614149:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454614149:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:15.069Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: ReferenceError: Can't find variable: Promise
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:15.070Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  n (https://man.vm5apis.com/dist/adn-web-sdk.js:10)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:9)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:17)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:9)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:17)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:8)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:4)
-  t (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-  (anonymous function) (https://man.vm5apis.com/dist/adn-web-sdk.js:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:30.864Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:30.865Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454630773:1)
-  mainProcess (https://rec.udn.com/er.js?1499454630773:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454630773:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:40.335Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:40.337Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454640242:1)
-  mainProcess (https://rec.udn.com/er.js?1499454640242:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454640242:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:52.114Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:10:52.118Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454651947:1)
-  mainProcess (https://rec.udn.com/er.js?1499454651947:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454651947:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:11:02.072Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:11:02.074Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454661817:1)
-  mainProcess (https://rec.udn.com/er.js?1499454661817:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454661817:1)
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:12:05.919Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - msg: TypeError: null is not an object (evaluating 'document.body.lastElementChild')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-07T19:12:05.921Z] Session [eab37720-6346-11e7-bcab-8f33b8ff389f] - page.onError - stack:
-  a (https://rec.udn.com/er.js?1499454725841:1)
-  mainProcess (https://rec.udn.com/er.js?1499454725841:1)
-  (anonymous function) (https://rec.udn.com/er.js?1499454725841:1)
+[ERROR - 2017-07-08T10:46:01.326Z] Session [cfca7de0-63c9-11e7-acd6-819dffb5b36c] - page.onError - stack:
+  a (https://rec.udn.com/er.js?1499510761224:1)
+  mainProcess (https://rec.udn.com/er.js?1499510761224:1)
+  (anonymous function) (https://rec.udn.com/er.js?1499510761224:1)
 
   phantomjs://platform/console++.js:263 in error

@@ -49,35 +49,38 @@ class aplSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			if articleURL in record:
-				continue
-			t.sleep(random.randint(4,6))
-			#get news from url
-			r = requests.get(articleURL)
-			soup = bs4(r.text, 'html.parser')
-			news = soup.find(class_ = 'abdominis')
-			#get title, date, time
-			title = news.find('h1', {'id':'h1'}).text
-			time = re.split('年|月|日|:', news.find('time').text)#time to list
-			timeInNews = ':'.join(time[3:])
-			datetime = '/'.join(time[:3])
-			#filter news from yesterday
-			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
-				continue
-			else:
+			try:
+				if articleURL in record:
+					continue
+				t.sleep(random.randint(4,6))
+				#get news from url
+				r = requests.get(articleURL)
+				soup = bs4(r.text, 'html.parser')
+				news = soup.find(class_ = 'abdominis')
+				#get title, date, time
+				title = news.find('h1', {'id':'h1'}).text
+				time = re.split('年|月|日|:', news.find('time').text)#time to list
+				timeInNews = ':'.join(time[3:])
+				datetime = '/'.join(time[:3])
+				#filter news from yesterday
+				if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
+					continue
+				else:
+					pass
+				#get content
+				article = news.find('p', {'id':'summary'}).findAll(text=True)
+				content = ''
+				for contents in article:
+					content +=  str(contents)
+				#assign news ID
+				articleID = ''.join(time)+'000'
+				while articleID in articleIDList:
+					articleID = str(int(articleID)+1)
+				articleIDList.append(articleID)
+				articleID = 'apl'+articleID
+				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+			except:
 				pass
-			#get content
-			article = news.find('p', {'id':'summary'}).findAll(text=True)
-			content = ''
-			for contents in article:
-				content +=  str(contents)
-			#assign news ID
-			articleID = ''.join(time)+'000'
-			while articleID in articleIDList:
-				articleID = str(int(articleID)+1)
-			articleIDList.append(articleID)
-			articleID = 'apl'+articleID
-			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class cldSpider:
@@ -202,32 +205,35 @@ class cnaSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			if articleURL in record:
-				continue
-			t.sleep(random.randint(4,6))
-			r = requests.get(articleURL)
-			soup = bs4(r.text, 'html.parser')
-			news = soup.find(class_ = 'news_article')
-			content = ""
-			title = news.find('h1').text.replace('\r\n        ','')
-			time = re.split('發稿時間：| |/|:', news.find('div', {'class':'update_times'}).find('p').text)
-			datetime = '/'.join(time[1:4])
-			timeInNews = ':'.join(time[4:])
-			article = news.find('div', {'class':'article_box'}).p.text
+			try:
+				if articleURL in record:
+					continue
+				t.sleep(random.randint(4,6))
+				r = requests.get(articleURL)
+				soup = bs4(r.text, 'html.parser')
+				news = soup.find(class_ = 'news_article')
+				content = ""
+				title = news.find('h1').text.replace('\r\n        ','')
+				time = re.split('發稿時間：| |/|:', news.find('div', {'class':'update_times'}).find('p').text)
+				datetime = '/'.join(time[1:4])
+				timeInNews = ':'.join(time[4:])
+				article = news.find('div', {'class':'article_box'}).p.text
 
-			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
-				continue
-			else:
+				if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
+					continue
+				else:
+					pass
+
+				articleID = ''.join(time[1:])+'000'
+				while articleID in articleIDList:
+					articleID = str(int(articleID)+1)
+				articleIDList.append(articleID)
+				articleID = 'cna'+articleID
+				for contents in article:
+					content +=  str(contents)
+				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+			except:
 				pass
-
-			articleID = ''.join(time[1:])+'000'
-			while articleID in articleIDList:
-				articleID = str(int(articleID)+1)
-			articleIDList.append(articleID)
-			articleID = 'cna'+articleID
-			for contents in article:
-				content +=  str(contents)
-			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class cntSpider:
@@ -347,70 +353,73 @@ class ltnSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			if articleURL in record:
-				continue
-			t.sleep(random.randint(4,6))
-			r = requests.get(articleURL)
-			soup = bs4(r.text, 'html.parser')
-			if soup.find(class_ = 'whitecon articlebody') is not None:
-				news = soup.find(class_ = 'whitecon articlebody')
-			elif soup.find(class_ = 'news_content') is not None:
-				news = soup.find(class_ = 'news_content')
-			elif soup.find(class_ = 'main-content') is not None:
-				news = soup.find(class_ = 'main-content')
-			content = ""
+			try:
+				if articleURL in record:
+					continue
+				t.sleep(random.randint(4,6))
+				r = requests.get(articleURL)
+				soup = bs4(r.text, 'html.parser')
+				if soup.find(class_ = 'whitecon articlebody') is not None:
+					news = soup.find(class_ = 'whitecon articlebody')
+				elif soup.find(class_ = 'news_content') is not None:
+					news = soup.find(class_ = 'news_content')
+				elif soup.find(class_ = 'main-content') is not None:
+					news = soup.find(class_ = 'main-content')
+				content = ""
 
-			if news.find('h1') is not None:
-				title = ''.join(re.split(' |[\n]|[\t]|[\r]', str(news.find('h1').text)))
-			else:
-				title = ''.join(re.split(' |[\n]|[\t]|[\r]', str(news.find('h2').text)))
+				if news.find('h1') is not None:
+					title = ''.join(re.split(' |[\n]|[\t]|[\r]', str(news.find('h1').text)))
+				else:
+					title = ''.join(re.split(' |[\n]|[\t]|[\r]', str(news.find('h2').text)))
 
-			if 'TAIPEI TIMES' in title:
-				continue
+				if 'TAIPEI TIMES' in title:
+					continue
 
-			if news.find('div',{'class':'text'}) is not None:
-				time = news.find('div',{'class':'text'}).span.text
-			elif news.find(class_ = 'c_time') is not None:
-				time = news.find(class_ = 'c_time').text
-			elif news.find(class_ = 'date') is not None:
-				time = news.find(class_ = 'date').text
-			elif news.find(class_ = 'pic750') is not None:
-				time = news.find(class_ = '-pic750').text
-			elif news.find(class_ = 'label-date') is not None:
-				if t.strftime('%b. %d %Y', t.localtime()) in news.find(class_ = 'label-date').text:
-					time = t.strftime('%Y-%m-%d 00:00', t.localtime())
+				if news.find('div',{'class':'text'}) is not None:
+					time = news.find('div',{'class':'text'}).span.text
+				elif news.find(class_ = 'c_time') is not None:
+					time = news.find(class_ = 'c_time').text
+				elif news.find(class_ = 'date') is not None:
+					time = news.find(class_ = 'date').text
+				elif news.find(class_ = 'pic750') is not None:
+					time = news.find(class_ = '-pic750').text
+				elif news.find(class_ = 'label-date') is not None:
+					if t.strftime('%b. %d %Y', t.localtime()) in news.find(class_ = 'label-date').text:
+						time = t.strftime('%Y-%m-%d 00:00', t.localtime())
 
-			if news.find('div',{'class':'text'}) is not None:
-				article = news.find('div',{'class':'text'}).findAll('p')
-			elif news.find('div',{'class':'new_p'}) is not None:
-				article = news.find('div',{'class':'new_p'}).findAll('p')
-			elif news.find('div',{'class':'content'}) is not None:
-				article = news.find('div',{'class':'content'}).findAll('p')
-			elif news.find('div',{'class':'boxTitle'}) is not None:
-				article = news.find('div',{'class':'boxTitle'}).findAll('p')
+				if news.find('div',{'class':'text'}) is not None:
+					article = news.find('div',{'class':'text'}).findAll('p')
+				elif news.find('div',{'class':'new_p'}) is not None:
+					article = news.find('div',{'class':'new_p'}).findAll('p')
+				elif news.find('div',{'class':'content'}) is not None:
+					article = news.find('div',{'class':'content'}).findAll('p')
+				elif news.find('div',{'class':'boxTitle'}) is not None:
+					article = news.find('div',{'class':'boxTitle'}).findAll('p')
 
 
 
-			if t.strftime('%Y-%m-%d', t.localtime()) not in time.split()[0]:
-				continue
-			else:
+				if t.strftime('%Y-%m-%d', t.localtime()) not in time.split()[0]:
+					continue
+				else:
+					pass
+
+
+				for contents in article:
+					content +=  str(contents.text.strip())
+				content = ''.join(re.split(' |[\n]|[\t]|[\r]', content))
+
+				time = re.split('-| |:',time)
+				datetime = '/'.join(time[:3])
+				timeInNews = ':'.join(time[3:])
+				articleID = ''.join(time)+'000'
+				while articleID in articleIDList:
+					articleID = str(int(articleID)+1)
+				articleIDList.append(articleID)
+				articleID = 'ltn'+articleID
+
+				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+			except:
 				pass
-
-
-			for contents in article:
-				content +=  str(contents.text.strip())
-			content = ''.join(re.split(' |[\n]|[\t]|[\r]', content))
-
-			time = re.split('-| |:',time)
-			datetime = '/'.join(time[:3])
-			timeInNews = ':'.join(time[3:])
-			articleID = ''.join(time)+'000'
-			while articleID in articleIDList:
-				articleID = str(int(articleID)+1)
-			articleIDList.append(articleID)
-			articleID = 'ltn'+articleID
-
-			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class ntkSpider:
@@ -446,31 +455,34 @@ class ntkSpider:
 		articleIDList = []
 		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
-			if articleURL in record:
-				continue
-			t.sleep(random.randint(4,6))
-			if t.strftime('%Y-%m-%d', t.localtime()) not in articleURL.split('/')[5]:
-				continue
-			else:
+			try:
+				if articleURL in record:
+					continue
+				t.sleep(random.randint(4,6))
+				if t.strftime('%Y-%m-%d', t.localtime()) not in articleURL.split('/')[5]:
+					continue
+				else:
+					pass
+				r = driver.get(articleURL)
+				pageSource = driver.page_source
+				soup = bs4(pageSource, 'html.parser')
+				news = soup.find(id = 'left_column')
+				content = ""
+				title = news.find(class_ = 'content_title').text
+				time = '/'.join(re.split('發布 |[.]| [|] |[:]|   [\n]', news.find(class_='content_date').text)[1:-1])
+				datetime ='/'.join(re.split('/', time))[:10]
+				timeInNews = ':'.join(re.split('/', time))[11:16]
+				article = news.findAll('p')
+				articleID = ''.join(re.split('/', time))[:12]+'000'
+				while articleID in articleIDList:
+					articleID = str(int(articleID)+1)
+				articleIDList.append(articleID)
+				articleID = 'ntk'+articleID
+				for contents in article:
+					content +=  str(contents.text)
+				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+			except:
 				pass
-			r = driver.get(articleURL)
-			pageSource = driver.page_source
-			soup = bs4(pageSource, 'html.parser')
-			news = soup.find(id = 'left_column')
-			content = ""
-			title = news.find(class_ = 'content_title').text
-			time = '/'.join(re.split('發布 |[.]| [|] |[:]|   [\n]', news.find(class_='content_date').text)[1:-1])
-			datetime ='/'.join(re.split('/', time))[:10]
-			timeInNews = ':'.join(re.split('/', time))[11:16]
-			article = news.findAll('p')
-			articleID = ''.join(re.split('/', time))[:12]+'000'
-			while articleID in articleIDList:
-				articleID = str(int(articleID)+1)
-			articleIDList.append(articleID)
-			articleID = 'ntk'+articleID
-			for contents in article:
-				content +=  str(contents.text)
-			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		driver.quit()
 		return newsList
 
@@ -597,31 +609,34 @@ class tnlSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			if articleURL in record:
-				continue
-			t.sleep(random.randint(4,6))
-			r = requests.get(articleURL)
-			soup = bs4(r.text, 'html.parser')
-			news = soup.find(class_ = 'article-title-box')
-			content = ""
-			title = str(news.find('h1', {'class':'article-title'}).header.text)
-			time = news.find(class_ = 'article-info').text.split(',')[0].replace(' ','')
-			article = soup.find(class_ = 'article-content').findAll('p')
+			try:
+				if articleURL in record:
+					continue
+				t.sleep(random.randint(4,6))
+				r = requests.get(articleURL)
+				soup = bs4(r.text, 'html.parser')
+				news = soup.find(class_ = 'article-title-box')
+				content = ""
+				title = str(news.find('h1', {'class':'article-title'}).header.text)
+				time = news.find(class_ = 'article-info').text.split(',')[0].replace(' ','')
+				article = soup.find(class_ = 'article-content').findAll('p')
 
-			if t.strftime('%Y/%m/%d', t.localtime()) not in time:
-				continue
-			else:
+				if t.strftime('%Y/%m/%d', t.localtime()) not in time:
+					continue
+				else:
+					pass
+
+				articleID = ''.join(re.split('/', time))[:8]+'0000000'
+				while articleID in articleIDList:
+					articleID = str(int(articleID)+1)
+				articleIDList.append(articleID)
+				articleID = 'tnl'+articleID
+				for contents in article:
+					content +=  str(contents.text.strip())
+				content = content.strip()
+				newsList.append([articleID, articleURL, title, time + ' 00:00', content])
+			except:
 				pass
-
-			articleID = ''.join(re.split('/', time))[:8]+'0000000'
-			while articleID in articleIDList:
-				articleID = str(int(articleID)+1)
-			articleIDList.append(articleID)
-			articleID = 'tnl'+articleID
-			for contents in article:
-				content +=  str(contents.text.strip())
-			content = content.strip()
-			newsList.append([articleID, articleURL, title, time + ' 00:00', content])
 		return newsList
 
 class tpnSpider:
@@ -675,32 +690,35 @@ class tpnSpider:
 		newsList = []
 		articleIDList = []
 		for articleURL in ARTICLE_List:
-			if articleURL in record:
-				continue
-			t.sleep(random.randint(4,6))
-			r = requests.get(articleURL)
-			soup = bs4(r.text, 'html.parser')
-			news = soup.find(id = 'news')
-			content = ""
-			title = str(news.find('h1').contents[0])
-			time = re.split('-| |:', news.find(class_ = 'date').text)
-			datetime = '/'.join(time[:3])
-			timeInNews = ':'.join(time[3:])
-			article = news.find('div', {'id':'newscontent'}).findAll('p')
+			try:
+				if articleURL in record:
+					continue
+				t.sleep(random.randint(4,6))
+				r = requests.get(articleURL)
+				soup = bs4(r.text, 'html.parser')
+				news = soup.find(id = 'news')
+				content = ""
+				title = str(news.find('h1').contents[0])
+				time = re.split('-| |:', news.find(class_ = 'date').text)
+				datetime = '/'.join(time[:3])
+				timeInNews = ':'.join(time[3:])
+				article = news.find('div', {'id':'newscontent'}).findAll('p')
 
-			if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
-				continue
-			else:
+				if t.strftime('%Y/%m/%d', t.localtime()) not in datetime:
+					continue
+				else:
+					pass
+
+				articleID = ''.join(time)+'000'
+				while articleID in articleIDList:
+					articleID = str(int(articleID)+1)
+				articleIDList.append(articleID)
+				articleID = 'tpn'+articleID
+				for contents in article:
+					content +=  str(contents.text)
+				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
+			except:
 				pass
-
-			articleID = ''.join(time)+'000'
-			while articleID in articleIDList:
-				articleID = str(int(articleID)+1)
-			articleIDList.append(articleID)
-			articleID = 'tpn'+articleID
-			for contents in article:
-				content +=  str(contents.text)
-			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
 class udnSpider:
