@@ -9,6 +9,7 @@ from nltk.metrics import  BigramAssocMeasures
 #import sci-kit learn
 import sklearn
 from sklearn.naive_bayes import  MultinomialNB
+from sklearn.linear_model import  LogisticRegression, SGDClassifier
 from sklearn.externals import joblib
 from nltk.classify.scikitlearn import  SklearnClassifier
 #word list shuffle
@@ -33,11 +34,11 @@ def jieba_feature(number):
 	posWords = []
 	negWords = []
 
-	for items in read_file('docs/pos_tw.txt'):#把集合的集合變成集合
+	for items in read_file('../docs/pos_tw.txt'):#把集合的集合變成集合
 		for item in items:
 			posWords.append(item)
 
-	for items in read_file('docs/neg_tw.txt'):
+	for items in read_file('../docs/neg_tw.txt'):
 		for item in items:
 			negWords.append(item)
 
@@ -69,7 +70,7 @@ def jieba_feature(number):
 def build_features(topRank):
 	feature = jieba_feature(topRank)
 	posFeatures = []
-	for items in read_file('docs/pos_tw.txt'):
+	for items in read_file('../docs/pos_tw.txt'):
 		a = {}
 		for item in items:
 			if item in feature.keys():
@@ -78,7 +79,7 @@ def build_features(topRank):
 		posFeatures.append(posWords)
 	negFeatures = []
 
-	for items in read_file('docs/neg_tw.txt'):
+	for items in read_file('../docs/neg_tw.txt'):
 		a = {}
 		for item in items:
 			if item in feature.keys():
@@ -90,11 +91,12 @@ def build_features(topRank):
 if __name__ == "__main__":
 	jieba.set_dictionary('jieba_dict/dict.txt.big')
 
-	posFeatures,negFeatures =  build_features(1500)#獲得訓練資料
+	posFeatures,negFeatures =  build_features(1000)#獲得訓練資料
 
-	train =  posFeatures+negFeatures#訓練集(80%)
+	train =  posFeatures+negFeatures
 
 	MultinomialNB_classifier = SklearnClassifier(MultinomialNB()) #在nltk中使用scikit-learn的介面
+	#MultinomialNB_classifier = SklearnClassifier(LogisticRegression()) #在nltk中使用scikit-learn的介面
 	MultinomialNB_classifier.train(train) #訓練分類器
 
 	joblib.dump(MultinomialNB_classifier, 'classifier.pkl')

@@ -12,7 +12,7 @@ from sklearn.externals import joblib
 
 #get original text
 def text():
-	f1 = open('docs/test.txt','r',encoding='utf8')
+	f1 = open('../docs/test.txt','r',encoding='utf8')
 	line1 = f1.readline()
 	str = ''
 
@@ -42,13 +42,13 @@ def jieba_best_words():
 	posWords = []
 	negWords = []
 
-	for items in read_file('docs/pos_tw.txt'):#把集合的集合變成集合
+	for items in read_file('../docs/pos_tw.txt'):#把集合的集合變成集合
 		for item in items:
 			if item is not None:
 				item = item.replace('\ufeff','').replace('\n','')
 				posWords.append(item)
 
-	for items in read_file('docs/neg_tw.txt'):
+	for items in read_file('../docs/neg_tw.txt'):
 		for item in items:
 			if item is not None:
 				item = item.replace('\ufeff','').replace('\n','')
@@ -99,7 +99,7 @@ if __name__ == "__main__":
 	jieba.set_dictionary('jieba_dict/dict.txt.big')
 
 	#get corpus
-	corpus = read_file('docs/test.txt')
+	corpus = read_file('../docs/test.txt')
 	corpusFeatures = extract_features(corpus)
 	#classifier
 	clf = joblib.load('classifier.pkl')

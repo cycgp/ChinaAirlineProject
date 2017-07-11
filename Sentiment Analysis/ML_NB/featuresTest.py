@@ -17,8 +17,8 @@ from sklearn.metrics import  accuracy_score
 from random import shuffle
 
 def text():
-    f1 = open('docs/pos_tw.txt','r',encoding='utf-8')
-    f2 = open('docs/neg_tw.txt','r',encoding='utf-8')
+    f1 = open('../docs/pos_tw.txt','r',encoding='utf-8')
+    f2 = open('../docs/neg_tw.txt','r',encoding='utf-8')
     line1 = f1.readline()
     line2 = f2.readline()
     str = ''
@@ -71,11 +71,11 @@ def jieba_feature(number):
     posWords = []
     negWords = []
 
-    for items in read_file('docs/pos_tw.txt'):#把集合的集合變成集合
+    for items in read_file('../docs/pos_tw.txt'):#把集合的集合變成集合
         for item in items:
             posWords.append(item)
 
-    for items in read_file('docs/neg_tw.txt'):
+    for items in read_file('..docs/neg_tw.txt'):
         for item in items:
             negWords.append(item)
 
@@ -115,7 +115,7 @@ def build_features(feature_info, topRank):
         feature = jieba_feature(topRank)
 
     posFeatures = []
-    for items in read_file('docs/pos_tw.txt'):
+    for items in read_file('../docs/pos_tw.txt'):
         a = {}
         for item in items:
             if item in feature.keys():
@@ -124,7 +124,7 @@ def build_features(feature_info, topRank):
         posFeatures.append(posWords)
     negFeatures = []
 
-    for items in read_file('docs/neg_tw.txt'):
+    for items in read_file('../docs/neg_tw.txt'):
         a = {}
         for item in items:
             if item in feature.keys():

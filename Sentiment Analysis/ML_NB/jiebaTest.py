@@ -21,8 +21,8 @@ import pandas as pd
 from tabulate import tabulate
 
 def text():
-    f1 = open('docs/pos_tw.txt','r',encoding='utf-8')
-    f2 = open('docs/neg_tw.txt','r',encoding='utf-8')
+    f1 = open('../docs/pos_tw.txt','r',encoding='utf-8')
+    f2 = open('../docs/neg_tw.txt','r',encoding='utf-8')
     line1 = f1.readline()
     line2 = f2.readline()
     str = ''
@@ -55,11 +55,11 @@ def jieba_feature(number):
     posWords = []
     negWords = []
 
-    for items in read_file('docs/pos_tw.txt'):#把集合的集合變成集合
+    for items in read_file('../docs/pos_tw.txt'):#把集合的集合變成集合
         for item in items:
             posWords.append(item)
 
-    for items in read_file('docs/neg_tw.txt'):
+    for items in read_file('../docs/neg_tw.txt'):
         for item in items:
             negWords.append(item)
 
@@ -91,7 +91,7 @@ def jieba_feature(number):
 def build_features(topRank):
     feature = jieba_feature(topRank)
     posFeatures = []
-    for items in read_file('docs/pos_tw.txt'):
+    for items in read_file('../docs/pos_tw.txt'):
         a = {}
         for item in items:
             if item in feature.keys():
@@ -100,7 +100,7 @@ def build_features(topRank):
         posFeatures.append(posWords)
     negFeatures = []
 
-    for items in read_file('docs/neg_tw.txt'):
+    for items in read_file('../docs/neg_tw.txt'):
         a = {}
         for item in items:
             if item in feature.keys():
@@ -118,7 +118,7 @@ def score(classifier):
 
 if __name__ == "__main__":
 
-    TOPRANK = [1000, 1500, 2000, 2500, 3000, 4000, 5000]
+    TOPRANK = [1000, 2000, 3000, 4000, 5000, 6000, 7000]
 
     accuracyScores = []
     for i in range(0,6):
@@ -130,7 +130,7 @@ if __name__ == "__main__":
     jieba.set_dictionary('jieba_dict/dict.txt.big')
 
     #執行100次
-    for i in range(1,101):
+    for i in range(0,10):
         for n in range(0,len(TOPRANK)):
             posFeatures,negFeatures =  build_features(TOPRANK[n])#獲得訓練資料
             posLength = int(len(posFeatures)*0.8)
@@ -161,7 +161,7 @@ if __name__ == "__main__":
         'SGDClassifier': accuracyScore[5]
         }
 
-    df = pd.DataFrame(datas, index=['1000', '1500', '2000', '2500', '3000', '4000', '5000'])
+    df = pd.DataFrame(datas, index=['1000', '2000', '3000', '4000', '5000', '6000', '7000'])
     print(tabulate(df, headers='keys', tablefmt='psql'))
 
 
