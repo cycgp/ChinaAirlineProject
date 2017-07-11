@@ -60,7 +60,7 @@ class aplSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			#get news from url
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
@@ -142,7 +142,7 @@ class cldSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -222,7 +222,7 @@ class cnaSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'news_article')
@@ -303,7 +303,7 @@ class cntSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -329,7 +329,7 @@ class cntSpiderCheck:
 					content +=  str(contents.text)
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
-				pass
+				continue
 		return newsList
 
 class ltnSpiderCheck:
@@ -367,6 +367,10 @@ class ltnSpiderCheck:
 			articles = soup.find_all('a', {'class' : 'ph'})
 			for article in articles:
 				articleURL = article.get('href')
+				if 'sports' in articleURL or 'talk' in articleURL or '3c' in articleURL or 'auto' in articleURL:
+					continue
+				else:
+					pass
 				self.ARTICLE_List.append(articleURL)
 		return {'press':'ltn', 'URLList':self.ARTICLE_List}
 
@@ -376,14 +380,16 @@ class ltnSpiderCheck:
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
+		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
-			r = requests.get(articleURL)
-			soup = bs4(r.text, 'html.parser')
+			t.sleep(random.randint(5,8))
+			r = driver.get(articleURL)
+			pageSource = driver.page_source
+			soup = bs4(pageSource, 'html.parser')
 			news = soup.find(class_ = 'content')
 			if soup.find(class_ = 'whitecon articlebody') is not None:
 				news = soup.find(class_ = 'whitecon articlebody')
@@ -391,6 +397,10 @@ class ltnSpiderCheck:
 				news = soup.find(class_ = 'news_content')
 			elif soup.find(class_ = 'main-content') is not None:
 				news = soup.find(class_ = 'main-content')
+			elif soup.find(class_ = 'conbox') is not None:
+				news = soup.find(class_ = 'conbox')
+			elif soup.find(class_ = 'content') is not None:
+				news = soup.find(class_ = 'content')
 			content = ""
 
 			if news.find('h1') is not None:
@@ -398,7 +408,8 @@ class ltnSpiderCheck:
 			else:
 				title = ''.join(re.split(' |[\n]|[\t]|[\r]', str(news.find('h2').text)))
 
-			if 'TAIPEI TIMES' in title:
+
+			if 'TAIPEITIMES' in title or 'TAIPEI TIMES' in title:
 				continue
 
 			if news.find('div',{'class':'text'}) is not None:
@@ -411,7 +422,15 @@ class ltnSpiderCheck:
 				time = news.find(class_ = 'pic750').text
 			elif news.find(class_ = 'label-date') is not None:
 				if t.strftime('%b. %d %Y', t.localtime()) in news.find(class_ = 'label-date').text:
-					time = t.strftime('%Y-%m-%d 00:00', t.localtime())
+					time = t.strftime('%Y-%m-%d 00:00', yesterday)
+			elif news.find(class_ = 'writer_date') is not None:
+				time = news.find(class_ = 'writer_date').text
+			elif news.find(class_ = 'writer') is not None:
+				time = news.findAll('span',{'class':'writer'})[2].replace(' 2','2')
+			elif news.find(class_ = 'h1dt') is not None:
+				time = news.find('span',{'class':'h1dt'}).text
+			elif news.find(class_ = 'mobile_none') is not None:
+				time = news.find(class_ = 'mobile_none').text
 
 			if news.find('div',{'class':'text'}) is not None:
 				article = news.find('div',{'class':'text'}).findAll('p')
@@ -421,6 +440,13 @@ class ltnSpiderCheck:
 				article = news.find('div',{'class':'content'}).findAll('p')
 			elif news.find('div',{'class':'boxTitle'}) is not None:
 				article = news.find('div',{'class':'boxTitle'}).findAll('p')
+			elif news.find('div',{'class':'cont'}) is not None:
+				article = news.find('div',{'class':'cont'}).findAll('p')
+			elif news.find('div',{'class':'cont boxTitle'}) is not None:
+				article = news.find('div',{'class':'cont boxTitle'}).findAll('p')
+			elif news.find('div',{'class':'cin'}) is not None:
+				article = news.find('div',{'class':'con'}).findAll('p')
+
 
 			if t.strftime('%Y-%m-%d', yesterday) not in time.split()[0]:
 				continue
@@ -440,6 +466,7 @@ class ltnSpiderCheck:
 				articleID = str(int(articleID)+1)
 			articleIDList.append(articleID)
 			articleID = 'ltn'+articleID
+
 			newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 		return newsList
 
@@ -488,7 +515,7 @@ class ntkSpiderCheck:
 				pass
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -563,7 +590,7 @@ class stmSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -649,7 +676,7 @@ class tnlSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'article-title-box')
@@ -717,7 +744,7 @@ class tpnSpiderCheck:
 					articleURL = 'http://www.peoplenews.tw/news/'+ EID
 					self.ARTICLE_List.append(articleURL)
 				except:
-					pass
+					continue
 		file = open('testfile.txt','w')
 		file.write(str(self.ARTICLE_List))
 		return {'press':'tpn', 'URLList':self.ARTICLE_List}
@@ -736,7 +763,7 @@ class tpnSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
 			news = soup.find(id = 'news')
@@ -814,7 +841,7 @@ class udnSpiderCheck:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r        URL: ' + articleURL[:65])
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
 			try:
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
@@ -855,5 +882,5 @@ class udnSpiderCheck:
 					content +=  str(contents.text)
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
-				pass
+				continue
 		return newsList

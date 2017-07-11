@@ -1,9 +1,0 @@
-Keras
-gensim
-jieba
-sklearn
-h5py
-numpy
-pandas
-Theano
-xlrd

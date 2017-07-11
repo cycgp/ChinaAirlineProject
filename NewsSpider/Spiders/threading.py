@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+import sys
 import threading
 import time
 
@@ -27,4 +27,5 @@ class getContentThread(threading.Thread):
 	def run(self):
 		print ('    Starting ' + self.name + time.strftime('  %Y/%m/%d %H:%M:%S', time.localtime()))
 		self.newsList = self.spider.getContent(self.URLList, self.record)
-		print ('    Exiting ' + self.name + time.strftime('   %Y/%m/%d %H:%M:%S', time.localtime()))
+		sys.stdout.write('\r             ' + ' '*65)
+		sys.stdout.write('\r    Exiting ' + self.name + time.strftime('   %Y/%m/%d %H:%M:%S', time.localtime()))

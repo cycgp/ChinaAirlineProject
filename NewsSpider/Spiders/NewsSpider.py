@@ -52,7 +52,9 @@ class aplSpider:
 			try:
 				if articleURL in record:
 					continue
-				t.sleep(random.randint(4,6))
+				t.sleep(random.randint(5,8))
+				sys.stdout.write('\r             ' + ' '*65)
+				sys.stdout.write('\r        URL: ' + articleURL[:65])
 				#get news from url
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -80,7 +82,7 @@ class aplSpider:
 				articleID = 'apl'+articleID
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
-				pass
+				continue
 		return newsList
 
 class cldSpider:
@@ -130,7 +132,9 @@ class cldSpider:
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
-			t.sleep(random.randint(4,6))
+			sys.stdout.write('\r             ' + ' '*65)
+			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			t.sleep(random.randint(5,8))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
 			soup = bs4(pageSource, 'html.parser')
@@ -208,7 +212,9 @@ class cnaSpider:
 			try:
 				if articleURL in record:
 					continue
-				t.sleep(random.randint(4,6))
+				t.sleep(random.randint(5,8))
+				sys.stdout.write('\r             ' + ' '*65)
+				sys.stdout.write('\r        URL: ' + articleURL[:65])
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
 				news = soup.find(class_ = 'news_article')
@@ -233,7 +239,7 @@ class cnaSpider:
 					content +=  str(contents)
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
-				pass
+				continue
 		return newsList
 
 class cntSpider:
@@ -284,7 +290,9 @@ class cntSpider:
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
+			sys.stdout.write('\r             ' + ' '*65)
+			sys.stdout.write('\r        URL: ' + articleURL[:65])
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -310,7 +318,7 @@ class cntSpider:
 					content +=  str(contents.text)
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
-				pass
+				continue
 		return newsList
 
 class ltnSpider:
@@ -345,6 +353,10 @@ class ltnSpider:
 			articles = soup.find_all('a', {'class' : 'ph'})
 			for article in articles:
 				articleURL = article.get('href')
+				if 'sports' in articleURL or 'talk' in articleURL or '3c' in articleURL or 'auto' in articleURL:
+					continue
+				else:
+					pass
 				self.ARTICLE_List.append(articleURL)
 		return {'press':'ltn', 'URLList':self.ARTICLE_List}
 
@@ -356,17 +368,23 @@ class ltnSpider:
 			try:
 				if articleURL in record:
 					continue
-				t.sleep(random.randint(4,6))
-				r = requests.get(articleURL)
+				t.sleep(random.randint(5,8))
+				driver = webdriver.PhantomJS()
 				sys.stdout.write('\r             ' + ' '*65)
 				sys.stdout.write('\r        URL: ' + articleURL[:65])
-				soup = bs4(r.text, 'html.parser')
+				r = driver.get(articleURL)
+				pageSource = driver.page_source
+				soup = bs4(pageSource, 'html.parser')
 				if soup.find(class_ = 'whitecon articlebody') is not None:
 					news = soup.find(class_ = 'whitecon articlebody')
 				elif soup.find(class_ = 'news_content') is not None:
 					news = soup.find(class_ = 'news_content')
 				elif soup.find(class_ = 'main-content') is not None:
 					news = soup.find(class_ = 'main-content')
+				elif soup.find(class_ = 'conbox') is not None:
+					news = soup.find(class_ = 'conbox')
+				elif soup.find(class_ = 'content') is not None:
+					news = soup.find(class_ = 'content')
 				content = ""
 
 				if news.find('h1') is not None:
@@ -374,7 +392,7 @@ class ltnSpider:
 				else:
 					title = ''.join(re.split(' |[\n]|[\t]|[\r]', str(news.find('h2').text)))
 
-				if 'TAIPEI TIMES' in title:
+				if 'TAIPEITIMES' in title or 'TAIPEI TIMES' in title:
 					continue
 
 				if news.find('div',{'class':'text'}) is not None:
@@ -384,10 +402,20 @@ class ltnSpider:
 				elif news.find(class_ = 'date') is not None:
 					time = news.find(class_ = 'date').text
 				elif news.find(class_ = 'pic750') is not None:
-					time = news.find(class_ = '-pic750').text
+					time = news.find(class_ = 'pic750').text
 				elif news.find(class_ = 'label-date') is not None:
 					if t.strftime('%b. %d %Y', t.localtime()) in news.find(class_ = 'label-date').text:
 						time = t.strftime('%Y-%m-%d 00:00', t.localtime())
+				elif news.find(class_ = 'writer_date') is not None:
+					time = news.find(class_ = 'writer_date').text
+				elif news.find(class_ = 'writer') is not None:
+					time = news.findAll('span',{'class':'writer'})[2].replace(' 2','2')
+				elif news.find(class_ = 'h1dt') is not None:
+					time = news.find('span',{'class':'h1dt'}).text
+				elif news.find(class_ = 'mobile_none') is not None:
+					time = news.find(class_ = 'mobile_none').text
+				elif news.find(class_ = 'writer_date') is not None:
+					time = news.find(class_ = 'writer_date').text
 
 				if news.find('div',{'class':'text'}) is not None:
 					article = news.find('div',{'class':'text'}).findAll('p')
@@ -397,7 +425,12 @@ class ltnSpider:
 					article = news.find('div',{'class':'content'}).findAll('p')
 				elif news.find('div',{'class':'boxTitle'}) is not None:
 					article = news.find('div',{'class':'boxTitle'}).findAll('p')
-
+				elif news.find('div',{'class':'cont'}) is not None:
+					article = news.find('div',{'class':'cont'}).findAll('p')
+				elif news.find('div',{'class':'cont boxTitle'}) is not None:
+					article = news.find('div',{'class':'cont boxTitle'}).findAll('p')
+				elif news.find('div',{'class':'cin'}) is not None:
+					article = news.find('div',{'class':'con'}).findAll('p')
 
 
 				if t.strftime('%Y-%m-%d', t.localtime()) not in time.split()[0]:
@@ -422,7 +455,7 @@ class ltnSpider:
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except Exception as e:
 				print(e)
-				pass
+				continue
 		return newsList
 
 class ntkSpider:
@@ -461,11 +494,13 @@ class ntkSpider:
 			try:
 				if articleURL in record:
 					continue
-				t.sleep(random.randint(4,6))
+				t.sleep(random.randint(5,8))
 				if t.strftime('%Y-%m-%d', t.localtime()) not in articleURL.split('/')[5]:
 					continue
 				else:
 					pass
+				sys.stdout.write('\r             ' + ' '*65)
+				sys.stdout.write('\r        URL: ' + articleURL[:65])
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
 				soup = bs4(pageSource, 'html.parser')
@@ -485,7 +520,7 @@ class ntkSpider:
 					content +=  str(contents.text)
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
-				pass
+				continue
 		return newsList
 
 class stmSpider:
@@ -535,7 +570,9 @@ class stmSpider:
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
+			sys.stdout.write('\r             ' + ' '*65)
+			sys.stdout.write('\r        URL: ' + articleURL[:65])
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -614,7 +651,9 @@ class tnlSpider:
 			try:
 				if articleURL in record:
 					continue
-				t.sleep(random.randint(4,6))
+				t.sleep(random.randint(5,8))
+				sys.stdout.write('\r             ' + ' '*65)
+				sys.stdout.write('\r        URL: ' + articleURL[:65])
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
 				news = soup.find(class_ = 'article-title-box')
@@ -638,7 +677,7 @@ class tnlSpider:
 				content = content.strip()
 				newsList.append([articleID, articleURL, title, time + ' 00:00', content])
 			except:
-				pass
+				continue
 		return newsList
 
 class tpnSpider:
@@ -681,7 +720,7 @@ class tpnSpider:
 					articleURL = 'http://www.peoplenews.tw/news/'+ EID
 					self.ARTICLE_List.append(articleURL)
 				except:
-					pass
+					continue
 		return {'press':'tpn', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
@@ -695,7 +734,9 @@ class tpnSpider:
 			try:
 				if articleURL in record:
 					continue
-				t.sleep(random.randint(4,6))
+				t.sleep(random.randint(5,8))
+				sys.stdout.write('\r             ' + ' '*65)
+				sys.stdout.write('\r        URL: ' + articleURL[:65])
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
 				news = soup.find(id = 'news')
@@ -720,7 +761,7 @@ class tpnSpider:
 					content +=  str(contents.text)
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
-				pass
+				continue
 		return newsList
 
 class udnSpider:
@@ -768,7 +809,9 @@ class udnSpider:
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
-			t.sleep(random.randint(4,6))
+			t.sleep(random.randint(5,8))
+			sys.stdout.write('\r             ' + ' '*65)
+			sys.stdout.write('\r        URL: ' + articleURL[:65])
 			try:
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
@@ -812,5 +855,5 @@ class udnSpider:
 					content +=  str(contents.text)
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except:
-				pass
+				continue
 		return newsList
