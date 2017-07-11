@@ -19,17 +19,15 @@ import jieba
 import pandas as pd
 import sys
 sys.setrecursionlimit(1000000)
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # set parameters:
-vocab_dim = 100
-maxlen = 600
-n_iterations = 5  # ideally more..
-n_exposures = 5 #字典最小詞頻
-window_size = 7
-batch_size = 512
-epochs = 40
-input_length = 600
+vocab_dim = 32
+maxlen = 500
+n_iterations = 10  # ideally more..
+n_exposures = 7 #字典最小詞頻
+window_size = 5
+batch_size = 256
+epochs = 10
+input_length = 500
 cpu_count = multiprocessing.cpu_count()
 
 
@@ -81,7 +79,7 @@ def create_dictionaries(model=None,
 	'''
 	if (combined is not None) and (model is not None):
 		gensim_dict = Dictionary()
-		gensim_dict.doc2bow(model.wv.vocab.keys(),
+		gensim_dict.doc2bow(model.vocab.keys(),
 							allow_update=True)
 		w2indx = {v: k+1 for k, v in gensim_dict.items()}#所有频数超过10的词语的索引
 		w2vec = {word: model[word] for word in w2indx.keys()}#所有频数超过10的词语的词向量
@@ -114,7 +112,7 @@ def word2vec_train(combined):
 					 workers=cpu_count,
 					 iter=n_iterations)
 	model.build_vocab(combined)
-	model.train(combined, total_examples=model.corpus_count, epochs=model.iter)
+	model.train(combined, total_examples=model.corpus_count)
 	model.save('lstm_data/Word2vec_model.pkl')
 	index_dict, word_vectors,combined = create_dictionaries(model=model,combined=combined)
 	return   index_dict, word_vectors,combined
@@ -139,7 +137,7 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
 						input_length=input_length))  # Adding Input Length
 
 	model.add(Dropout(0.2))
-	model.add(LSTM(32))
+	model.add(LSTM(64))
 	model.add(Dense(units=128,
 					activation='relu'))
 	model.add(Dropout(0.2))
