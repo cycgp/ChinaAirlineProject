@@ -54,7 +54,7 @@ class aplSpider:
 					continue
 				t.sleep(random.randint(5,8))
 				sys.stdout.write('\r             ' + ' '*65)
-				sys.stdout.write('\r        URL: ' + articleURL[:65])
+				sys.stdout.write('\r    URL: ' + articleURL[:69])
 				#get news from url
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -133,7 +133,7 @@ class cldSpider:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
@@ -214,7 +214,7 @@ class cnaSpider:
 					continue
 				t.sleep(random.randint(5,8))
 				sys.stdout.write('\r             ' + ' '*65)
-				sys.stdout.write('\r        URL: ' + articleURL[:65])
+				sys.stdout.write('\r    URL: ' + articleURL[:69])
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
 				news = soup.find(class_ = 'news_article')
@@ -292,7 +292,7 @@ class cntSpider:
 				continue
 			t.sleep(random.randint(5,8))
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -371,7 +371,7 @@ class ltnSpider:
 				t.sleep(random.randint(5,8))
 				driver = webdriver.PhantomJS()
 				sys.stdout.write('\r             ' + ' '*65)
-				sys.stdout.write('\r        URL: ' + articleURL[:65])
+				sys.stdout.write('\r    URL: ' + articleURL[:69])
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
 				soup = bs4(pageSource, 'html.parser')
@@ -500,7 +500,7 @@ class ntkSpider:
 				else:
 					pass
 				sys.stdout.write('\r             ' + ' '*65)
-				sys.stdout.write('\r        URL: ' + articleURL[:65])
+				sys.stdout.write('\r    URL: ' + articleURL[:69])
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
 				soup = bs4(pageSource, 'html.parser')
@@ -572,7 +572,7 @@ class stmSpider:
 				continue
 			t.sleep(random.randint(5,8))
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			try:
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
@@ -653,7 +653,7 @@ class tnlSpider:
 					continue
 				t.sleep(random.randint(5,8))
 				sys.stdout.write('\r             ' + ' '*65)
-				sys.stdout.write('\r        URL: ' + articleURL[:65])
+				sys.stdout.write('\r    URL: ' + articleURL[:69])
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
 				news = soup.find(class_ = 'article-title-box')
@@ -736,7 +736,7 @@ class tpnSpider:
 					continue
 				t.sleep(random.randint(5,8))
 				sys.stdout.write('\r             ' + ' '*65)
-				sys.stdout.write('\r        URL: ' + articleURL[:65])
+				sys.stdout.write('\r    URL: ' + articleURL[:69])
 				r = requests.get(articleURL)
 				soup = bs4(r.text, 'html.parser')
 				news = soup.find(id = 'news')
@@ -797,7 +797,7 @@ class udnSpider:
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find(id = 'breaknews_body').find_all('dt')
 			for article in articles:
-				articleURL = 'https://udn.com/'+article.find('a').get('href')
+				articleURL = 'https://udn.com'+article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
 		return {'press':'udn', 'URLList':self.ARTICLE_List}
 
@@ -811,7 +811,7 @@ class udnSpider:
 				continue
 			t.sleep(random.randint(5,8))
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			try:
 				r = driver.get(articleURL)
 				pageSource = driver.page_source
