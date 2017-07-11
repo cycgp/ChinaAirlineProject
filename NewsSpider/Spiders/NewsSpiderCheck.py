@@ -59,7 +59,7 @@ class aplSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			#get news from url
 			r = requests.get(articleURL)
@@ -141,7 +141,7 @@ class cldSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
@@ -221,7 +221,7 @@ class cnaSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
@@ -302,7 +302,7 @@ class cntSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			try:
 				r = requests.get(articleURL)
@@ -385,7 +385,7 @@ class ltnSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
@@ -514,7 +514,7 @@ class ntkSpiderCheck:
 			else:
 				pass
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			r = driver.get(articleURL)
 			pageSource = driver.page_source
@@ -589,7 +589,7 @@ class stmSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			try:
 				r = requests.get(articleURL)
@@ -675,7 +675,7 @@ class tnlSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
@@ -762,7 +762,7 @@ class tpnSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			r = requests.get(articleURL)
 			soup = bs4(r.text, 'html.parser')
@@ -840,7 +840,7 @@ class udnSpiderCheck:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
-			sys.stdout.write('\r        URL: ' + articleURL[:65])
+			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
 			try:
 				r = driver.get(articleURL)

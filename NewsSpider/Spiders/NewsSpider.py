@@ -809,7 +809,7 @@ class udnSpider:
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
-			t.sleep(random.randint(5,8))
+			t.sleep(random.randint(2,4))
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			try:
