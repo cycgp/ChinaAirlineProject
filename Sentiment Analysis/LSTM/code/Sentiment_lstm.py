@@ -54,7 +54,7 @@ def loadfile():
 	pos = np.array(posWords)
 	neg = np.array(negWords)
 
-	combined=np.concatenate((pos, neg))
+	combined = np.concatenate((pos, neg))
 	y = np.concatenate((np.ones(len(pos),dtype=int), np.zeros(len(neg),dtype=int)))
 	return combined,y
 
@@ -97,8 +97,8 @@ def create_dictionaries(model=None,
 						new_txt.append(0)
 				data.append(new_txt)
 			return data
-		combined=parse_dataset(combined)
-		combined= sequence.pad_sequences(combined, maxlen=maxlen)#每个句子所含词语对应的索引，所以句子中含有频数小于10的词语，索引为0
+		combined = parse_dataset(combined)
+		combined = sequence.pad_sequences(combined, maxlen=maxlen)#每个句子所含词语对应的索引，所以句子中含有频数小于10的词语，索引为0
 		return w2indx, w2vec,combined
 	else:
 		print('No data provided...')
@@ -106,16 +106,16 @@ def create_dictionaries(model=None,
 #创建词语字典，并返回每个词语的索引，词向量，以及每个句子所对应的词语索引
 def word2vec_train(combined):
 
-	model = Word2Vec(size=vocab_dim,
-					 min_count=n_exposures,
-					 window=window_size,
-					 workers=cpu_count,
-					 iter=n_iterations)
+	model = Word2Vec(size = vocab_dim,
+					 min_count = n_exposures,
+					 window = window_size,
+					 workers = cpu_count,
+					 iter = n_iterations)
 	model.build_vocab(combined)
 	model.train(combined, total_examples=model.corpus_count)
 	model.save('lstm_data/Word2vec_model.pkl')
-	index_dict, word_vectors,combined = create_dictionaries(model=model,combined=combined)
-	return   index_dict, word_vectors,combined
+	index_dict, word_vectors,combined = create_dictionaries(model = model, combined = combined)
+	return index_dict, word_vectors,combined
 
 def get_data(index_dict,word_vectors,combined,y):
 
@@ -130,32 +130,31 @@ def get_data(index_dict,word_vectors,combined,y):
 def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
 	print('Defining a Simple Keras Model...')
 	model = Sequential()  # or Graph or whatever
-	model.add(Embedding(output_dim=vocab_dim,
-						input_dim=n_symbols,
-						mask_zero=True,
-						weights=[embedding_weights],
-						input_length=input_length))  # Adding Input Length
+	model.add(Embedding(output_dim = vocab_dim,
+						input_dim = n_symbols,
+						mask_zero = True,
+						weights = [embedding_weights],
+						input_length = input_length))  # Adding Input Length
 
 	model.add(Dropout(0.2))
 	model.add(LSTM(64))
-	model.add(Dense(units=128,
-					activation='relu'))
+	model.add(Dense(units = 128,
+					activation = 'relu'))
 	model.add(Dropout(0.2))
-	model.add(Dense(units=1, activation='sigmoid'))
+	model.add(Dense(units = 1, activation = 'sigmoid'))
 
 	print('Compiling the Model...')
-	model.compile(loss='binary_crossentropy',
-				  optimizer='adam',metrics=['accuracy'])
+	model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
 
 	print("Train...")
-	model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs,verbose=1, validation_data=(x_test, y_test))
+	model.fit(x_train, y_train, batch_size = batch_size, epochs = epochs, verbose = 1, validation_data = (x_test, y_test))
 
 	print("Evaluate...")
-	score = model.evaluate(x_test, y_test, verbose=1, batch_size=batch_size)
+	score = model.evaluate(x_test, y_test, verbose = 1, batch_size = batch_size)
 
 	yaml_string = model.to_yaml()
 	with open('lstm_data/lstm.yml', 'w') as outfile:
-		outfile.write( yaml.dump(yaml_string, default_flow_style=True) )
+		outfile.write(yaml.dump(yaml_string, default_flow_style=True))
 	model.save_weights('lstm_data/lstm.h5')
 	print('Test score:', score)
 
@@ -163,25 +162,28 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
 #训练模型，并保存
 def train():
 	print('Loading Data...')
-	combined,y=loadfile()
+	combined,y = loadfile()
 	print(len(combined),len(y))
 	print('Tokenising...')
 	combined = tokenizer(combined)
 	print('Training a Word2vec model...')
-	index_dict, word_vectors,combined=word2vec_train(combined)
+	index_dict, word_vectors,combined = word2vec_train(combined)
 	print('Setting up Arrays for Keras Embedding Layer...')
-	n_symbols,embedding_weights,x_train,y_train,x_test,y_test=get_data(index_dict, word_vectors,combined,y)
+	n_symbols,embedding_weights,x_train,y_train,x_test,y_test = get_data(index_dict, word_vectors,combined,y)
 	print(x_train.shape,y_train.shape)
 	train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test)
 
-def input_transform(string):
-	words=jieba.lcut(string)
-	words=np.array(words).reshape(1,-1)
-	model=Word2Vec.load('lstm_data/Word2vec_model.pkl')
-	_,_,combined=create_dictionaries(model,words)
-	return combined
+def input_transform(inputList):
+	transList = []
+	model = Word2Vec.load('lstm_data/Word2vec_model.pkl')
+	for string in inputList:
+		words = jieba.lcut(string)
+		words = np.array(words).reshape(1,-1)
+		_,_,combined = create_dictionaries(model,words)
+		transList.append(combined)
+	return transList
 
-def lstm_predict(string):
+def lstm_predict(inputList):
 	print('loading model......')
 	with open('lstm_data/lstm.yml', 'r') as f:
 		yaml_string = yaml.load(f)
@@ -189,29 +191,35 @@ def lstm_predict(string):
 
 	print('loading weights......')
 	model.load_weights('lstm_data/lstm.h5')
-	model.compile(loss='binary_crossentropy',
-				  optimizer='adam',metrics=['accuracy'])
-	data=input_transform(string)
-	data.reshape(1,-1)
-	#print data
-	result=model.predict_classes(data)
-	if result[0][0]==1:
-		print(string,' positive')
-	else:
-		print(string,' negative')
+	model.compile(loss = 'binary_crossentropy',optimizer = 'adam',metrics = ['accuracy'])
+
+	transList = input_transform(inputList)
+	i = 0
+	for data in transList:
+		print('Corpus: ' + inputList[i])
+		i += 1
+		data.reshape(1,-1)
+		result = model.predict_classes(data, verbose=0)
+		prob = model.predict_proba(data, verbose=0)
+		print('Probability:' + str(prob[0][0]))
+		if result[0][0] == 1:
+			print('positive')
+		else:
+			print('negative')
 
 if __name__=='__main__':
-	train()
-	#string='电池充完了电连手机都打不开.简直烂的要命.真是金玉其外,败絮其中!连5号电池都不如'
-	#string='牛逼的手机，从3米高的地方摔下去都没坏，质量非常好'
-	#string='酒店的环境非常好，价格也便宜，值得推荐'
-	#string='手机质量太差了，傻逼店家，赚黑心钱，以后再也不会买了'
-	#string='我是傻逼'
-	#string='你是傻逼'
-	#string='屏幕较差，拍照也很粗糙。'
-	#string='质量不错，是正品 ，安装师傅也很好，才要了83元材料费'
-	#string='东西非常不错，安装师傅很负责人，装的也很漂亮，精致，谢谢安装师傅！'
-	string='航班準时,空服员亲切有礼,能给予我适合的服务,对於我的问题可以很清楚的答覆并解决,是我旅行传统航空得首选'
-	string= '十分不好的飞行经验，飞机上居然没有乾净新的枕头和毛毯，所有东西都是之前旅客用过的，十分的糟糕，餐食普普通通'
-	string='普普通通，可能我抱的期待太大了，之前時常在報章雜誌上看到長榮獲獎的新聞，心裡想這間航空公司一定很棒!但真正飛行過後覺得與外界所說的稍微有點出入，我想可能我抱的期待太大了吧?但不得不說硬體設備真的很優!不過餐點部分就見仁見智了，從台灣飛往泰國所提供的餐點我覺得普普，但是從泰國飛往荷蘭這段所提供的餐點我真的覺得很棒(雞肉飯非常香辣又很下飯!)去程時(泰國飛往荷蘭)的空服員都很親切，而且非常親民很像鄰家姐姐般!但是回程時，不知道是因為有乘客在機上購買大量免稅品(?)使得事務長太開心並大聲直呼感謝，總而言之和朋友睡覺睡一半就被"謝謝"給喚醒來了...(我坐的位置是在左邊靠窗處，而當時那位事務長所站的地方是在另一邊的安全門位置)最後想繼續睡也睡不著，那就乾脆享受機上的硬體設備吧!'
+	#train()
+	string=['电池充完了电连手机都打不开.简直烂的要命.真是金玉其外,败絮其中!连5号电池都不如',
+			'牛逼的手机，从3米高的地方摔下去都没坏，质量非常好',
+			'酒店的环境非常好，价格也便宜，值得推荐',
+			'手机质量太差了，傻逼店家，赚黑心钱，以后再也不会买了',
+			'我是傻逼',
+			'你是傻逼',
+			'屏幕较差，拍照也很粗糙。',
+			'质量不错，是正品 ，安装师傅也很好，才要了83元材料费',
+			'东西非常不错，安装师傅很负责人，装的也很漂亮，精致，谢谢安装师傅！',
+			'航班準时,空服员亲切有礼,能给予我适合的服务,对於我的问题可以很清楚的答覆并解决,是我旅行传统航空得首选',
+			'十分不好的飞行经验，飞机上居然没有乾净新的枕头和毛毯，所有东西都是之前旅客用过的，十分的糟糕，餐食普普通通',
+			'普普通通，可能我抱的期待太大了，之前時常在報章雜誌上看到長榮獲獎的新聞，心裡想這間航空公司一定很棒!但真正飛行過後覺得與外界所說的稍微有點出入，我想可能我抱的期待太大了吧?但不得不說硬體設備真的很優!不過餐點部分就見仁見智了，從台灣飛往泰國所提供的餐點我覺得普普，但是從泰國飛往荷蘭這段所提供的餐點我真的覺得很棒(雞肉飯非常香辣又很下飯!)去程時(泰國飛往荷蘭)的空服員都很親切，而且非常親民很像鄰家姐姐般!但是回程時，不知道是因為有乘客在機上購買大量免稅品(?)使得事務長太開心並大聲直呼感謝，總而言之和朋友睡覺睡一半就被"謝謝"給喚醒來了...(我坐的位置是在左邊靠窗處，而當時那位事務長所站的地方是在另一邊的安全門位置)最後想繼續睡也睡不著，那就乾脆享受機上的硬體設備吧!',
+			'沒有特別，整體而言服務還可以，沒有特別感覺。一開始很驚訝經濟艙有飲料單，但送餐時要求單上的品項又被空服員勸退，我跟她說我可以等沒關係，但後來送上的飲料很難喝。']
 	lstm_predict(string)
