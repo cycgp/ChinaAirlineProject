@@ -1,4 +1,5 @@
 #coding:utf8
+from sklearn.externals import joblib
 import yaml
 import sys
 from imp import reload
@@ -103,7 +104,7 @@ import pandas as pd
 
 def read_csv_file():
 	#fileName = 'NewsList_' + time.strftime('%Y%m%d', time.localtime())
-	fileName = '../docs/csv_data/NewsList_20170709.csv'
+	fileName = '../docs/csv_data/NewsList_20170713.csv'
 	df = pd.read_csv(fileName)
 	record = df['content'].values.tolist()
 
@@ -115,7 +116,7 @@ def read_csv_file_jieba():
 	stop = [line.strip() for line in  open('../docs/jieba_dict/stopwords.txt','r',encoding='utf8').readlines()]#停用詞
 
 	#fileName = 'NewsList_' + time.strftime('%Y%m%d', time.localtime())
-	fileName = '../docs/csv_data/NewsList_20170709.csv'
+	fileName = '../docs/csv_data/NewsList_20170713.csv'
 	df = pd.read_csv(fileName)
 	record = df['content'].values.tolist()
 
@@ -176,7 +177,7 @@ def jieba_best_words():
 		pos_score = BigramAssocMeasures.chi_sq(cond_word_fd['pos'][word],  (freq, pos_word_count), total_word_count) #計算積極詞的卡方統計量，這裡也可以計算互資訊等其它統計量
 		neg_score = BigramAssocMeasures.chi_sq(cond_word_fd['neg'][word],  (freq, neg_word_count), total_word_count) #同理
 		word_scores[word] = pos_score + neg_score #一個詞的資訊量等於積極卡方統計量加上消極卡方統計量
-	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:1500] #把詞按資訊量倒序排序。number是特徵的維度
+	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:5000] #把詞按資訊量倒序排序。number是特徵的維度
 	best_words = set([w for w,s in best_vals])
 	return dict([(word, True) for word in best_words])
 
@@ -217,6 +218,9 @@ if __name__ == "__main__":
 	DeepLearning_LSTM_score = lstm_predict(corpus)
 	LogisticRegression_score = []
 	MultinomialNB_score = []
+	Sum = []
+	emotion_sum = []
+	emotion = []
 
 	for i in LogisticRegression_pred:
 		score = i.prob('pos')-i.prob('neg')
@@ -226,10 +230,29 @@ if __name__ == "__main__":
 		score = i.prob('pos')-i.prob('neg')
 		MultinomialNB_score.append(score)
 
-	print('Saving Scores...')
-	score = np.array([LogisticRegression_score, MultinomialNB_score, DeepLearning_LSTM_score]).transpose()
-	print('Merging CSV file')
-	df1 = pd.DataFrame(data=score, columns=['LogisticRegression_score', 'MultinomialNB_score', 'DeepLearning_LSTM_score'])
+	for i in range(0,len(MultinomialNB_score)):
+		Sum.append(LogisticRegression_score[i] + MultinomialNB_score[i] + DeepLearning_LSTM_score[i])
+
+	for data in Sum:
+		if data > 0:
+			emotion_sum.append('Positive')
+		else:
+			emotion_sum.append('Negative')
+
+	for i in range(0,len(MultinomialNB_score)):
+		L_score = LogisticRegression_score[i] > 0
+		M_score = MultinomialNB_score[i] > 0
+		D_score = DeepLearning_LSTM_score[i] > 0
+		if sum([L_score, M_score, D_score]) > 0 :
+			emotion.append('Positive')
+		else:
+			emotion.append('Negative')
+
+	print('\nSaving Scores...')
+	score = np.array([LogisticRegression_score, MultinomialNB_score, DeepLearning_LSTM_score, Sum, emotion_sum, emotion]).transpose()
+	joblib.dump(score, '../docs/score.pkl')
+	print('Merging CSV file...')
+	df1 = pd.DataFrame(data=score, columns=['LogisticRegression_score', 'MultinomialNB_score', 'DeepLearning_LSTM_score' , 'Sum', 'emotion_sum', 'emotion'])
 	fileName = 'NewsList_20170713'
-	df2 = pd.read_csv('data_csv/' + fileName + '.csv').join(df1, how='outer')
-	df2.to_csv('data_csv/'+fileName+'_SA.csv', sep=',', encoding='utf-8', index=False)
+	df2 = pd.read_csv('../docs/csv_data/' + fileName + '.csv').join(df1, how='outer')
+	df2.to_csv('../docs/csv_data/'+fileName+'_SA.csv', sep=',', encoding='utf-8', index=False)
