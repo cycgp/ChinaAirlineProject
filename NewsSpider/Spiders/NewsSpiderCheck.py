@@ -19,6 +19,8 @@ class aplSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
@@ -98,6 +100,8 @@ class cldSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 0
@@ -178,6 +182,8 @@ class cnaSpiderCheck:
 		self.ARTICLE_List = cnaSpiderCheck.ARTICLE_List
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
@@ -257,6 +263,8 @@ class cntSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		#Real-time news pages
@@ -341,6 +349,8 @@ class ltnSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		theDayBeforeYesterday = (date.today() - timedelta(2)).timetuple()
@@ -380,16 +390,14 @@ class ltnSpiderCheck:
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		newsList = []
 		articleIDList = []
-		driver = webdriver.PhantomJS()
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			t.sleep(random.randint(5,8))
-			r = driver.get(articleURL)
-			pageSource = driver.page_source
-			soup = bs4(pageSource, 'html.parser')
+			r = requests.get(articleURL)
+			soup = bs4(r.text, 'html.parser')
 			news = soup.find(class_ = 'content')
 			if soup.find(class_ = 'whitecon articlebody') is not None:
 				news = soup.find(class_ = 'whitecon articlebody')
@@ -479,6 +487,8 @@ class ntkSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		a = t.strftime('%Y-%m-%d', yesterday)
@@ -545,6 +555,8 @@ class stmSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
@@ -630,6 +642,8 @@ class tnlSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
@@ -710,6 +724,8 @@ class tpnSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1
@@ -796,6 +812,8 @@ class udnSpiderCheck:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		today = date.today().timetuple()
 		yesterday = (date.today() - timedelta(1)).timetuple()
 		page = 1

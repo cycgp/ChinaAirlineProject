@@ -102,7 +102,7 @@ if __name__ == "__main__":
 	corpus = read_file('../docs/test.txt')
 	corpusFeatures = extract_features(corpus)
 	#classifier
-	clf = joblib.load('classifier.pkl')
+	clf = joblib.load('../docs/ml_data/classifier.pkl')
 	pred = clf.prob_classify_many(corpusFeatures)
 
 	originalText = text()

@@ -47,7 +47,6 @@ def checkFile():
 	print('End: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()))
 
 if __name__ == '__main__':
-	writeFile()
 	schedule.every().day.at("09:00").do(writeFile)
 	schedule.every().day.at("11:30").do(writeFile)
 	schedule.every().day.at("13:30").do(writeFile)

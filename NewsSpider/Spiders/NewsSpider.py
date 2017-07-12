@@ -17,6 +17,8 @@ class aplSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		page = 1
 		state = True
 		while state:
@@ -94,6 +96,8 @@ class cldSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		page = 0
 		state = True
 		while state:
@@ -170,6 +174,8 @@ class cnaSpider:
 		self.ARTICLE_List = cnaSpider.ARTICLE_List
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		page = 1
 		state = True
 		while state:
@@ -251,6 +257,8 @@ class cntSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		#Real-time news pages
 		page = 1
 		state = True
@@ -330,6 +338,8 @@ class ltnSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		#Real-time news pages
 		page = 0
 		state = True
@@ -364,17 +374,16 @@ class ltnSpider:
 	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
+		print(ARTICLE_List)
 		for articleURL in ARTICLE_List:
 			try:
 				if articleURL in record:
 					continue
 				t.sleep(random.randint(5,8))
-				driver = webdriver.PhantomJS()
 				sys.stdout.write('\r             ' + ' '*65)
 				sys.stdout.write('\r    URL: ' + articleURL[:69])
-				r = driver.get(articleURL)
-				pageSource = driver.page_source
-				soup = bs4(pageSource, 'html.parser')
+				r = requests.get(articleURL)
+				soup = bs4(r.text, 'html.parser')
 				if soup.find(class_ = 'whitecon articlebody') is not None:
 					news = soup.find(class_ = 'whitecon articlebody')
 				elif soup.find(class_ = 'news_content') is not None:
@@ -432,12 +441,10 @@ class ltnSpider:
 				elif news.find('div',{'class':'cin'}) is not None:
 					article = news.find('div',{'class':'con'}).findAll('p')
 
-
 				if t.strftime('%Y-%m-%d', t.localtime()) not in time.split()[0]:
 					continue
 				else:
 					pass
-
 
 				for contents in article:
 					content +=  str(contents.text.strip())
@@ -467,6 +474,8 @@ class ntkSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		a = t.strftime('%Y-%m-%d', t.localtime())
 		#Real-time news pages
 		URL = 'https://newtalk.tw/news/summary/'+str(a)
@@ -532,6 +541,8 @@ class stmSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		page = 1
 		state = True
 		while state:
@@ -611,6 +622,8 @@ class tnlSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		page = 1
 		state = True
 		while state:
@@ -689,6 +702,8 @@ class tpnSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		page = 1
 		state = True
 		while state:
@@ -773,6 +788,8 @@ class udnSpider:
 
 	#Get real-time news url
 	def getURL(self):
+		self.URLList = []
+		self.ARTICLE_List = []
 		page = 1
 		state = True
 		while state:

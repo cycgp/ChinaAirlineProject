@@ -3,7 +3,7 @@
   \ [null, 500]\n    dtype: int32\n    embeddings_constraint: null\n    embeddings_initializer:\n\
   \      class_name: RandomUniform\n      config: {maxval: 0.05, minval: -0.05, seed:\
   \ null}\n    embeddings_regularizer: null\n    input_dim: 7647\n    input_length:\
-  \ 500\n    mask_zero: true\n    name: embedding_1\n    output_dim: 32\n    trainable:\
+  \ 500\n    mask_zero: true\n    name: embedding_1\n    output_dim: 100\n    trainable:\
   \ true\n- class_name: Dropout\n  config: {name: dropout_1, rate: 0.2, trainable:\
   \ true}\n- class_name: LSTM\n  config:\n    activation: tanh\n    activity_regularizer:\
   \ null\n    bias_constraint: null\n    bias_initializer:\n      class_name: Zeros\n\

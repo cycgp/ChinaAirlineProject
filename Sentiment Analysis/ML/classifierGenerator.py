@@ -91,14 +91,16 @@ def build_features(topRank):
 if __name__ == "__main__":
 	jieba.set_dictionary('../docs/jieba_dict/dict.txt.big')
 
-	posFeatures,negFeatures =  build_features(1000)#獲得訓練資料
-
+	posFeatures,negFeatures =  build_features(6000)#獲得訓練資料
 	train =  posFeatures+negFeatures
-
 	MultinomialNB_classifier = SklearnClassifier(MultinomialNB()) #在nltk中使用scikit-learn的介面
-	#MultinomialNB_classifier = SklearnClassifier(LogisticRegression()) #在nltk中使用scikit-learn的介面
 	MultinomialNB_classifier.train(train) #訓練分類器
+	joblib.dump(MultinomialNB_classifier, '../docs/ml_data/MultinomialNB_classifier.pkl')
 
-	joblib.dump(MultinomialNB_classifier, 'classifier.pkl')
+	posFeatures,negFeatures =  build_features(1000)#獲得訓練資料
+	train =  posFeatures+negFeatures
+	LogisticRegression_classifier = SklearnClassifier(LogisticRegression()) #在nltk中使用scikit-learn的介面
+	LogisticRegression_classifier.train(train) #訓練分類器
+	joblib.dump(LogisticRegression_classifier, '../docs/ml_data/LogisticRegression_classifier.pkl')
 
 	print('Done!')
