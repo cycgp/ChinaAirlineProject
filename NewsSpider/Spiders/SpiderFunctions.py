@@ -1,6 +1,6 @@
 from Spiders.NewsSpider import aplSpider, cldSpider, cnaSpider, cntSpider, ltnSpider, ntkSpider, stmSpider, tnlSpider, tpnSpider, udnSpider
 from Spiders.NewsSpiderCheck import aplSpiderCheck, cldSpiderCheck, cnaSpiderCheck, cntSpiderCheck, ltnSpiderCheck, ntkSpiderCheck, stmSpiderCheck, tnlSpiderCheck, tpnSpiderCheck, udnSpiderCheck
-from Spiders.threading import getURLThread, getContentThread
+from Spiders.Threading import getURLThread, getContentThread
 import logging
 import time
 

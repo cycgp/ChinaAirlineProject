@@ -374,7 +374,6 @@ class ltnSpider:
 	def getContent(self, ARTICLE_List, record):
 		newsList = []
 		articleIDList = []
-		print(ARTICLE_List)
 		for articleURL in ARTICLE_List:
 			try:
 				if articleURL in record:
@@ -461,7 +460,6 @@ class ltnSpider:
 
 				newsList.append([articleID, articleURL, title, datetime + ' ' + timeInNews, content])
 			except Exception as e:
-				print(e)
 				continue
 		return newsList
 

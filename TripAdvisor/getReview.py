@@ -6,7 +6,7 @@ from selenium import webdriver
 import re
 #generate url of Trip Advisor
 
-		
+
 #get review detail
 def getReviewInfo(review):
 	#print(review.prettify())
