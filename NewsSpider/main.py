@@ -18,11 +18,11 @@ def writeFile():
 		record = df['url'].values.tolist()
 		df = df.append(writePandas(record), ignore_index=True)
 		df = df.drop_duplicates(subset=['url'], keep='last')
-		df.to_csv(fileName+'.csv', sep=',', encoding='utf-8', index=False)
+		df.to_csv('data_csv/'+fileName+'.csv', sep=',', encoding='utf-8', index=False)
 	except:
 		record = []
 		df = writePandas(record)
-		df.to_csv(fileName+'.csv', sep=',', encoding='utf-8', index=False)
+		df.to_csv('data_csv/'+fileName+'.csv', sep=',', encoding='utf-8', index=False)
 
 	print('\n'+fileName+'.csv updated')
 	print('End: ' + time.strftime('%Y/%m/%d %H:%M', time.localtime()) + '\n')

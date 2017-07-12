@@ -7,16 +7,16 @@ import time
 logging.basicConfig(level=logging.INFO,
 					format='[%(levelname)-4s - %(asctime)-4s] %(message)s',
 					datefmt='%Y-%m-%d %H:%M:%S ',
-					handlers = [logging.FileHandler('newsSpider'+'.log', 'a', 'utf-8'),])
+					handlers = [logging.FileHandler('NewsSpider'+'.log', 'a', 'utf-8'),])
 
-press = ['Apple', 'CNA', 'China Times', 'Liberty Times', 'New Talks', 'Storm', 'The News Lens', 'Taiwan People News', 'UDN']
-pressAbbr = ['apl', 'cna', 'cnt', 'ltn', 'ntk', 'stm', 'tnl', 'tpn', 'udn']
-spiders = [aplSpider(), cnaSpider(), cntSpider(), ltnSpider(), ntkSpider(), stmSpider(), tnlSpider(), tpnSpider(), udnSpider()]
-spidersCheck = [aplSpiderCheck(), cnaSpiderCheck(), cntSpiderCheck(), ltnSpiderCheck(), ntkSpiderCheck(), stmSpiderCheck(), tnlSpiderCheck(), tpnSpiderCheck(), udnSpiderCheck()]
-#press = ['Liberty Times']
-#pressAbbr = ['ltn']
-#spiders = [ltnSpider()]
-#spidersCheck = [ltnSpiderCheck()]
+# press = ['Apple', 'CNA', 'China Times', 'Liberty Times', 'New Talks', 'Storm', 'The News Lens', 'Taiwan People News', 'UDN']
+# pressAbbr = ['apl', 'cna', 'cnt', 'ltn', 'ntk', 'stm', 'tnl', 'tpn', 'udn']
+# spiders = [aplSpider(), cnaSpider(), cntSpider(), ltnSpider(), ntkSpider(), stmSpider(), tnlSpider(), tpnSpider(), udnSpider()]
+# spidersCheck = [aplSpiderCheck(), cnaSpiderCheck(), cntSpiderCheck(), ltnSpiderCheck(), ntkSpiderCheck(), stmSpiderCheck(), tnlSpiderCheck(), tpnSpiderCheck(), udnSpiderCheck()]
+press = ['Liberty Times']
+pressAbbr = ['ltn']
+spiders = [ltnSpider()]
+spidersCheck = [ltnSpiderCheck()]
 
 def getNewsList(state):
 	getNewsListThreads = []

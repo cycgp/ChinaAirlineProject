@@ -331,7 +331,7 @@ class ltnSpider:
 	#Get real-time news url
 	def getURL(self):
 		#Real-time news pages
-		page = 1
+		page = 0
 		state = True
 		TimeList= []
 		while state:

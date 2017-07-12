@@ -745,8 +745,6 @@ class tpnSpiderCheck:
 					self.ARTICLE_List.append(articleURL)
 				except:
 					continue
-		file = open('testfile.txt','w')
-		file.write(str(self.ARTICLE_List))
 		return {'press':'tpn', 'URLList':self.ARTICLE_List}
 
 	# def checkUpdate():
