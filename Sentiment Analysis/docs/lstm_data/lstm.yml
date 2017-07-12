@@ -3,7 +3,7 @@
   \ [null, 500]\n    dtype: int32\n    embeddings_constraint: null\n    embeddings_initializer:\n\
   \      class_name: RandomUniform\n      config: {maxval: 0.05, minval: -0.05, seed:\
   \ null}\n    embeddings_regularizer: null\n    input_dim: 7647\n    input_length:\
-  \ 500\n    mask_zero: true\n    name: embedding_1\n    output_dim: 100\n    trainable:\
+  \ 500\n    mask_zero: true\n    name: embedding_1\n    output_dim: 32\n    trainable:\
   \ true\n- class_name: Dropout\n  config: {name: dropout_1, rate: 0.2, trainable:\
   \ true}\n- class_name: LSTM\n  config:\n    activation: tanh\n    activity_regularizer:\
   \ null\n    bias_constraint: null\n    bias_initializer:\n      class_name: Zeros\n\
@@ -15,13 +15,13 @@
   \ 0.0\n    recurrent_initializer:\n      class_name: Orthogonal\n      config: {gain:\
   \ 1.0, seed: null}\n    recurrent_regularizer: null\n    return_sequences: false\n\
   \    return_state: false\n    stateful: false\n    trainable: true\n    unit_forget_bias:\
-  \ true\n    units: 64\n    unroll: false\n    use_bias: true\n- class_name: Dense\n\
+  \ true\n    units: 128\n    unroll: false\n    use_bias: true\n- class_name: Dense\n\
   \  config:\n    activation: relu\n    activity_regularizer: null\n    bias_constraint:\
   \ null\n    bias_initializer:\n      class_name: Zeros\n      config: {}\n    bias_regularizer:\
   \ null\n    kernel_constraint: null\n    kernel_initializer:\n      class_name:\
   \ VarianceScaling\n      config: {distribution: uniform, mode: fan_avg, scale: 1.0,\
   \ seed: null}\n    kernel_regularizer: null\n    name: dense_1\n    trainable: true\n\
-  \    units: 128\n    use_bias: true\n- class_name: Dropout\n  config: {name: dropout_2,\
+  \    units: 256\n    use_bias: true\n- class_name: Dropout\n  config: {name: dropout_2,\
   \ rate: 0.2, trainable: true}\n- class_name: Dense\n  config:\n    activation: sigmoid\n\
   \    activity_regularizer: null\n    bias_constraint: null\n    bias_initializer:\n\
   \      class_name: Zeros\n      config: {}\n    bias_regularizer: null\n    kernel_constraint:\

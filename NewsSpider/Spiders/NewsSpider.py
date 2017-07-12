@@ -3,10 +3,10 @@ from bs4 import BeautifulSoup as bs4
 import json
 import re
 import requests
-from selenium import webdriver
-import time as t
 import random
 import sys
+from selenium import webdriver
+import time as t
 
 class aplSpider:
 	URLList = []
@@ -824,7 +824,7 @@ class udnSpider:
 		for articleURL in ARTICLE_List:
 			if articleURL in record:
 				continue
-			t.sleep(random.randint(2,4))
+			t.sleep(random.randint(1,2))
 			sys.stdout.write('\r             ' + ' '*65)
 			sys.stdout.write('\r    URL: ' + articleURL[:69])
 			try:

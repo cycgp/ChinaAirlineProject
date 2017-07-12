@@ -10,7 +10,6 @@ from datetime import date, timedelta
 import random
 
 class aplSpiderCheck:
-
 	URLList = []
 	ARTICLE_List = []
 	def __init__(self):
@@ -841,7 +840,7 @@ class udnSpiderCheck:
 			soup = bs4(r.text, 'html.parser')
 			articles = soup.find(id = 'breaknews_body').find_all('dt')
 			for article in articles:
-				articleURL = 'https://udn.com/'+article.find('a').get('href')
+				articleURL = 'https://udn.com'+article.find('a').get('href')
 				self.ARTICLE_List.append(articleURL)
 		return {'press':'udn', 'URLList':self.ARTICLE_List}
 

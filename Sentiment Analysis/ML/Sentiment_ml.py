@@ -77,7 +77,6 @@ def jieba_best_words():
 		word_scores[word] = pos_score + neg_score #一個詞的資訊量等於積極卡方統計量加上消極卡方統計量
 	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:1500] #把詞按資訊量倒序排序。number是特徵的維度
 	best_words = set([w for w,s in best_vals])
-	print(best_words)
 	return dict([(word, True) for word in best_words])
 
 def extract_features(datas):
@@ -90,8 +89,8 @@ def extract_features(datas):
 			item = item.replace('\ufeff','')
 			if item in feature.keys() and item is not '\n':
 				a[item]='True'
-		posWords = a #為積極文字賦予"pos"
-		corpusFeatures.append(posWords)
+		FeatureWords = a
+		corpusFeatures.append(FeatureWords)
 	return corpusFeatures
 
 if __name__ == "__main__":
@@ -102,7 +101,7 @@ if __name__ == "__main__":
 	corpus = read_file('../docs/test.txt')
 	corpusFeatures = extract_features(corpus)
 	#classifier
-	clf = joblib.load('../docs/ml_data/classifier.pkl')
+	clf = joblib.load('../docs/ml_data/LogisticRegression_classifier.pkl')
 	pred = clf.prob_classify_many(corpusFeatures)
 
 	originalText = text()
