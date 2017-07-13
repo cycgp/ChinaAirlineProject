@@ -141,7 +141,7 @@ def read_file(filename):
 		line = f.readline()
 	return str
 
-def jieba_best_words():
+def jieba_best_words(number):
 	posWords = []
 	negWords = []
 
@@ -177,12 +177,12 @@ def jieba_best_words():
 		pos_score = BigramAssocMeasures.chi_sq(cond_word_fd['pos'][word],  (freq, pos_word_count), total_word_count) #計算積極詞的卡方統計量，這裡也可以計算互資訊等其它統計量
 		neg_score = BigramAssocMeasures.chi_sq(cond_word_fd['neg'][word],  (freq, neg_word_count), total_word_count) #同理
 		word_scores[word] = pos_score + neg_score #一個詞的資訊量等於積極卡方統計量加上消極卡方統計量
-	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:5000] #把詞按資訊量倒序排序。number是特徵的維度
+	best_vals = sorted(word_scores.items(), key=lambda item:item[1],  reverse=True)[:number] #把詞按資訊量倒序排序。number是特徵的維度
 	best_words = set([w for w,s in best_vals])
 	return dict([(word, True) for word in best_words])
 
-def extract_features(datas):
-	feature = jieba_best_words()
+def extract_features(datas, number):
+	feature = jieba_best_words(number)
 	corpusFeatures = []
 	for data in datas:
 		a = {}
@@ -201,19 +201,20 @@ if __name__ == "__main__":
 	print('Reading CSV file......')
 	corpus = read_csv_file()
 	corpus_jieba = read_csv_file_jieba()
-	corpusFeatures = extract_features(corpus_jieba)
+	corpusFeatures_LogisticRegression = extract_features(corpus_jieba, 1000)
+	corpusFeatures_MultinomialNB = extract_features(corpus_jieba, 5000)
 	#LogisticRegression_classifier
 	print('\nLogisticRegression:')
 	print('    Loading model -> LogisticRegression_classifier')
 	LogisticRegression_classifier = joblib.load('../docs/ml_data/LogisticRegression_classifier.pkl')
 	print('    Classifying ( LogisticRegression_classifier) ...')
-	LogisticRegression_pred = LogisticRegression_classifier.prob_classify_many(corpusFeatures)
+	LogisticRegression_pred = LogisticRegression_classifier.prob_classify_many(corpusFeatures_LogisticRegression)
 	#MultinomialNB_classifier
 	print('\nMultinomialNB:')
 	print('    Loading model -> MultinomialNB_classifier')
 	MultinomialNB_classifier = joblib.load('../docs/ml_data/MultinomialNB_classifier.pkl')
 	print('    Classifying ( MultinomialNB_classifier) ...')
-	MultinomialNB_pred = MultinomialNB_classifier.prob_classify_many(corpusFeatures)
+	MultinomialNB_pred = MultinomialNB_classifier.prob_classify_many(corpusFeatures_MultinomialNB)
 	print('\nLSTM:')
 	DeepLearning_LSTM_score = lstm_predict(corpus)
 	LogisticRegression_score = []
@@ -221,6 +222,7 @@ if __name__ == "__main__":
 	Sum = []
 	emotion_sum = []
 	emotion = []
+	DeepLearning_emotion = []
 
 	for i in LogisticRegression_pred:
 		score = i.prob('pos')-i.prob('neg')
@@ -243,16 +245,22 @@ if __name__ == "__main__":
 		L_score = LogisticRegression_score[i] > 0
 		M_score = MultinomialNB_score[i] > 0
 		D_score = DeepLearning_LSTM_score[i] > 0
-		if sum([L_score, M_score, D_score]) > 0 :
+		if sum([L_score, M_score, D_score]) > 1 :
 			emotion.append('Positive')
 		else:
 			emotion.append('Negative')
 
+	for data in LogisticRegression_score:
+		if data > 0:
+			DeepLearning_emotion.append(1)
+		else:
+			DeepLearning_emotion.append(-1)
+
 	print('\nSaving Scores...')
-	score = np.array([LogisticRegression_score, MultinomialNB_score, DeepLearning_LSTM_score, Sum, emotion_sum, emotion]).transpose()
-	joblib.dump(score, '../docs/score.pkl')
+	score = np.array([LogisticRegression_score, MultinomialNB_score, DeepLearning_LSTM_score, Sum, emotion_sum, emotion, DeepLearning_emotion]).transpose()
 	print('Merging CSV file...')
-	df1 = pd.DataFrame(data=score, columns=['LogisticRegression_score', 'MultinomialNB_score', 'DeepLearning_LSTM_score' , 'Sum', 'emotion_sum', 'emotion'])
+	df1 = pd.DataFrame(data=score, columns=['LogisticRegression_score', 'MultinomialNB_score', 'DeepLearning_LSTM_score' , 'Sum', 'emotion_sum', 'emotion', 'DeepLearning_emotion'])
 	fileName = 'NewsList_20170713'
 	df2 = pd.read_csv('../docs/csv_data/' + fileName + '.csv').join(df1, how='outer')
-	df2.to_csv('../docs/csv_data/'+fileName+'_SA.csv', sep=',', encoding='utf-8', index=False)
+	df2.to_csv('../docs/csv_data_SA/'+fileName+'_SA.csv', sep=',', encoding='utf-8', index=False)
+	print('\nDone!')
