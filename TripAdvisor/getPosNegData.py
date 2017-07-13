@@ -10,9 +10,9 @@ pos = open("data_txt/pos.txt","w", encoding='utf-8')
 neg = open("data_txt/neg.txt","w", encoding='utf-8')
 
 for data in datas:
-    if int(data['rating']) >= 3:
+    if int(data['rating']) > 3:
         pos.write(data['title']+'，'+data['comment']+'\n')
-    else:
+    elif int(data['rating']) < 3:
         neg.write(data['title']+'，'+data['comment']+'\n')
 
 pos.close()

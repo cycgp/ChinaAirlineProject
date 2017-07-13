@@ -44,10 +44,10 @@ def loadfile():
 	posWords = []
 	negWords = []
 
-	with open('../docs/test/pos_tw.txt', 'r', encoding='utf-8') as items:
+	with open('../docs/tripadvisor_data/ignore_three_star/pos_tw.txt', 'r', encoding='utf-8') as items:
 		for item in items:
 			posWords.append(item)
-	with open('../docs/test/neg_tw.txt', 'r', encoding='utf-8') as items:
+	with open('./docs/tripadvisor_data/ignore_three_star/neg_tw.txt', 'r', encoding='utf-8') as items:
 		for item in items:
 			negWords.append(item)
 

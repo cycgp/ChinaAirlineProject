@@ -34,11 +34,11 @@ def jieba_feature(number):
 	posWords = []
 	negWords = []
 
-	for items in read_file('../docs/pos_tw.txt'):#把集合的集合變成集合
+	for items in read_file('./docs/tripadvisor_data/ignore_three_star/pos_tw.txt'):#把集合的集合變成集合
 		for item in items:
 			posWords.append(item)
 
-	for items in read_file('../docs/neg_tw.txt'):
+	for items in read_file('./docs/tripadvisor_data/ignore_three_star/neg_tw.txt'):
 		for item in items:
 			negWords.append(item)
 
@@ -70,7 +70,7 @@ def jieba_feature(number):
 def build_features(topRank):
 	feature = jieba_feature(topRank)
 	posFeatures = []
-	for items in read_file('../docs/pos_tw.txt'):
+	for items in read_file('./docs/tripadvisor_data/ignore_three_star/pos_tw.txt'):
 		a = {}
 		for item in items:
 			if item in feature.keys():
@@ -79,7 +79,7 @@ def build_features(topRank):
 		posFeatures.append(posWords)
 	negFeatures = []
 
-	for items in read_file('../docs/neg_tw.txt'):
+	for items in read_file('./docs/tripadvisor_data/ignore_three_star/neg_tw.txt'):
 		a = {}
 		for item in items:
 			if item in feature.keys():

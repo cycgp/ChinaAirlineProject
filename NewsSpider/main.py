@@ -51,7 +51,7 @@ if __name__ == '__main__':
 	schedule.every().day.at("06:30").do(writeFile)
 	schedule.every().day.at("10:00").do(writeFile)
 	schedule.every().day.at("13:30").do(writeFile)
-	schedule.every().day.at("13:30").do(writeFile)
+	schedule.every().day.at("15:30").do(writeFile)
 	schedule.every().day.at("18:00").do(writeFile)
 	schedule.every().day.at("21:00").do(writeFile)
 	schedule.every().day.at("22:00").do(writeFile)

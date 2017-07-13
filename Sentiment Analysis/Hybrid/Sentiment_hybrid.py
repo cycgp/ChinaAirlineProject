@@ -22,6 +22,7 @@ import sys
 sys.setrecursionlimit(1000000)
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import time
 # set parameters:
 maxlen = 500
 cpu_count = multiprocessing.cpu_count()
@@ -103,8 +104,8 @@ from sklearn.externals import joblib
 import pandas as pd
 
 def read_csv_file():
-	#fileName = 'NewsList_' + time.strftime('%Y%m%d', time.localtime())
-	fileName = '../docs/csv_data/NewsList_20170713.csv'
+	fileName = '../docs/csv_data/NewsList_' + time.strftime('%Y%m%d', time.localtime()) + '.csv'
+	#fileName = '../docs/csv_data/NewsList_20170713.csv'
 	df = pd.read_csv(fileName)
 	record = df['content'].values.tolist()
 
@@ -115,8 +116,8 @@ def read_csv_file_jieba():
 	jieba.load_userdict("../docs/jieba_dict/userdict.txt")
 	stop = [line.strip() for line in  open('../docs/jieba_dict/stopwords.txt','r',encoding='utf8').readlines()]#停用詞
 
-	#fileName = 'NewsList_' + time.strftime('%Y%m%d', time.localtime())
-	fileName = '../docs/csv_data/NewsList_20170713.csv'
+	fileName = '../docs/csv_data/NewsList_' + time.strftime('%Y%m%d', time.localtime()) + '.csv'
+	#fileName = '../docs/csv_data/NewsList_20170713.csv'
 	df = pd.read_csv(fileName)
 	record = df['content'].values.tolist()
 
@@ -145,13 +146,13 @@ def jieba_best_words(number):
 	posWords = []
 	negWords = []
 
-	for items in read_file('../docs/pos_tw.txt'):#把集合的集合變成集合
+	for items in read_file('./docs/tripadvisor_data/ignore_three_star/pos_tw.txt'):#把集合的集合變成集合
 		for item in items:
 			if item is not None:
 				item = item.replace('\ufeff','').replace('\n','')
 				posWords.append(item)
 
-	for items in read_file('../docs/neg_tw.txt'):
+	for items in read_file('./docs/tripadvisor_data/ignore_three_star/neg_tw.txt'):
 		for item in items:
 			if item is not None:
 				item = item.replace('\ufeff','').replace('\n','')
