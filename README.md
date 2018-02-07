@@ -1,4 +1,4 @@
-# ChinaAirlineProject
+# Sentiment aAnalysis Project (China Airline)
 This is a project in China Airline to do text mining and sentiment analysis on [Trip Advisor](https://www.tripadvisor.com.tw/Airline_Review-d8729049-Reviews-Cheap-Flights-China-Airlines) and [Facebook fans page](https://www.facebook.com/chinaairlines.travelchannel/?fref=ts) for further business and advertising decision(Based on Python3).
 
 ## News Spiders
@@ -35,6 +35,7 @@ The steps of do text mining and sentiment analysis on Trip Advisor.
 
 #### Simplified Chinese to Traditional Chinese
 [OpenCC](https://github.com/BYVoid/OpenCC) -- simple tool to translate simplified Chinese to traditional Chinese or traditional chinese to simplified chinese.
+
 #### Ｗord segmentation
 [jieba](https://github.com/fxsjy/jieba)
 
